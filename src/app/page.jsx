@@ -146,7 +146,7 @@ export default function Home() {
 								experiences and secure checkout systems.
 							</p>
 							<Link
-								href="/service/ecommerce-development"
+								href="/services/ecommerce-development-service"
 								className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
 							>
 								Learn more <FaArrowRight className="ml-2" />
@@ -164,9 +164,15 @@ export default function Home() {
 								products, customers, and order history while integrating essential tools such as ERP systems, CRMs, POS,
 								shipping gateways, and payment processors.
 							</p>
-							<a href="#" className="text-purple-600 font-medium hover:text-purple-800 flex items-center">
+							<Link
+								href="/services/ecommerce-migration-and-integration-service"
+								className="text-purple-600 font-medium hover:text-purple-800 flex items-center"
+							>
 								Learn more <FaArrowRight className="ml-2" />
-							</a>
+							</Link>
+							{/* <a href="#" className="text-purple-600 font-medium hover:text-purple-800 flex items-center">
+								Learn more <FaArrowRight className="ml-2" />
+							</a> */}
 						</div>
 
 						{/* Service 3 */}
@@ -626,7 +632,7 @@ export default function Home() {
 						<div className="rounded-xl overflow-hidden shadow-lg group">
 							<div className="relative overflow-hidden h-64">
 								<img
-									src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
 									alt="Case Study"
 									className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
 								/>

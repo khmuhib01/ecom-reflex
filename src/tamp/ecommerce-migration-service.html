@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ecommerce Migration & Integration Services | EcomReflex</title>
+		<meta
+			name="description"
+			content="Professional eCommerce platform migration and integration services. Seamlessly move your store or connect it with business systems without data loss or downtime."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.service-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+			}
+			.process-step {
+				position: relative;
+			}
+			.process-step:not(:last-child):after {
+				content: '';
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 2px;
+				height: 40px;
+				background-color: #e5e7eb;
+			}
+			@media (min-width: 1024px) {
+				.process-step:not(:last-child):after {
+					bottom: 50%;
+					left: auto;
+					right: -20px;
+					transform: translateY(50%);
+					width: 40px;
+					height: 2px;
+				}
+			}
+			.integration-card:hover {
+				transform: scale(1.03);
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.tab-content {
+				display: none;
+			}
+			.tab-content.active {
+				display: block;
+				animation: fadeIn 0.5s ease-in-out;
+			}
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-600">Reflex</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+						<a href="ecommerce-development.html" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+						<a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+						<a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+						<a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+						<a
+							href="get-started.html"
+							class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Get Started</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Home</a
+						>
+						<a
+							href="ecommerce-development.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Services</a
+						>
+						<a
+							href="portfolio.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Portfolio</a
+						>
+						<a
+							href="about.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>About</a
+						>
+						<a
+							href="contact.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Contact</a
+						>
+						<a
+							href="get-started.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Get Started</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-28">
+				<div class="max-w-4xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Ecommerce Migration & Integration Services</h1>
+					<p class="text-xl text-indigo-100 mb-8">
+						Seamlessly move your store to a better platform or connect it with essential business systems. Our experts
+						ensure zero data loss, minimal downtime, and perfect synchronization across your tech stack.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="#migration-services"
+							class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Explore Migration</a
+						>
+						<a
+							href="#integration-services"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+							>View Integrations</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Introduction -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+						<div>
+							<h2 class="text-3xl md:text-4xl font-bold mb-6">Your Store Should Work For You, Not Against You</h2>
+							<p class="text-xl text-gray-600 mb-6">
+								Whether you're moving to a new platform or connecting your store to business systems, we handle the
+								complex technical work so you can focus on growing your business.
+							</p>
+							<div class="space-y-4">
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Zero Downtime Migrations</h3>
+										<p class="text-gray-600">
+											We keep your store running during transitions with no disruption to sales.
+										</p>
+									</div>
+								</div>
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Data Integrity Guaranteed</h3>
+										<p class="text-gray-600">Every product, customer, and order transferred with 100% accuracy.</p>
+									</div>
+								</div>
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Seamless System Integration</h3>
+										<p class="text-gray-600">Connect your store to the tools that power your business operations.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+							<img
+								src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+								alt="Ecommerce Migration"
+								class="rounded-lg w-full h-auto"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Migration Services -->
+		<section id="migration-services" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Platform Migration Services</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Move your store to a better platform without losing data, SEO rankings, or customer information.
+					</p>
+				</div>
+
+				<!-- Migration Tabs Navigation -->
+				<div class="flex flex-wrap justify-center mb-8 border-b border-gray-200">
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 transition"
+						data-tab="shopify-migration"
+					>
+						To Shopify
+					</button>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 transition"
+						data-tab="magento-migration"
+					>
+						To Magento
+					</button>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 transition"
+						data-tab="woocommerce-migration"
+					>
+						To WooCommerce
+					</button>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 transition"
+						data-tab="headless-migration"
+					>
+						To Headless
+					</button>
+				</div>
+
+				<!-- Migration Tab Contents -->
+				<div class="max-w-6xl mx-auto">
+					<!-- Shopify Migration Tab -->
+					<div id="shopify-migration" class="tab-content active">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-2xl font-bold mb-4">Migrate to Shopify/Shopify Plus</h3>
+								<p class="text-gray-600 mb-6">
+									Move from Magento, WooCommerce, BigCommerce, or custom platforms to Shopify with zero data loss. We
+									handle product data, customer accounts, order history, SEO URLs, and all content migration.
+								</p>
+								<div class="space-y-4">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">SEO-Preserving Migration</h4>
+											<p class="text-gray-600">
+												301 redirects and URL structure maintenance to protect your search rankings.
+											</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Custom Field Mapping</h4>
+											<p class="text-gray-600">Complex product attributes and custom data transferred accurately.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Third-Party App Setup</h4>
+											<p class="text-gray-600">
+												Reconfigure your essential apps and extensions in the new environment.
+											</p>
+										</div>
+									</div>
+								</div>
+								<a
+									href="contact.html"
+									class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+									>Start Your Migration</a
+								>
+							</div>
+							<div class="bg-white p-6 rounded-xl shadow-md">
+								<img
+									src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="Shopify Migration"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Magento Migration Tab -->
+					<div id="magento-migration" class="tab-content">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-2xl font-bold mb-4">Migrate to Magento 2</h3>
+								<p class="text-gray-600 mb-6">
+									Upgrade from Magento 1 or move from Shopify, WooCommerce, or other platforms to Magento 2. We handle
+									the complete transition including data migration, theme conversion, extension setup, and performance
+									optimization.
+								</p>
+								<div class="space-y-4">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Magento 1 to Magento 2</h4>
+											<p class="text-gray-600">Full migration including custom modules and database restructuring.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Multi-Store Migration</h4>
+											<p class="text-gray-600">Consolidate or separate stores during platform transition.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Performance Optimization</h4>
+											<p class="text-gray-600">Ensure your new Magento store runs faster than the old one.</p>
+										</div>
+									</div>
+								</div>
+								<a
+									href="contact.html"
+									class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+									>Start Your Migration</a
+								>
+							</div>
+							<div class="bg-white p-6 rounded-xl shadow-md">
+								<img
+									src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="Magento Migration"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- WooCommerce Migration Tab -->
+					<div id="woocommerce-migration" class="tab-content">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-2xl font-bold mb-4">Migrate to WooCommerce</h3>
+								<p class="text-gray-600 mb-6">
+									Move from Shopify, Magento, BigCommerce, or other platforms to WooCommerce. We ensure all products,
+									customers, orders, and content are transferred accurately while maintaining your SEO value.
+								</p>
+								<div class="space-y-4">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Content-Preserving Migration</h4>
+											<p class="text-gray-600">Blog posts, pages, and media library transferred intact.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Plugin Configuration</h4>
+											<p class="text-gray-600">Equivalent WooCommerce plugins installed and configured.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Theme Adaptation</h4>
+											<p class="text-gray-600">Existing design adapted or new theme implemented to match your brand.</p>
+										</div>
+									</div>
+								</div>
+								<a
+									href="contact.html"
+									class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+									>Start Your Migration</a
+								>
+							</div>
+							<div class="bg-white p-6 rounded-xl shadow-md">
+								<img
+									src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="WooCommerce Migration"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Headless Migration Tab -->
+					<div id="headless-migration" class="tab-content">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-2xl font-bold mb-4">Migrate to Headless Commerce</h3>
+								<p class="text-gray-600 mb-6">
+									Transition from traditional monolithic platforms to a flexible headless architecture. We'll decouple
+									your frontend from the backend and set up API connections for a future-proof commerce solution.
+								</p>
+								<div class="space-y-4">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">API Strategy Development</h4>
+											<p class="text-gray-600">Plan the optimal API architecture for your business needs.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Progressive Migration</h4>
+											<p class="text-gray-600">Phase the transition to minimize business disruption.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Omnichannel Setup</h4>
+											<p class="text-gray-600">Prepare your infrastructure for web, mobile, IoT, and other channels.</p>
+										</div>
+									</div>
+								</div>
+								<a
+									href="contact.html"
+									class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+									>Start Your Migration</a
+								>
+							</div>
+							<div class="bg-white p-6 rounded-xl shadow-md">
+								<img
+									src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="Headless Commerce Migration"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Migration Process -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Migration Process</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						A structured approach to ensure your platform transition is smooth and successful.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+					<!-- Step 1 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">1</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Discovery & Planning</h3>
+						<p class="text-gray-600">
+							We analyze your current setup, identify special requirements, and create a detailed migration plan.
+						</p>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">2</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Test Migration</h3>
+						<p class="text-gray-600">
+							We perform a complete dry run to identify and resolve any potential issues before the live migration.
+						</p>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">3</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Data Migration</h3>
+						<p class="text-gray-600">
+							Products, customers, orders, and other essential data are transferred to the new platform.
+						</p>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">4</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Design & Functionality</h3>
+						<p class="text-gray-600">
+							Your store's look and features are implemented on the new platform with all customizations.
+						</p>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">5</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Launch & Optimization</h3>
+						<p class="text-gray-600">
+							Final testing, SEO setup, and performance tuning before going live with the new store.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Integration Services -->
+		<section id="integration-services" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">eCommerce Integration Services</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Connect your store with the business systems that power your operations.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Integration 1 -->
+					<div class="integration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-boxes text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">ERP Integration</h3>
+						<p class="text-gray-600 mb-4">
+							Connect your store with ERP systems like SAP, NetSuite, or Odoo for real-time inventory, order management,
+							and accounting synchronization.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Inventory Sync</span>
+							<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Order Automation</span>
+							<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Pricing Updates</span>
+						</div>
+						<a href="contact.html" class="text-indigo-600 font-medium hover:text-indigo-800">Learn More →</a>
+					</div>
+
+					<!-- Integration 2 -->
+					<div class="integration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-users text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">CRM Integration</h3>
+						<p class="text-gray-600 mb-4">
+							Sync customer data with Salesforce, HubSpot, or other CRMs to enable personalized marketing and unified
+							customer profiles.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Customer Sync</span>
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Order History</span>
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Segmentation</span>
+						</div>
+						<a href="contact.html" class="text-purple-600 font-medium hover:text-purple-800">Learn More →</a>
+					</div>
+
+					<!-- Integration 3 -->
+					<div class="integration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-credit-card text-blue-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Payment Gateway Integration</h3>
+						<p class="text-gray-600 mb-4">
+							Connect Stripe, PayPal, Authorize.Net, or regional processors for seamless checkout experiences and global
+							payment acceptance.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Multi-Currency</span>
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Subscription Billing</span>
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Fraud Prevention</span>
+						</div>
+						<a href="contact.html" class="text-blue-600 font-medium hover:text-blue-800">Learn More →</a>
+					</div>
+
+					<!-- Integration 4 -->
+					<div class="integration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-truck text-green-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Shipping & Fulfillment</h3>
+						<p class="text-gray-600 mb-4">
+							Integrate with FedEx, UPS, ShipStation, or fulfillment centers to automate shipping calculations, labels,
+							and tracking.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Real-Time Rates</span>
+							<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Label Automation</span>
+							<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Inventory Updates</span>
+						</div>
+						<a href="contact.html" class="text-green-600 font-medium hover:text-green-800">Learn More →</a>
+					</div>
+
+					<!-- Integration 5 -->
+					<div class="integration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-envelope text-yellow-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Marketing Automation</h3>
+						<p class="text-gray-600 mb-4">
+							Connect with Klaviyo, Mailchimp, or other tools to trigger personalized emails, SMS, and campaigns based
+							on shopping behavior.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Abandoned Cart</span>
+							<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Customer Journeys</span>
+							<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Segmentation</span>
+						</div>
+						<a href="contact.html" class="text-yellow-600 font-medium hover:text-yellow-800">Learn More →</a>
+					</div>
+
+					<!-- Integration 6 -->
+					<div class="integration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-cogs text-red-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Custom API Development</h3>
+						<p class="text-gray-600 mb-4">
+							Build custom integrations for proprietary systems, marketplaces, or unique business workflows.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Custom Endpoints</span>
+							<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Webhooks</span>
+							<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Data Transformation</span>
+						</div>
+						<a href="contact.html" class="text-red-600 font-medium hover:text-red-800">Learn More →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Choose Us -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose eComReflex for Migration & Integration?</h2>
+					<p class="text-xl text-gray-600">
+						We don't just move data — we ensure your business continues uninterrupted during and after transition.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Reason 1 -->
+					<div class="bg-gray-50 p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-database text-indigo-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Data Integrity Focus</h3>
+						<p class="text-gray-600">
+							Our multi-step validation process ensures every product, customer, and order is transferred accurately.
+						</p>
+					</div>
+
+					<!-- Reason 2 -->
+					<div class="bg-gray-50 p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-clock text-purple-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Minimal Downtime</h3>
+						<p class="text-gray-600">
+							We plan migrations during low-traffic periods and use staging environments to prevent sales disruption.
+						</p>
+					</div>
+
+					<!-- Reason 3 -->
+					<div class="bg-gray-50 p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-search text-blue-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">SEO Preservation</h3>
+						<p class="text-gray-600">
+							Proper 301 redirects and URL structure maintenance protect your hard-earned search rankings.
+						</p>
+					</div>
+
+					<!-- Reason 4 -->
+					<div class="bg-gray-50 p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-plug text-green-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Integration Expertise</h3>
+						<p class="text-gray-600">
+							Certified developers experienced with all major eCommerce APIs and middleware solutions.
+						</p>
+					</div>
+
+					<!-- Reason 5 -->
+					<div class="bg-gray-50 p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-shield-alt text-yellow-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Security First</h3>
+						<p class="text-gray-600">
+							All data transfers use encrypted connections with proper authentication protocols.
+						</p>
+					</div>
+
+					<!-- Reason 6 -->
+					<div class="bg-gray-50 p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-headset text-red-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Post-Migration Support</h3>
+						<p class="text-gray-600">We monitor your new setup and address any issues that arise after go-live.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl md:text-4xl font-bold mb-4">Migration & Integration FAQs</h2>
+						<p class="text-xl text-gray-600">
+							Answers to common questions about moving platforms and connecting systems.
+						</p>
+					</div>
+
+					<div class="space-y-4">
+						<!-- FAQ Item 1 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How long does a typical eCommerce migration take?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Migration timelines vary based on store size and complexity. Small stores (under 500 products) can
+									often be migrated in 2-3 weeks. Medium stores (500-5,000 products) typically take 3-6 weeks. Large or
+									complex migrations may require 8-12 weeks. We provide a detailed timeline after assessing your
+									specific requirements.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 2 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Will my SEO rankings be affected by migration?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									When done correctly, migration should not negatively impact your SEO. We implement 301 redirects for
+									all changed URLs, preserve metadata, submit updated sitemaps, and monitor rankings post-migration. In
+									many cases, sites see improved rankings due to technical SEO enhancements during the migration
+									process.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 3 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Can you migrate customer passwords?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Password migration depends on the platforms involved. When moving between similar systems (e.g.,
+									Magento to Magento), we can often transfer passwords directly. For cross-platform migrations, we
+									typically implement a password reset workflow that maintains security while ensuring customers can
+									easily regain access to their accounts.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 4 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">
+									How do you handle custom functionality during migration?
+								</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We document all custom features from your current store and either find equivalent solutions on the
+									new platform or develop custom implementations. This includes custom product types, checkout
+									modifications, reporting tools, and any other unique functionality. We test all custom elements
+									thoroughly before launch.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 5 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">What's involved in ERP integration?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									ERP integration typically includes: product/inventory synchronization, order data transfer, customer
+									data sharing, and pricing updates. We analyze your workflows to determine which data needs to flow in
+									which direction, set up the API connections or middleware, establish synchronization schedules, and
+									implement error handling procedures.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 6 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Do you provide post-migration support?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Yes, we offer various post-migration support options. Our standard package includes 30 days of bug
+									fixes and minor adjustments at no additional cost. We also offer ongoing maintenance plans that
+									include performance monitoring, security updates, and feature enhancements. Many clients choose to
+									retain us for continuous optimization after migration.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-20 bg-indigo-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Move or Connect Your Store?</h2>
+					<p class="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+						Whether you're migrating platforms or integrating systems, our experts will ensure a smooth transition.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="contact.html"
+							class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Get a Free Consultation</a
+						>
+						<a
+							href="tel:+18005551234"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+						>
+							<i class="fas fa-phone-alt mr-2"></i> Call Our Experts
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-400">Reflex</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">
+							Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+						</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Services</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="ecommerce-development.html" class="text-gray-400 hover:text-white">eCommerce Development</a>
+							</li>
+							<li>
+								<a href="ecommerce-migration-integration.html" class="text-gray-400 hover:text-white"
+									>Migration & Integration</a
+								>
+							</li>
+							<li><a href="#" class="text-gray-400 hover:text-white">UX/UI Design</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">SEO Optimization</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Support & Maintenance</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="portfolio.html" class="text-gray-400 hover:text-white">Portfolio</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+							<li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// FAQ accordion
+			document.querySelectorAll('.faq-toggle').forEach((button) => {
+				button.addEventListener('click', () => {
+					const content = button.nextElementSibling;
+					const icon = button.querySelector('i');
+
+					// Toggle content
+					content.classList.toggle('hidden');
+
+					// Rotate icon
+					if (content.classList.contains('hidden')) {
+						icon.classList.remove('transform', 'rotate-180');
+					} else {
+						icon.classList.add('transform', 'rotate-180');
+					}
+				});
+			});
+
+			// Migration tabs
+			const tabButtons = document.querySelectorAll('.tab-btn');
+			const tabContents = document.querySelectorAll('.tab-content');
+
+			tabButtons.forEach((button) => {
+				button.addEventListener('click', () => {
+					const tabId = button.getAttribute('data-tab');
+
+					// Remove active class from all buttons and contents
+					tabButtons.forEach((btn) => btn.classList.remove('border-indigo-600', 'text-indigo-600'));
+					tabContents.forEach((content) => content.classList.remove('active'));
+
+					// Add active class to clicked button and corresponding content
+					button.classList.add('border-indigo-600', 'text-indigo-600');
+					document.getElementById(tabId).classList.add('active');
+				});
+			});
+
+			// Set first tab as active by default
+			if (tabButtons.length > 0) {
+				tabButtons[0].classList.add('border-indigo-600', 'text-indigo-600');
+			}
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
