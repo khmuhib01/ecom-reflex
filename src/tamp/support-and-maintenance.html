@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Support & Maintenance Services | EcomReflex</title>
+    <meta name="description" content="Reliable eCommerce support and maintenance services. Keep your store running smoothly with our proactive monitoring, security updates, and technical support.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+        }
+        .plan-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.2);
+        }
+        .process-step {
+            position: relative;
+        }
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 40px;
+            background-color: #e5e7eb;
+        }
+        @media (min-width: 1024px) {
+            .process-step:not(:last-child):after {
+                bottom: 50%;
+                left: auto;
+                right: -20px;
+                transform: translateY(50%);
+                width: 40px;
+                height: 2px;
+            }
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-600">Reflex</span></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                    <a href="ecommerce-development.html" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+                    <a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+                    <a href="get-started.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Get Started</a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
+                    <a href="ecommerce-development.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Services</a>
+                    <a href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Portfolio</a>
+                    <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+                    <a href="get-started.html" class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-20 md:py-28">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">eCommerce Support & Maintenance Services</h1>
+                <p class="text-xl text-blue-100 mb-8">
+                    Proactive care for your online store. Keep your eCommerce business running smoothly while we handle the technical details.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#support-plans" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center">View Plans</a>
+                    <a href="#maintenance-services" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-blue-600 transition text-center">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Your Store Always Open, Always Secure</h2>
+                        <p class="text-xl text-gray-600 mb-6">
+                            eCommerce never sleeps, and neither does our support. We provide the technical backbone so you can focus on growing your business, not fixing problems.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">Proactive Monitoring</h3>
+                                    <p class="text-gray-600">We catch and fix issues before they impact your customers.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">Rapid Response</h3>
+                                    <p class="text-gray-600">Dedicated support team with fast resolution times.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">Security First</h3>
+                                    <p class="text-gray-600">Regular updates and patches to protect your business.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="eCommerce Support" class="rounded-lg w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Plans -->
+    <section id="support-plans" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comprehensive Support Plans</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the level of support that matches your business needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="plan-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Basic</h3>
+                    <div class="text-4xl font-bold mb-6 text-center">$299<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>24/7 Monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Security Updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Bug Fixes (2 hours/month)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-gray-400 mr-3">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <span class="text-gray-500">Priority Support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-gray-400 mr-3">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <span class="text-gray-500">Monthly Performance Reports</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="block text-center bg-gray-200 text-gray-800 px-6 py-3 rounded-md font-medium hover:bg-gray-300 transition">Get Basic Plan</a>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="plan-card bg-white p-8 rounded-xl shadow-md border-2 border-blue-600 transition duration-300 transform scale-105">
+                    <div class="bg-blue-600 text-white text-sm font-bold px-4 py-1 rounded-full inline-block mb-4">MOST POPULAR</div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Pro</h3>
+                    <div class="text-4xl font-bold mb-6 text-center">$599<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>24/7 Monitoring & Alerts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Security Updates & Patches</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Bug Fixes (5 hours/month)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Priority Support (4hr response)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Monthly Performance Reports</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="block text-center bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition">Get Pro Plan</a>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="plan-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Enterprise</h3>
+                    <div class="text-4xl font-bold mb-6 text-center">$1,299<span class="text-lg text-gray-500">/month</span></div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>24/7 Monitoring & Immediate Response</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Advanced Security Management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Unlimited Bug Fixes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>VIP Support (1hr response)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1 text-blue-600 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Weekly Performance Reports</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="block text-center bg-gray-800 text-white px-6 py-3 rounded-md font-medium hover:bg-gray-900 transition">Get Enterprise Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Services -->
+    <section id="maintenance-services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Maintenance Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive care to keep your store performing at its best.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Security Maintenance</h3>
+                    <p class="text-gray-600 mb-4">
+                        Regular security patches, malware scans, and vulnerability assessments to protect your store and customer data.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">PCI Compliance</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Firewall Updates</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Security Patches</span>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-tachometer-alt text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Performance Optimization</h3>
+                    <p class="text-gray-600 mb-4">
+                        Ongoing speed improvements, database optimizations, and resource management to ensure fast page loads.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Speed Tests</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Caching</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Image Optimization</span>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Platform Updates</h3>
+                    <p class="text-gray-600 mb-4">
+                        Careful management of platform, theme, and plugin updates to maintain compatibility and security.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Version Control</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Change Logs</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Rollback Plans</span>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-database text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Backup Management</h3>
+                    <p class="text-gray-600 mb-4">
+                        Automated daily backups with offsite storage and easy restoration options for disaster recovery.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Daily Backups</span>
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Cloud Storage</span>
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">One-Click Restore</span>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bug text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Bug Fixes</h3>
+                    <p class="text-gray-600 mb-4">
+                        Quick resolution of technical issues, broken functionality, and unexpected errors.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Error Tracking</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Priority Fixes</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Code Reviews</span>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Performance Reporting</h3>
+                    <p class="text-gray-600 mb-4">
+                        Regular insights into your store's technical health, speed metrics, and security status.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Monthly Reports</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Core Web Vitals</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Uptime Monitoring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Process -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Support Process</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Clear, efficient workflows to resolve your issues quickly.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+                <!-- Step 1 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Issue Identification</h3>
+                    <p class="text-gray-600">
+                        Automated monitoring detects problems or you submit a support ticket.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Priority Assessment</h3>
+                    <p class="text-gray-600">
+                        We categorize and prioritize based on business impact.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Technical Analysis</h3>
+                    <p class="text-gray-600">
+                        Our experts diagnose the root cause of the issue.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Solution Implementation</h3>
+                    <p class="text-gray-600">
+                        We implement fixes following change management protocols.
+                    </p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">5</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Verification & Documentation</h3>
+                    <p class="text-gray-600">
+                        We confirm resolution and update knowledge base.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Response Times -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Guaranteed Response Times</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We understand urgency when your store is experiencing issues.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto overflow-hidden shadow-md rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Priority Level</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Initial Response</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Resolution Target</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Critical</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Store down or major functionality broken</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">30 minutes</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">4 hours</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">High</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Significant impact on business operations</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2 hours</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">24 hours</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">Medium</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Minor functionality issues</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">8 hours</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">3 business days</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Low</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Cosmetic or non-urgent requests</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">24 hours</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1 week</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose eComReflex Support?</h2>
+                <p class="text-xl text-gray-600">
+                    We're not just another support team - we're eCommerce specialists.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Reason 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">eCommerce Focus</h3>
+                    <p class="text-gray-600">
+                        We specialize exclusively in eCommerce platforms, not generic web support.
+                    </p>
+                </div>
+                
+                <!-- Reason 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Proactive Monitoring</h3>
+                    <p class="text-gray-600">
+                        We catch and resolve 62% of issues before they affect your store.
+                    </p>
+                </div>
+                
+                <!-- Reason 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-user-shield text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Security Experts</h3>
+                    <p class="text-gray-600">
+                        Certified professionals keeping your store PCI compliant and secure.
+                    </p>
+                </div>
+                
+                <!-- Reason 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-history text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Change Tracking</h3>
+                    <p class="text-gray-600">
+                        Detailed logs of all changes made to your store for complete transparency.
+                    </p>
+                </div>
+                
+                <!-- Reason 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-business-time text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Peak Period Support</h3>
+                    <p class="text-gray-600">
+                        Extra resources during holidays and sales events when you need it most.
+                    </p>
+                </div>
+                
+                <!-- Reason 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dedicated Account Manager</h3>
+                    <p class="text-gray-600">
+                        Single point of contact who understands your business (Pro & Enterprise plans).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Support Success Stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    How we've helped businesses maintain seamless operations.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Case Study 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fashion Retailer</h3>
+                        <p class="text-gray-600 mb-4">
+                            Reduced downtime by 92% and eliminated checkout errors during peak season with our Enterprise support plan.
+                        </p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800">Read Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Home Goods Store</h3>
+                        <p class="text-gray-600 mb-4">
+                            Prevented a security breach through our proactive monitoring and patch management.
+                        </p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800">Read Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Case Study 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">B2B Industrial Supplier</h3>
+                        <p class="text-gray-600 mb-4">
+                            Improved site speed by 58% through our ongoing performance optimization services.
+                        </p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800">Read Case Study →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Support & Maintenance FAQs</h2>
+                    <p class="text-xl text-gray-600">
+                        Answers to common questions about our support services.
+                    </p>
+                </div>
+                
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">What's included in your monthly maintenance?</h3>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Our monthly maintenance includes: security updates, plugin/theme/core updates (with testing), performance optimization, database maintenance, backup verification, security scans, and uptime monitoring. Higher-tier plans include additional services like content updates and more extensive optimizations.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">How do you handle emergency issues after hours?</h3>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                We provide 24/7 emergency support for critical issues (store down, checkout broken, etc.). Our team rotates on-call duties to ensure immediate response. After-hours emergencies can be reported via our dedicated emergency phone line or priority support ticketing system.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">Do you provide support for third-party apps and plugins?</h3>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Yes, we support all standard third-party apps and plugins. For highly specialized or custom-built solutions, we may need to coordinate with the original developers. We handle updates, compatibility issues, and troubleshooting for all supported plugins.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">Can we request specific maintenance windows?</h3>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Absolutely. We schedule all maintenance during your specified low-traffic periods whenever possible. For Enterprise clients, we provide a maintenance calendar 30 days in advance and accommodate special requests for high-traffic periods like holidays.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">How quickly can you restore from backup if something goes wrong?</h3>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Our standard recovery time is under 2 hours for critical failures. We maintain multiple backup points (daily, weekly, monthly) with offsite storage. For Enterprise clients with mission-critical stores, we offer 1-hour recovery SLA with redundant systems in place.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 6 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">What platforms do you support?</h3>
+                            <i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                We specialize in Shopify Plus, Magento (1 & 2), WooCommerce, and BigCommerce. We also support custom and headless implementations. Our team is certified on all major platforms and stays current with the latest updates and best practices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready for Stress-Free eCommerce Support?</h2>
+                <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                    Focus on growing your business while we handle the technical details. Get started with a free support consultation.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="contact.html" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center">Get Free Consultation</a>
+                    <a href="tel:+18005551234" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-blue-600 transition text-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Support Team
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-400">Reflex</span></span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="ecommerce-development.html" class="text-gray-400 hover:text-white">eCommerce Development</a></li>
+                        <li><a href="ecommerce-migration-integration.html" class="text-gray-400 hover:text-white">Migration & Integration</a></li>
+                        <li><a href="ecommerce-audit-analysis.html" class="text-gray-400 hover:text-white">Audit & Analysis</a></li>
+                        <li><a href="ecommerce-growth-optimization.html" class="text-gray-400 hover:text-white">Growth & Optimization</a></li>
+                        <li><a href="ecommerce-support-maintenance.html" class="text-gray-400 hover:text-white">Support & Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+                            <a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach((button) => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                // Toggle content
+                content.classList.toggle('hidden');
+
+                // Rotate icon
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('transform', 'rotate-180');
+                } else {
+                    icon.classList.add('transform', 'rotate-180');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth',
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

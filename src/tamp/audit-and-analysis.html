@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Audit & Analysis Services | EcomReflex</title>
+    <meta name="description" content="Professional eCommerce store audits and performance analysis. Identify growth opportunities, technical issues, and optimization strategies for your online store.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3);
+        }
+        .audit-feature-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
+        }
+        .process-step {
+            position: relative;
+        }
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 40px;
+            background-color: #e5e7eb;
+        }
+        @media (min-width: 1024px) {
+            .process-step:not(:last-child):after {
+                bottom: 50%;
+                left: auto;
+                right: -20px;
+                transform: translateY(50%);
+                width: 40px;
+                height: 2px;
+            }
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-600">Reflex</span></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                    <a href="ecommerce-development.html" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+                    <a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+                    <a href="get-started.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Get Started</a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
+                    <a href="ecommerce-development.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Services</a>
+                    <a href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Portfolio</a>
+                    <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+                    <a href="get-started.html" class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-20 md:py-28">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">eCommerce Audit & Analysis Services</h1>
+                <p class="text-xl text-blue-100 mb-8">
+                    Uncover hidden opportunities and fix critical issues with our comprehensive eCommerce store audits. Get actionable insights to boost conversions, improve performance, and accelerate growth.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#audit-types" class="bg-white text-emerald-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center">Explore Audit Types</a>
+                    <a href="#audit-process" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-emerald-600 transition text-center">Our Process</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Data-Driven Insights for Your eCommerce Growth</h2>
+                        <p class="text-xl text-gray-600 mb-6">
+                            Most online stores are leaving money on the table due to undetected technical issues, UX problems, and missed optimization opportunities. Our audits identify exactly what's holding your store back and how to fix it.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">Comprehensive Technical Review</h3>
+                                    <p class="text-gray-600">We examine your store's architecture, performance, and technical SEO factors.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">Conversion Rate Analysis</h3>
+                                    <p class="text-gray-600">Identify UX friction points that prevent visitors from becoming customers.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold">Actionable Recommendations</h3>
+                                    <p class="text-gray-600">Clear, prioritized steps to improve performance and revenue.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="eCommerce Audit" class="rounded-lg w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audit Types -->
+    <section id="audit-types" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comprehensive Audit Types</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the audit that matches your needs or combine multiple for a complete picture of your store's health.
+                </p>
+            </div>
+            
+            <!-- Audit Tabs Navigation -->
+            <div class="flex flex-wrap justify-center mb-8 border-b border-gray-200">
+                <button class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-emerald-600 border-b-2 border-transparent hover:border-emerald-300 transition" data-tab="technical-audit">Technical Audit</button>
+                <button class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-300 transition" data-tab="conversion-audit">Conversion Audit</button>
+                <button class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-purple-600 border-b-2 border-transparent hover:border-purple-300 transition" data-tab="seo-audit">SEO Audit</button>
+                <button class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-red-600 border-b-2 border-transparent hover:border-red-300 transition" data-tab="full-audit">Full Store Audit</button>
+            </div>
+            
+            <!-- Audit Tab Contents -->
+            <div class="max-w-6xl mx-auto">
+                <!-- Technical Audit Tab -->
+                <div id="technical-audit" class="tab-content active">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Technical eCommerce Audit</h3>
+                            <p class="text-gray-600 mb-6">
+                                A deep dive into your store's technical infrastructure to identify performance bottlenecks, security vulnerabilities, and architectural issues that impact user experience and search visibility.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Performance Analysis</h4>
+                                        <p class="text-gray-600">Page speed, load times, and resource optimization opportunities.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Security Assessment</h4>
+                                        <p class="text-gray-600">Vulnerability scanning and PCI compliance review.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Mobile Optimization</h4>
+                                        <p class="text-gray-600">Responsive design evaluation and mobile UX assessment.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Checkout Process Review</h4>
+                                        <p class="text-gray-600">Payment gateway configuration and funnel optimization.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="inline-block mt-6 bg-emerald-600 text-white px-6 py-3 rounded-md font-medium hover:bg-emerald-700 transition">Get Technical Audit</a>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Technical Audit" class="rounded-lg w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Conversion Audit Tab -->
+                <div id="conversion-audit" class="tab-content">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Conversion Rate Optimization Audit</h3>
+                            <p class="text-gray-600 mb-6">
+                                Identify why visitors aren't converting and discover opportunities to improve your store's user experience, messaging, and purchase funnel.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">User Journey Analysis</h4>
+                                        <p class="text-gray-600">Heatmaps, session recordings, and funnel drop-off points.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Value Proposition Evaluation</h4>
+                                        <p class="text-gray-600">Messaging clarity, trust signals, and unique selling points.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Product Page Optimization</h4>
+                                        <p class="text-gray-600">Images, descriptions, reviews, and call-to-action effectiveness.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Cart & Checkout Review</h4>
+                                        <p class="text-gray-600">Abandonment factors and friction points in the purchase process.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition">Get Conversion Audit</a>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Conversion Audit" class="rounded-lg w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SEO Audit Tab -->
+                <div id="seo-audit" class="tab-content">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">eCommerce SEO Audit</h3>
+                            <p class="text-gray-600 mb-6">
+                                Comprehensive analysis of your store's search engine visibility, content strategy, and technical SEO factors that impact organic traffic and rankings.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-purple-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Keyword Strategy</h4>
+                                        <p class="text-gray-600">Product page optimization and category structure analysis.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-purple-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Technical SEO Factors</h4>
+                                        <p class="text-gray-600">Indexation, crawlability, site structure, and schema markup.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-purple-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Content Quality</h4>
+                                        <p class="text-gray-600">Duplicate content, thin content, and optimization opportunities.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-purple-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Backlink Profile</h4>
+                                        <p class="text-gray-600">Link quality analysis and toxic link identification.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="inline-block mt-6 bg-purple-600 text-white px-6 py-3 rounded-md font-medium hover:bg-purple-700 transition">Get SEO Audit</a>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="SEO Audit" class="rounded-lg w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Full Store Audit Tab -->
+                <div id="full-audit" class="tab-content">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Full eCommerce Store Audit</h3>
+                            <p class="text-gray-600 mb-6">
+                                Our most comprehensive service combining technical, conversion, and SEO audits with competitive benchmarking and growth strategy recommendations.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-red-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Complete Technical Review</h4>
+                                        <p class="text-gray-600">All aspects of our technical audit plus server configuration analysis.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-red-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">In-Depth CRO Analysis</h4>
+                                        <p class="text-gray-600">Conversion audit plus A/B test recommendations and user testing.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-red-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Comprehensive SEO Audit</h4>
+                                        <p class="text-gray-600">Full SEO analysis plus content gap analysis and competitor research.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1 text-red-600 mr-4">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">Growth Strategy Roadmap</h4>
+                                        <p class="text-gray-600">Prioritized 12-month plan with implementation recommendations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="inline-block mt-6 bg-red-600 text-white px-6 py-3 rounded-md font-medium hover:bg-red-700 transition">Get Full Store Audit</a>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Full Store Audit" class="rounded-lg w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audit Features -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What's Included in Our Audits</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Detailed analysis across all critical aspects of your eCommerce operation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="audit-feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-tachometer-alt text-emerald-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Performance Metrics</h3>
+                    <p class="text-gray-600">
+                        Page load times, Core Web Vitals, mobile performance scores, and resource optimization recommendations.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="audit-feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Conversion Funnel</h3>
+                    <p class="text-gray-600">
+                        Analysis of visitor behavior through product discovery, cart addition, and checkout completion.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="audit-feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">SEO Health Check</h3>
+                    <p class="text-gray-600">
+                        Technical SEO factors, content optimization, backlink profile, and keyword opportunities.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="audit-feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-lock text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Security Assessment</h3>
+                    <p class="text-gray-600">
+                        Vulnerability scanning, PCI compliance check, and data protection measures review.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="audit-feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile Experience</h3>
+                    <p class="text-gray-600">
+                        Responsive design evaluation, touch target sizing, and mobile-specific UX issues.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="audit-feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Competitive Benchmarking</h3>
+                    <p class="text-gray-600">
+                        Comparison against top competitors in your vertical for performance and features.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audit Process -->
+    <section id="audit-process" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Audit Process</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A structured approach to deliver actionable insights and measurable improvements.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+                <!-- Step 1 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-emerald-600 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Discovery & Planning</h3>
+                    <p class="text-gray-600">
+                        We review your business goals, current metrics, and challenges to tailor our audit approach.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data Collection</h3>
+                    <p class="text-gray-600">
+                        Comprehensive data gathering using analytics, crawlers, and manual testing.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-purple-600 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Analysis & Evaluation</h3>
+                    <p class="text-gray-600">
+                        Our experts analyze findings against industry benchmarks and best practices.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-red-600 font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Recommendations</h3>
+                    <p class="text-gray-600">
+                        Prioritized action plan with clear ROI estimates for each suggested improvement.
+                    </p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-step bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-indigo-600 font-bold text-xl">5</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reporting & Review</h3>
+                    <p class="text-gray-600">
+                        Detailed report presentation with executive summary and technical deep dives.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What You'll Receive</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive deliverables designed for both technical teams and business stakeholders.
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Deliverable 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+                            <i class="fas fa-file-alt text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">Detailed Audit Report</h3>
+                            <p class="text-gray-600">
+                                50-100 page PDF with screenshots, data visualizations, and clear explanations of all findings organized by priority level.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deliverable 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+                            <i class="fas fa-chart-pie text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">Executive Summary</h3>
+                            <p class="text-gray-600">
+                                5-10 page overview highlighting key opportunities and estimated business impact for decision-makers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deliverable 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1 text-purple-600 mr-4">
+                            <i class="fas fa-tasks text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">Implementation Roadmap</h3>
+                            <p class="text-gray-600">
+                                Prioritized action plan with quick wins, medium-term improvements, and long-term strategic initiatives.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deliverable 4 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1 text-red-600 mr-4">
+                            <i class="fas fa-video text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3">Video Walkthrough</h3>
+                            <p class="text-gray-600">
+                                Recorded video explanation of key findings and recommendations from our lead analyst.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose eComReflex for Your Audit?</h2>
+                <p class="text-xl text-gray-600">
+                    We go beyond surface-level analysis to deliver truly actionable insights.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Reason 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-store text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">eCommerce Specialists</h3>
+                    <p class="text-gray-600">
+                        Unlike general digital agencies, we focus exclusively on eCommerce and understand the unique challenges of online stores.
+                    </p>
+                </div>
+                
+                <!-- Reason 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data-Driven Approach</h3>
+                    <p class="text-gray-600">
+                        Our recommendations are based on quantitative data from your analytics and qualitative user experience analysis.
+                    </p>
+                </div>
+                
+                <!-- Reason 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-hand-holding-usd text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">ROI-Focused</h3>
+                    <p class="text-gray-600">
+                        We prioritize recommendations based on potential revenue impact and implementation complexity.
+                    </p>
+                </div>
+                
+                <!-- Reason 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-certificate text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Platform Expertise</h3>
+                    <p class="text-gray-600">
+                        Certified experts in Shopify Plus, Magento, WooCommerce, and headless commerce solutions.
+                    </p>
+                </div>
+                
+                <!-- Reason 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Actionable Insights</h3>
+                    <p class="text-gray-600">
+                        Clear, practical recommendations you can implement immediately or through our development team.
+                    </p>
+                </div>
+                
+                <!-- Reason 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Ongoing Support</h3>
+                    <p class="text-gray-600">
+                        Optional implementation support and follow-up audits to measure improvement impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Audit Success Stories</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See how our audits have helped businesses uncover growth opportunities.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Case Study 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fashion Retailer</h3>
+                        <p class="text-gray-600 mb-4">
+                            Identified $240k/year in lost revenue from mobile checkout issues and improved conversion rate by 22%.
+                        </p>
+                        <a href="#" class="text-emerald-600 font-medium hover:text-emerald-800">Read Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Home Goods Store</h3>
+                        <p class="text-gray-600 mb-4">
+                            SEO audit uncovered 68% increase potential in organic traffic through content optimization.
+                        </p>
+                        <a href="#" class="text-emerald-600 font-medium hover:text-emerald-800">Read Case Study →</a>
+                    </div>
+                </div>
+                
+                <!-- Case Study 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">B2B Industrial Supplier</h3>
+                        <p class="text-gray-600 mb-4">
+                            Technical audit reduced page load time by 3.2 seconds, decreasing bounce rate by 37%.
+                        </p>
+                        <a href="#" class="text-emerald-600 font-medium hover:text-emerald-800">Read Case Study →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Audit & Analysis FAQs</h2>
+                    <p class="text-xl text-gray-600">
+                        Answers to common questions about our eCommerce audit services.
+                    </p>
+                </div>
+                
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">How long does an eCommerce audit take?</h3>
+                            <i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Most audits are completed within 2-3 weeks from project kickoff. The timeline depends on the audit type and store complexity. Technical audits tend to be fastest (1-2 weeks), while full comprehensive audits typically take 3-4 weeks. We provide a detailed timeline during our initial consultation.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">What access do you need to perform the audit?</h3>
+                            <i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Requirements vary by audit type. At minimum, we need read-only access to your Google Analytics, Google Search Console, and eCommerce platform backend. For more technical audits, we may require staging site access or limited FTP access. We only request the minimum access needed and follow strict security protocols.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">Can you help implement the recommendations?</h3>
+                            <i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Yes! Many clients choose our implementation services after receiving their audit report. We offer both full implementation of all recommendations and selective implementation of specific high-impact items. Our audit reports are also designed to be actionable for your internal team if you prefer to handle implementation yourself.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">How do you measure the impact of your recommendations?</h3>
+                            <i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                For each recommendation, we provide an estimated impact range based on similar implementations we've done for other clients. After implementation, we can conduct follow-up measurements to quantify the actual improvement in metrics like conversion rate, page speed, or organic traffic. Many clients opt for our 6-month follow-up mini-audit to measure results.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">Do you audit paid advertising performance?</h3>
+                            <i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Our standard audits focus on your owned channels (website, SEO, etc.), but we offer a specialized PPC audit as an add-on service. This examines your advertising accounts, landing pages, conversion tracking, and overall paid media strategy. The PPC audit provides recommendations to improve ROAS and lower customer acquisition costs.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 6 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">What makes your audits different from automated tools?</h3>
+                            <i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                While we use automated tools as part of our process, our audits combine technology with human expertise. Our analysts interpret the data in the context of your specific business, prioritize findings based on potential impact, and provide tailored recommendations. We also identify issues that tools often miss, particularly in user experience and conversion optimization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-emerald-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Uncover Your Store's Hidden Potential?</h2>
+                <p class="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+                    Our audits reveal exactly what's holding your store back and how to fix it. Get started with a free consultation.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="contact.html" class="bg-white text-emerald-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center">Get a Free Consultation</a>
+                    <a href="tel:+18005551234" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-emerald-600 transition text-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Our Experts
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-400">Reflex</span></span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="ecommerce-development.html" class="text-gray-400 hover:text-white">eCommerce Development</a></li>
+                        <li><a href="ecommerce-migration-integration.html" class="text-gray-400 hover:text-white">Migration & Integration</a></li>
+                        <li><a href="ecommerce-audit-analysis.html" class="text-gray-400 hover:text-white">Audit & Analysis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">SEO Optimization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Support & Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+                            <a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach((button) => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                // Toggle content
+                content.classList.toggle('hidden');
+
+                // Rotate icon
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('transform', 'rotate-180');
+                } else {
+                    icon.classList.add('transform', 'rotate-180');
+                }
+            });
+        });
+
+        // Audit tabs
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('border-emerald-600', 'text-emerald-600');
+                    btn.classList.remove('border-blue-600', 'text-blue-600');
+                    btn.classList.remove('border-purple-600', 'text-purple-600');
+                    btn.classList.remove('border-red-600', 'text-red-600');
+                });
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                if (tabId === 'technical-audit') {
+                    button.classList.add('border-emerald-600', 'text-emerald-600');
+                } else if (tabId === 'conversion-audit') {
+                    button.classList.add('border-blue-600', 'text-blue-600');
+                } else if (tabId === 'seo-audit') {
+                    button.classList.add('border-purple-600', 'text-purple-600');
+                } else if (tabId === 'full-audit') {
+                    button.classList.add('border-red-600', 'text-red-600');
+                }
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Set first tab as active by default
+        if (tabButtons.length > 0) {
+            tabButtons[0].classList.add('border-emerald-600', 'text-emerald-600');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth',
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

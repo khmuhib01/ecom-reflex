@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {useState} from 'react';
 import {FaLaptopCode, FaExchangeAlt, FaSearch, FaChartLine, FaCogs, FaCode, FaArrowRight} from 'react-icons/fa';
 import {FaLayerGroup, FaTachometerAlt, FaProjectDiagram, FaChartBar, FaCheckCircle} from 'react-icons/fa';
+import {FaChevronDown} from 'react-icons/fa';
 
 export default function Home() {
 	const [activeIndex, setActiveIndex] = useState(null);
@@ -745,13 +746,13 @@ export default function Home() {
 										className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
 									>
 										<h3 className="text-lg font-medium text-gray-900">{item.question}</h3>
-										<i
-											className={`fas fa-chevron-down text-indigo-600 transition-transform duration-200 ${
+										<FaChevronDown
+											className={`text-indigo-600 transition-transform duration-200 ${
 												activeIndex === index ? 'transform rotate-180' : ''
 											}`}
-										></i>
+										/>
 									</button>
-									<div className={`faq-content ${activeIndex === index ? 'block' : 'hidden'} px-6 pb-6`}>
+									<div className={`${activeIndex === index ? 'block' : 'hidden'} px-6 pb-6`}>
 										<p className="text-gray-600">{item.answer}</p>
 									</div>
 								</div>
