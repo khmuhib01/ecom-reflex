@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EcomReflex - Full-Service eCommerce Development Agency</title>
+		<meta
+			name="description"
+			content="EcomReflex, a reliable eCommerce development agency? Get high-performance online stores with custom design, integrations, and SEO optimization."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.service-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+			}
+			.testimonial-card {
+				transition: all 0.3s ease;
+			}
+			.testimonial-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.process-step {
+				position: relative;
+			}
+			.process-step:not(:last-child):after {
+				content: '';
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 2px;
+				height: 40px;
+				background-color: #e5e7eb;
+			}
+			@media (min-width: 1024px) {
+				.process-step:not(:last-child):after {
+					bottom: 50%;
+					left: auto;
+					right: -20px;
+					transform: translateY(50%);
+					width: 40px;
+					height: 2px;
+				}
+			}
+			.price-card:hover {
+				transform: scale(1.03);
+				box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="#" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-600">Reflex</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="#services" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+						<a href="#process" class="text-gray-700 hover:text-indigo-600 transition">Process</a>
+						<a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition">Pricing</a>
+						<a href="#portfolio" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+						<a href="#faq" class="text-gray-700 hover:text-indigo-600 transition">FAQ</a>
+						<a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Get Started</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="#services"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Services</a
+						>
+						<a
+							href="#process"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Process</a
+						>
+						<a
+							href="#pricing"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Pricing</a
+						>
+						<a
+							href="#portfolio"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Portfolio</a
+						>
+						<a
+							href="#faq"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>FAQ</a
+						>
+						<a
+							href="#contact"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Get Started</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-32">
+				<div class="flex flex-col md:flex-row items-center">
+					<div class="md:w-1/2 mb-10 md:mb-0">
+						<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+							EcomReflex - Full-Service eCommerce Development Agency
+						</h1>
+						<p class="text-xl text-indigo-100 mb-8">
+							Your one-stop agency for eCommerce development. Custom websites, mobile optimization, payment
+							integrations, and ongoing support.
+						</p>
+						<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+							<a
+								href="#contact"
+								class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+								>Get Free Consultation</a
+							>
+							<a
+								href="#portfolio"
+								class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+								>See Our Work</a
+							>
+						</div>
+					</div>
+					<div class="md:w-1/2 flex justify-center">
+						<img
+							src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="eCommerce Dashboard"
+							class="rounded-lg shadow-2xl max-w-full h-auto"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">What We Do</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Transform your eCommerce vision into reality with our end-to-end solutions. We deliver tailored services
+						designed to build, optimize, and scale your online store for maximum performance and growth.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Service 1 -->
+					<div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300 p-6">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-laptop-code text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Ecommerce Development</h3>
+						<p class="text-gray-600 mb-4">
+							We specialize in creating custom online stores across platforms like Shopify Plus, Magento, and
+							WooCommerce. Our team designs mobile-responsive, SEO-optimized storefronts with intuitive user experiences
+							and secure checkout systems.
+						</p>
+						<a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 flex items-center">
+							Learn more <i class="fas fa-arrow-right ml-2"></i>
+						</a>
+					</div>
+
+					<!-- Service 2 -->
+					<div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300 p-6">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-exchange-alt text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Ecommerce Migration & Integration</h3>
+						<p class="text-gray-600 mb-4">
+							Our migration experts ensure smooth transitions between platforms. We handle data migration for products,
+							customers, and order history while integrating essential tools such as ERP systems, CRMs, POS, shipping
+							gateways, and payment processors.
+						</p>
+						<a href="#" class="text-purple-600 font-medium hover:text-purple-800 flex items-center">
+							Learn more <i class="fas fa-arrow-right ml-2"></i>
+						</a>
+					</div>
+
+					<!-- Service 3 -->
+					<div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300 p-6">
+						<div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-search text-blue-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Audit & Analysis</h3>
+						<p class="text-gray-600 mb-4">
+							Discover growth blockers and fix them fast. Our detailed audits cover technical performance, UX/UI design,
+							page speed, SEO health, and mobile responsiveness. We also assess your conversion funnels and security
+							setup.
+						</p>
+						<a href="#" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+							Learn more <i class="fas fa-arrow-right ml-2"></i>
+						</a>
+					</div>
+
+					<!-- Service 4 -->
+					<div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300 p-6">
+						<div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-chart-line text-green-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Growth & Optimization</h3>
+						<p class="text-gray-600 mb-4">
+							We help you scale through data-led strategies. This includes CRO tactics, A/B testing, cart abandonment
+							recovery, funnel analysis, and retention strategies. Using analytics and user behavior tracking.
+						</p>
+						<a href="#" class="text-green-600 font-medium hover:text-green-800 flex items-center">
+							Learn more <i class="fas fa-arrow-right ml-2"></i>
+						</a>
+					</div>
+
+					<!-- Service 5 -->
+					<div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300 p-6">
+						<div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-cogs text-yellow-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Support & Maintenance</h3>
+						<p class="text-gray-600 mb-4">
+							We handle 24/7 monitoring, regular maintenance, patch updates, bug fixing, speed optimization, and
+							security enhancements. Whether it's Magento or WooCommerce, we make sure your store is always stable.
+						</p>
+						<a href="#" class="text-yellow-600 font-medium hover:text-yellow-800 flex items-center">
+							Learn more <i class="fas fa-arrow-right ml-2"></i>
+						</a>
+					</div>
+
+					<!-- Service 6 -->
+					<div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300 p-6">
+						<div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-code text-red-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Custom Development</h3>
+						<p class="text-gray-600 mb-4">
+							Your business is unique—your store should be too. We develop custom Magento modules, WooCommerce plugins,
+							and tailor-made APIs to expand functionality. From advanced product options to custom checkout flows.
+						</p>
+						<a href="#" class="text-red-600 font-medium hover:text-red-800 flex items-center">
+							Learn more <i class="fas fa-arrow-right ml-2"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Why EcomReflex?</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Choosing the right development partner is more than a technical decision; it's a strategic one.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+					<!-- Feature 1 -->
+					<div class="flex">
+						<div class="flex-shrink-0 mr-6">
+							<div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-100 text-indigo-600">
+								<i class="fas fa-layer-group text-xl"></i>
+							</div>
+						</div>
+						<div>
+							<h3 class="text-xl font-bold mb-3">Multi-Platform Expertise</h3>
+							<p class="text-gray-600">
+								Our team has certified expertise in all major eCommerce platforms, including Shopify, Magento,
+								WooCommerce, and custom headless builds. We don't believe in one solution that works for everyone.
+								Instead, we design a platform that's a good fit for your business model, budget, and future growth
+								plans.
+							</p>
+						</div>
+					</div>
+
+					<!-- Feature 2 -->
+					<div class="flex">
+						<div class="flex-shrink-0 mr-6">
+							<div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-100 text-purple-600">
+								<i class="fas fa-tachometer-alt text-xl"></i>
+							</div>
+						</div>
+						<div>
+							<h3 class="text-xl font-bold mb-3">Speed, Performance & Optimization</h3>
+							<p class="text-gray-600">
+								A beautiful website is useless if it's slow or hard to use. Performance is a key part of our company. We
+								make every pixel and line of code better to make sure that websites load quickly, work well on mobile
+								devices, and look good on any device. What happened? Your website will get higher rankings, more people
+								will be interested in it, and you will get more conversions.
+							</p>
+						</div>
+					</div>
+
+					<!-- Feature 3 -->
+					<div class="flex">
+						<div class="flex-shrink-0 mr-6">
+							<div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+								<i class="fas fa-project-diagram text-xl"></i>
+							</div>
+						</div>
+						<div>
+							<h3 class="text-xl font-bold mb-3">End-to-End Capabilities</h3>
+							<p class="text-gray-600">
+								We do more than just development; we cover everything your eCommerce business needs to succeed. We offer
+								a variety of services, including API integrations, third-party tools, conversion rate optimization,
+								ongoing maintenance, SEO, and Amazon FBA/FBM services. We are here to help you grow your business.
+							</p>
+						</div>
+					</div>
+
+					<!-- Feature 4 -->
+					<div class="flex">
+						<div class="flex-shrink-0 mr-6">
+							<div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-600">
+								<i class="fas fa-chart-bar text-xl"></i>
+							</div>
+						</div>
+						<div>
+							<h3 class="text-xl font-bold mb-3">Results-Driven Strategy</h3>
+							<p class="text-gray-600">
+								We don't just build websites; we deliver results. We think about data first. We track performance at
+								every stage of your eCommerce journey and make changes quickly. We provide clear timelines, transparent
+								reporting, and proactive communication. You'll always know where we are, what's next, and what kind of
+								return on investment (ROI) you're getting.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Process Section -->
+		<section id="process" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Our e-Commerce Development Process</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">A structured approach to ensure your eCommerce success</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Step 1 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">01</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Ideation & Planning</h3>
+						<p class="text-gray-600">
+							We start by having in-depth meetings to understand your business goals, gather detailed requirements,
+							study your competitors, and define a clear plan for the project. This step is the foundation for a
+							successful build.
+						</p>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">02</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Design</h3>
+						<p class="text-gray-600">
+							We take your ideas and turn them into simple, interactive models. We will use your feedback to make
+							changes to the layout and user interface until we have a final design that matches your brand.
+						</p>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">03</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Development</h3>
+						<p class="text-gray-600">
+							Our developers bring the designs to life using clean, scalable code. We integrate all desired
+							functionalities while maintaining frequent check-ins for feedback and transparency throughout the process.
+						</p>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">04</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Testing</h3>
+						<p class="text-gray-600">
+							Quality is key. Our QA experts conduct thorough performance checks, security audits, cross-browser
+							testing, and usability analysis to ensure your store is robust, fast, and ready for scale.
+						</p>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">05</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Release</h3>
+						<p class="text-gray-600">
+							After rigorous QA testing, your website goes live—either through a soft launch or a full-scale release,
+							depending on your go-to-market plan. We ensure a smooth transition with zero disruption.
+						</p>
+					</div>
+
+					<!-- Step 6 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-indigo-600 font-bold text-xl">06</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Maintenance</h3>
+						<p class="text-gray-600">
+							Post-launch, we continue to support your store with updates, optimizations, security patches, and
+							user-driven improvements to keep performance top-notch and ensure long-term success.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Pricing Section -->
+		<section id="pricing" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Cost of High-Quality eCommerce Store Development</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						We understand that every business is unique, and so are their eCommerce needs.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+					<!-- Price Card 1 -->
+					<div
+						class="bg-white rounded-xl shadow-md overflow-hidden price-card transition duration-300 border border-gray-200"
+					>
+						<div class="p-8 text-center">
+							<h3 class="text-xl font-bold mb-4">Startup</h3>
+							<p class="text-gray-600 mb-6">
+								Ideal for early-stage businesses needing essential functionality and a fast launch with a professional
+								presence.
+							</p>
+							<div class="text-3xl font-bold text-indigo-600 mb-6">From $25,000</div>
+							<ul class="space-y-3 mb-8 text-left">
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Entry-level features
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Responsive, template-based design
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Basic product catalog
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Standard payment gateways
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Basic SEO setup
+								</li>
+							</ul>
+							<a
+								href="#contact"
+								class="block w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+								>Get Started</a
+							>
+						</div>
+					</div>
+
+					<!-- Price Card 2 -->
+					<div
+						class="bg-white rounded-xl shadow-md overflow-hidden price-card transition duration-300 border-2 border-indigo-500 transform scale-105"
+					>
+						<div class="p-8 text-center">
+							<div class="absolute top-0 right-0 bg-indigo-500 text-white px-4 py-1 text-sm font-bold rounded-bl-lg">
+								Popular
+							</div>
+							<h3 class="text-xl font-bold mb-4">Midsized Business</h3>
+							<p class="text-gray-600 mb-6">Perfect for growing brands that need more than just the basics.</p>
+							<div class="text-3xl font-bold text-indigo-600 mb-6">From $55,000</div>
+							<ul class="space-y-3 mb-8 text-left">
+								<li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Custom design</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Scalable architecture
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Advanced product options
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Multiple payment options
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> CRM integration
+								</li>
+							</ul>
+							<a
+								href="#contact"
+								class="block w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+								>Get Started</a
+							>
+						</div>
+					</div>
+
+					<!-- Price Card 3 -->
+					<div
+						class="bg-white rounded-xl shadow-md overflow-hidden price-card transition duration-300 border border-gray-200"
+					>
+						<div class="p-8 text-center">
+							<h3 class="text-xl font-bold mb-4">Enterprise</h3>
+							<p class="text-gray-600 mb-6">
+								Tailored for high-traffic, multi-channel, or B2B operations requiring enterprise-grade functionality.
+							</p>
+							<div class="text-3xl font-bold text-indigo-600 mb-6">From $200,000</div>
+							<ul class="space-y-3 mb-8 text-left">
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Advanced custom development
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Business logic automation
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Full system integrations
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Multi-store management
+								</li>
+								<li class="flex items-center">
+									<i class="fas fa-check-circle text-green-500 mr-2"></i> Dedicated support team
+								</li>
+							</ul>
+							<a
+								href="#contact"
+								class="block w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+								>Get Started</a
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center mt-12">
+					<p class="text-gray-600 mb-4">
+						Need a custom solution? Tell us about your project and we'll prepare a tailored quote.
+					</p>
+					<a
+						href="#contact"
+						class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+					>
+						Request a Custom Quote
+						<i class="fas fa-arrow-right ml-2"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Portfolio Section -->
+		<section id="portfolio" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">See how we've helped brands achieve remarkable growth</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Case Study 1 -->
+					<div class="rounded-xl overflow-hidden shadow-lg group">
+						<div class="relative overflow-hidden h-64">
+							<img
+								src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+								alt="Case Study"
+								class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+							/>
+							<div
+								class="absolute inset-0 bg-indigo-600 opacity-0 group-hover:opacity-75 transition duration-300 flex items-center justify-center"
+							>
+								<span class="text-white font-bold text-lg">View Case Study</span>
+							</div>
+						</div>
+						<div class="p-6">
+							<div class="flex justify-between items-start mb-2">
+								<h3 class="text-xl font-bold">Luxe Skincare</h3>
+								<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">+320% ROAS</span>
+							</div>
+							<p class="text-gray-600 mb-4">
+								Premium skincare brand scaled from $50k to $500k/month in 6 months through our full-funnel marketing
+								strategy.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Shopify Plus</span>
+								<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Facebook Ads</span>
+								<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Email Flows</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Case Study 2 -->
+					<div class="rounded-xl overflow-hidden shadow-lg group">
+						<div class="relative overflow-hidden h-64">
+							<img
+								src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1099&q=80"
+								alt="Case Study"
+								class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+							/>
+							<div
+								class="absolute inset-0 bg-indigo-600 opacity-0 group-hover:opacity-75 transition duration-300 flex items-center justify-center"
+							>
+								<span class="text-white font-bold text-lg">View Case Study</span>
+							</div>
+						</div>
+						<div class="p-6">
+							<div class="flex justify-between items-start mb-2">
+								<h3 class="text-xl font-bold">UrbanTech</h3>
+								<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">+180% Revenue</span>
+							</div>
+							<p class="text-gray-600 mb-4">
+								Tech accessories brand increased conversion rate by 42% through our UX redesign and CRO strategy.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">BigCommerce</span>
+								<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Google Ads</span>
+								<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">A/B Testing</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Case Study 3 -->
+					<div class="rounded-xl overflow-hidden shadow-lg group">
+						<div class="relative overflow-hidden h-64">
+							<img
+								src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80"
+								alt="Case Study"
+								class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+							/>
+							<div
+								class="absolute inset-0 bg-indigo-600 opacity-0 group-hover:opacity-75 transition duration-300 flex items-center justify-center"
+							>
+								<span class="text-white font-bold text-lg">View Case Study</span>
+							</div>
+						</div>
+						<div class="p-6">
+							<div class="flex justify-between items-start mb-2">
+								<h3 class="text-xl font-bold">PureFit Nutrition</h3>
+								<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">+400% Subscribers</span>
+							</div>
+							<p class="text-gray-600 mb-4">
+								Health supplement company grew email list by 400% and increased repeat purchase rate by 65%.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Shopify</span>
+								<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Klaviyo</span>
+								<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SMS Marketing</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center mt-12">
+					<a
+						href="#"
+						class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+					>
+						View All Case Studies
+						<i class="fas fa-arrow-right ml-2"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section id="faq" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Answers to common questions about our eCommerce services
+					</p>
+				</div>
+
+				<div class="max-w-3xl mx-auto">
+					<div class="space-y-4">
+						<!-- FAQ Item 1 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">What services does EcomReflex offer?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									EcomReflex offers a variety of services related to e-commerce, such as designing custom stores, moving
+									platforms, creating headless commerce, integrating APIs, improving performance, and providing ongoing
+									maintenance. We also offer digital strategy, SEO, and UI/UX enhancements designed for eCommerce brands
+									that want to grow.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 2 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Which eCommerce platforms do you work with?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We work with many different platforms, including Shopify, Shopify Plus, WooCommerce, Magento (Adobe
+									Commerce), BigCommerce, and custom solutions using headless frameworks like Next.js and React.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 3 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Do you provide custom design and development?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Absolutely. Every store we build is uniquely designed to reflect your brand and meet your specific
+									business needs. Our team handles everything from UI/UX design to full-stack development.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 4 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How long does it take to build an eCommerce website?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									How long this will take depends on how complicated the project is. It usually takes between 4 and 12
+									weeks to build a custom store. For platform migrations or large-scale projects, the timeline may be
+									longer. We provide a detailed plan for the project during the discovery phase.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 5 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">What's your pricing model?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Our prices can change based on the project. After we talk about what you need and look at what the job
+									will cost, we will give you a detailed proposal with a price. We also offer retainer and hourly plans
+									for ongoing work and support.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 6 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Can you help with an existing eCommerce site?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Yes, we often work with clients who already have stores. We help them with redesigns, feature
+									enhancements, speed optimization, or third-party integrations.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 7 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Do you offer post-launch support?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Yes. We offer ongoing support and maintenance packages. These include updates, bug fixes, security
+									monitoring, performance tuning, and feature rollouts.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 8 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Will my website be mobile-optimized?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Absolutely. We build websites that look great on any device. They work well on desktops, laptops, and
+									phones.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 9 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Do you offer eCommerce SEO and marketing services?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Yes. Along with technical SEO for e-commerce (like speed optimization and structured data), we offer
+									content strategy, landing page optimization, and integrations with email marketing and analytics
+									tools.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 10 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">
+									Can you integrate my store with third-party tools like CRMs or ERPs?
+								</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We can help you connect your e-commerce store to other tools, like CRMs (such as HubSpot and
+									Salesforce) and ERPs (like NetSuite and SAP). We can also connect it to payment gateways, shipping
+									APIs, and marketing platforms.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 11 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">What makes EcomReflex different from other agencies?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We combine deep e-commerce expertise with a strategy-first approach. We don't just build websites; we
+									build ecosystems that support your brand's long-term growth. Our clients like that we are honest,
+									fast, and pay close attention to detail.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 12 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How do I get started?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Just send us a message through our contact form or schedule a free discovery call. We'll talk about
+									your goals, what you're doing now, and how we can help you grow.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section id="contact" class="py-20 bg-indigo-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl font-bold mb-6">Got a Project in Mind?</h2>
+						<p class="text-xl text-indigo-100 max-w-3xl mx-auto">
+							Our experts are ready to make it happen. Share with us now!
+						</p>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+						<div class="grid grid-cols-1 md:grid-cols-2">
+							<div class="p-8 md:p-12 bg-indigo-700">
+								<h3 class="text-2xl font-bold mb-6">Let's Talk About Your Project</h3>
+								<div class="space-y-6">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-300">
+											<i class="fas fa-envelope text-xl"></i>
+										</div>
+										<div class="ml-4">
+											<h4 class="font-bold">Email Us</h4>
+											<a href="mailto:hello@ecomreflex.com" class="text-indigo-200 hover:text-white"
+												>hello@ecomreflex.com</a
+											>
+										</div>
+									</div>
+
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-300">
+											<i class="fas fa-phone-alt text-xl"></i>
+										</div>
+										<div class="ml-4">
+											<h4 class="font-bold">Call Us</h4>
+											<a href="tel:+18005551234" class="text-indigo-200 hover:text-white">+1 (800) 555-1234</a>
+										</div>
+									</div>
+
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-300">
+											<i class="fas fa-map-marker-alt text-xl"></i>
+										</div>
+										<div class="ml-4">
+											<h4 class="font-bold">Visit Us</h4>
+											<p class="text-indigo-200">123 Commerce St, Suite 500<br />San Francisco, CA 94107</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="p-8 md:p-12">
+								<form id="contactForm" class="space-y-4">
+									<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+										<div>
+											<label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name*</label>
+											<input
+												type="text"
+												id="firstName"
+												name="firstName"
+												required
+												class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+											/>
+										</div>
+										<div>
+											<label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name*</label>
+											<input
+												type="text"
+												id="lastName"
+												name="lastName"
+												required
+												class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+											/>
+										</div>
+									</div>
+
+									<div>
+										<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+										<input
+											type="email"
+											id="email"
+											name="email"
+											required
+											class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+										/>
+									</div>
+
+									<div>
+										<label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+										<input
+											type="tel"
+											id="phone"
+											name="phone"
+											class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+										/>
+									</div>
+
+									<div>
+										<label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Interest*</label>
+										<select
+											id="service"
+											name="service"
+											required
+											class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+										>
+											<option value="">Select a service</option>
+											<option value="ecommerce-development">Ecommerce Development</option>
+											<option value="migration-integration">Migration & Integration</option>
+											<option value="audit-analysis">Audit & Analysis</option>
+											<option value="growth-optimization">Growth & Optimization</option>
+											<option value="support-maintenance">Support & Maintenance</option>
+											<option value="custom-development">Custom Development</option>
+										</select>
+									</div>
+
+									<div>
+										<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Project Details*</label>
+										<textarea
+											id="message"
+											name="message"
+											rows="4"
+											required
+											class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+										></textarea>
+									</div>
+
+									<div class="flex items-start">
+										<div class="flex items-center h-5">
+											<input
+												id="agree"
+												name="agree"
+												type="checkbox"
+												required
+												class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+											/>
+										</div>
+										<div class="ml-3 text-sm">
+											<label for="agree" class="font-medium text-gray-700"
+												>I agree to the
+												<a href="#" class="text-indigo-600 hover:text-indigo-500">privacy policy</a></label
+											>
+										</div>
+									</div>
+
+									<button
+										type="submit"
+										class="w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+									>
+										Send Message
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="#" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-400">Reflex</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">
+							Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+						</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Services</h3>
+						<ul class="space-y-3">
+							<li><a href="#" class="text-gray-400 hover:text-white">Ecommerce Development</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Migration & Integration</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Audit & Analysis</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Growth & Optimization</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Support & Maintenance</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Our Team</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// FAQ accordion
+			document.querySelectorAll('.faq-toggle').forEach((button) => {
+				button.addEventListener('click', () => {
+					const content = button.nextElementSibling;
+					const icon = button.querySelector('i');
+
+					// Toggle content
+					content.classList.toggle('hidden');
+
+					// Rotate icon
+					if (content.classList.contains('hidden')) {
+						icon.classList.remove('transform', 'rotate-180');
+					} else {
+						icon.classList.add('transform', 'rotate-180');
+					}
+				});
+			});
+
+			// Form submission
+			document.getElementById('contactForm').addEventListener('submit', function (e) {
+				e.preventDefault();
+				// Here you would typically send the form data to your server
+				alert('Thank you for your message! We will get back to you soon.');
+				this.reset();
+			});
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Our Process | EcomReflex - Full-Service eCommerce Development Agency</title>
+		<meta
+			name="description"
+			content="Discover our proven eCommerce development process designed to deliver high-performance online stores on time and on budget."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.process-step {
+				position: relative;
+				padding-left: 2.5rem;
+			}
+			.process-step:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 1.75rem;
+				height: 1.75rem;
+				border-radius: 50%;
+				background-color: #4f46e5;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				font-weight: bold;
+			}
+			.process-step:nth-child(1):before { content: '1'; }
+			.process-step:nth-child(2):before { content: '2'; }
+			.process-step:nth-child(3):before { content: '3'; }
+			.process-step:nth-child(4):before { content: '4'; }
+			.process-step:nth-child(5):before { content: '5'; }
+			.process-step:nth-child(6):before { content: '6'; }
+			.process-step:not(:last-child):after {
+				content: '';
+				position: absolute;
+				left: 0.875rem;
+				top: 1.75rem;
+				width: 2px;
+				height: calc(100% - 1.75rem);
+				background-color: #e5e7eb;
+			}
+			@media (min-width: 1024px) {
+				.process-step {
+					padding-left: 0;
+					padding-top: 2.5rem;
+				}
+				.process-step:before {
+					left: 50%;
+					top: 0;
+					transform: translateX(-50%);
+				}
+				.process-step:not(:last-child):after {
+					left: 50%;
+					top: 1.75rem;
+					width: calc(100% - 1.75rem);
+					height: 2px;
+					transform: translateX(-50%);
+				}
+			}
+			.process-card {
+				transition: all 0.3s ease;
+			}
+			.process-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-600">Reflex</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="services.html" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+						<a href="process.html" class="text-indigo-600 font-medium transition">Process</a>
+						<a href="pricing.html" class="text-gray-700 hover:text-indigo-600 transition">Pricing</a>
+						<a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+						<a href="blog.html" class="text-gray-700 hover:text-indigo-600 transition">Blog</a>
+						<a
+							href="contact.html"
+							class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Get Started</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="services.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Services</a
+						>
+						<a
+							href="process.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50"
+							>Process</a
+						>
+						<a
+							href="pricing.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Pricing</a
+						>
+						<a
+							href="portfolio.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Portfolio</a
+						>
+						<a
+							href="blog.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Blog</a
+						>
+						<a
+							href="contact.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Get Started</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20">
+				<div class="max-w-3xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Our Proven eCommerce Development Process</h1>
+					<p class="text-xl text-indigo-100 mb-8">
+						A structured, transparent approach to building high-converting online stores that drive results.
+					</p>
+					<a
+						href="#contact"
+						class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"
+						>Get Started Today</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Process Overview -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">How We Build Successful eCommerce Stores</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Our 6-phase methodology ensures your project stays on track, on budget, and delivers maximum ROI.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-6 gap-8 mb-20">
+					<!-- Step 1 -->
+					<div class="process-step bg-gray-50 p-6 rounded-lg">
+						<h3 class="text-xl font-bold mb-3">Discovery</h3>
+						<p class="text-gray-600">
+							We start by deeply understanding your business, goals, and technical requirements to create a tailored roadmap.
+						</p>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="process-step bg-gray-50 p-6 rounded-lg">
+						<h3 class="text-xl font-bold mb-3">Design</h3>
+						<p class="text-gray-600">
+							Our designers create intuitive, brand-aligned interfaces focused on conversion and user experience.
+						</p>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="process-step bg-gray-50 p-6 rounded-lg">
+						<h3 class="text-xl font-bold mb-3">Development</h3>
+						<p class="text-gray-600">
+							Engineers build your store with clean, scalable code while maintaining regular communication.
+						</p>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="process-step bg-gray-50 p-6 rounded-lg">
+						<h3 class="text-xl font-bold mb-3">Testing</h3>
+						<p class="text-gray-600">
+							We rigorously test every aspect to ensure performance, security, and flawless functionality.
+						</p>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="process-step bg-gray-50 p-6 rounded-lg">
+						<h3 class="text-xl font-bold mb-3">Launch</h3>
+						<p class="text-gray-600">
+							Your store goes live with minimal disruption, backed by our comprehensive launch plan.
+						</p>
+					</div>
+
+					<!-- Step 6 -->
+					<div class="process-step bg-gray-50 p-6 rounded-lg">
+						<h3 class="text-xl font-bold mb-3">Optimize</h3>
+						<p class="text-gray-600">
+							Post-launch, we analyze performance and implement continuous improvements for growth.
+						</p>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<a
+						href="#detailed-process"
+						class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+					>
+						Explore Our Process in Detail
+						<i class="fas fa-arrow-down ml-2"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Detailed Process -->
+		<section id="detailed-process" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Our eCommerce Development Process</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Transparent, collaborative, and designed for your success
+					</p>
+				</div>
+
+				<div class="max-w-4xl mx-auto space-y-12">
+					<!-- Phase 1 -->
+					<div class="process-card bg-white p-8 rounded-xl shadow-md">
+						<div class="flex flex-col md:flex-row">
+							<div class="md:w-1/3 mb-6 md:mb-0">
+								<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-lightbulb text-indigo-600 text-2xl"></i>
+								</div>
+								<h3 class="text-2xl font-bold mb-2">1. Discovery & Planning</h3>
+								<p class="text-indigo-600 font-medium">1-2 weeks</p>
+							</div>
+							<div class="md:w-2/3">
+								<p class="text-gray-600 mb-4">
+									We begin with an in-depth discovery phase to understand your business objectives, target audience,
+									competitors, and technical requirements. This foundation ensures we build the right solution for your
+									needs.
+								</p>
+								<h4 class="font-bold mb-2">Key Activities:</h4>
+								<ul class="list-disc pl-5 space-y-2 text-gray-600 mb-4">
+									<li>Business requirements gathering</li>
+									<li>Competitor and market analysis</li>
+									<li>Technical assessment</li>
+									<li>Project roadmap creation</li>
+									<li>KPI definition and success metrics</li>
+								</ul>
+								<h4 class="font-bold mb-2">Deliverables:</h4>
+								<div class="flex flex-wrap gap-2">
+									<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Project Plan</span>
+									<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Technical Specification</span>
+									<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Sitemap</span>
+									<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Wireframes</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Phase 2 -->
+					<div class="process-card bg-white p-8 rounded-xl shadow-md">
+						<div class="flex flex-col md:flex-row">
+							<div class="md:w-1/3 mb-6 md:mb-0">
+								<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-paint-brush text-purple-600 text-2xl"></i>
+								</div>
+								<h3 class="text-2xl font-bold mb-2">2. UI/UX Design</h3>
+								<p class="text-purple-600 font-medium">2-4 weeks</p>
+							</div>
+							<div class="md:w-2/3">
+								<p class="text-gray-600 mb-4">
+									Our design team creates visually stunning, conversion-focused interfaces that reflect your brand
+									identity while prioritizing user experience and accessibility.
+								</p>
+								<h4 class="font-bold mb-2">Key Activities:</h4>
+								<ul class="list-disc pl-5 space-y-2 text-gray-600 mb-4">
+									<li>Brand alignment and mood boards</li>
+									<li>High-fidelity mockups creation</li>
+									<li>Mobile-first responsive design</li>
+									<li>User flow optimization</li>
+									<li>Interactive prototyping</li>
+								</ul>
+								<h4 class="font-bold mb-2">Deliverables:</h4>
+								<div class="flex flex-wrap gap-2">
+									<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">UI Design System</span>
+									<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Interactive Prototypes</span>
+									<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Style Guide</span>
+									<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Asset Library</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Phase 3 -->
+					<div class="process-card bg-white p-8 rounded-xl shadow-md">
+						<div class="flex flex-col md:flex-row">
+							<div class="md:w-1/3 mb-6 md:mb-0">
+								<div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-code text-blue-600 text-2xl"></i>
+								</div>
+								<h3 class="text-2xl font-bold mb-2">3. Development</h3>
+								<p class="text-blue-600 font-medium">4-12 weeks</p>
+							</div>
+							<div class="md:w-2/3">
+								<p class="text-gray-600 mb-4">
+									Our developers bring designs to life using best practices and modern technologies, with regular updates
+									to keep you informed throughout the process.
+								</p>
+								<h4 class="font-bold mb-2">Key Activities:</h4>
+								<ul class="list-disc pl-5 space-y-2 text-gray-600 mb-4">
+									<li>Frontend and backend development</li>
+									<li>Third-party integrations</li>
+									<li>CMS setup and configuration</li>
+									<li>Payment gateway implementation</li>
+									<li>Performance optimization</li>
+									<li>Bi-weekly progress demos</li>
+								</ul>
+								<h4 class="font-bold mb-2">Deliverables:</h4>
+								<div class="flex flex-wrap gap-2">
+									<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Development Environment</span>
+									<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Staging Site</span>
+									<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">API Documentation</span>
+									<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Admin Training</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Phase 4 -->
+					<div class="process-card bg-white p-8 rounded-xl shadow-md">
+						<div class="flex flex-col md:flex-row">
+							<div class="md:w-1/3 mb-6 md:mb-0">
+								<div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-search text-green-600 text-2xl"></i>
+								</div>
+								<h3 class="text-2xl font-bold mb-2">4. Quality Assurance</h3>
+								<p class="text-green-600 font-medium">2-3 weeks</p>
+							</div>
+							<div class="md:w-2/3">
+								<p class="text-gray-600 mb-4">
+									We conduct rigorous testing to ensure your store performs flawlessly across all devices, browsers, and
+									use cases before launch.
+								</p>
+								<h4 class="font-bold mb-2">Key Activities:</h4>
+								<ul class="list-disc pl-5 space-y-2 text-gray-600 mb-4">
+									<li>Functional testing</li>
+									<li>Cross-browser and device testing</li>
+									<li>Performance and load testing</li>
+									<li>Security audit</li>
+									<li>Accessibility compliance check</li>
+									<li>User acceptance testing (UAT)</li>
+								</ul>
+								<h4 class="font-bold mb-2">Deliverables:</h4>
+								<div class="flex flex-wrap gap-2">
+									<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Test Reports</span>
+									<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Performance Metrics</span>
+									<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Bug Fix Log</span>
+									<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Security Certificate</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Phase 5 -->
+					<div class="process-card bg-white p-8 rounded-xl shadow-md">
+						<div class="flex flex-col md:flex-row">
+							<div class="md:w-1/3 mb-6 md:mb-0">
+								<div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-rocket text-yellow-600 text-2xl"></i>
+								</div>
+								<h3 class="text-2xl font-bold mb-2">5. Launch</h3>
+								<p class="text-yellow-600 font-medium">1-2 weeks</p>
+							</div>
+							<div class="md:w-2/3">
+								<p class="text-gray-600 mb-4">
+									We manage a smooth, stress-free launch with comprehensive planning to ensure zero disruption to your
+									business operations.
+								</p>
+								<h4 class="font-bold mb-2">Key Activities:</h4>
+								<ul class="list-disc pl-5 space-y-2 text-gray-600 mb-4">
+									<li>Final content population</li>
+									<li>DNS and hosting configuration</li>
+									<li>SSL certificate installation</li>
+									<li>Performance optimization</li>
+									<li>Soft launch and monitoring</li>
+									<li>Full production launch</li>
+								</ul>
+								<h4 class="font-bold mb-2">Deliverables:</h4>
+								<div class="flex flex-wrap gap-2">
+									<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Launch Checklist</span>
+									<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Backup Plan</span>
+									<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Analytics Setup</span>
+									<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Post-Launch Report</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Phase 6 -->
+					<div class="process-card bg-white p-8 rounded-xl shadow-md">
+						<div class="flex flex-col md:flex-row">
+							<div class="md:w-1/3 mb-6 md:mb-0">
+								<div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-chart-line text-red-600 text-2xl"></i>
+								</div>
+								<h3 class="text-2xl font-bold mb-2">6. Optimization & Growth</h3>
+								<p class="text-red-600 font-medium">Ongoing</p>
+							</div>
+							<div class="md:w-2/3">
+								<p class="text-gray-600 mb-4">
+									After launch, we continue to monitor, optimize, and enhance your store to drive continuous improvement
+									and business growth.
+								</p>
+								<h4 class="font-bold mb-2">Key Activities:</h4>
+								<ul class="list-disc pl-5 space-y-2 text-gray-600 mb-4">
+									<li>Performance monitoring</li>
+									<li>Conversion rate optimization</li>
+									<li>SEO enhancements</li>
+									<li>Security updates</li>
+									<li>Feature additions</li>
+									<li>Quarterly strategy reviews</li>
+								</ul>
+								<h4 class="font-bold mb-2">Deliverables:</h4>
+								<div class="flex flex-wrap gap-2">
+									<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Monthly Reports</span>
+									<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Optimization Roadmap</span>
+									<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Support Tickets</span>
+									<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Feature Updates</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Our Process Works -->
+		<section class="py-20 bg-indigo-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl md:text-4xl font-bold mb-6">Why Our Process Delivers Results</h2>
+						<p class="text-xl text-indigo-100 max-w-3xl mx-auto">
+							Our methodology is designed to minimize risk, maximize efficiency, and ensure your store performs at its best.
+						</p>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div class="bg-white bg-opacity-10 p-6 rounded-lg">
+							<div class="flex items-start">
+								<div class="flex-shrink-0 mt-1 text-indigo-300">
+									<i class="fas fa-clipboard-check text-2xl"></i>
+								</div>
+								<div class="ml-4">
+									<h4 class="text-xl font-bold mb-3">Structured Yet Flexible</h4>
+									<p class="text-indigo-100">
+										While we follow a proven framework, we adapt our approach to your unique business needs and evolving
+										market conditions.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="bg-white bg-opacity-10 p-6 rounded-lg">
+							<div class="flex items-start">
+								<div class="flex-shrink-0 mt-1 text-indigo-300">
+									<i class="fas fa-comments text-2xl"></i>
+								</div>
+								<div class="ml-4">
+									<h4 class="text-xl font-bold mb-3">Transparent Communication</h4>
+									<p class="text-indigo-100">
+										Regular updates, demos, and reviews ensure you're always informed and able to provide feedback at key
+										milestones.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="bg-white bg-opacity-10 p-6 rounded-lg">
+							<div class="flex items-start">
+								<div class="flex-shrink-0 mt-1 text-indigo-300">
+									<i class="fas fa-tachometer-alt text-2xl"></i>
+								</div>
+								<div class="ml-4">
+									<h4 class="text-xl font-bold mb-3">Performance-Focused</h4>
+									<p class="text-indigo-100">
+										We prioritize speed, security, and scalability at every stage to ensure your store can handle growth
+										and traffic spikes.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="bg-white bg-opacity-10 p-6 rounded-lg">
+							<div class="flex items-start">
+								<div class="flex-shrink-0 mt-1 text-indigo-300">
+									<i class="fas fa-chart-pie text-2xl"></i>
+								</div>
+								<div class="ml-4">
+									<h4 class="text-xl font-bold mb-3">Data-Driven Decisions</h4>
+									<p class="text-indigo-100">
+										We base our recommendations on analytics and user behavior, not guesswork, to continuously improve
+										your store's performance.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section id="contact" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+						Let's discuss how our proven process can help you build a high-performing eCommerce store.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="contact.html"
+							class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+							>Get Free Consultation</a
+						>
+						<a
+							href="tel:+18005551234"
+							class="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-indigo-50 transition"
+							><i class="fas fa-phone-alt mr-2"></i> Call Us Now</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-400">Reflex</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">
+							Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+						</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Services</h3>
+						<ul class="space-y-3">
+							<li><a href="services.html" class="text-gray-400 hover:text-white">eCommerce Development</a></li>
+							<li><a href="services.html" class="text-gray-400 hover:text-white">Migration & Integration</a></li>
+							<li><a href="services.html" class="text-gray-400 hover:text-white">Audit & Analysis</a></li>
+							<li><a href="services.html" class="text-gray-400 hover:text-white">Growth & Optimization</a></li>
+							<li><a href="services.html" class="text-gray-400 hover:text-white">Support & Maintenance</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="team.html" class="text-gray-400 hover:text-white">Our Team</a></li>
+							<li><a href="portfolio.html" class="text-gray-400 hover:text-white">Case Studies</a></li>
+							<li><a href="careers.html" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="terms.html" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="cookies.html" class="text-gray-400 hover:text-white">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

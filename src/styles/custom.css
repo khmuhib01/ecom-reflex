@@ -1,0 +1,51 @@
+/* Header footer and home page css*/
+
+.hero-gradient {
+	background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+.service-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+}
+.testimonial-card {
+	transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.mobile-menu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+}
+.mobile-menu.open {
+	max-height: 500px;
+}
+.process-step {
+	position: relative;
+}
+.process-step:not(:last-child):after {
+	content: '';
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2px;
+	height: 40px;
+	background-color: #e5e7eb;
+}
+@media (min-width: 1024px) {
+	.process-step:not(:last-child):after {
+		bottom: 50%;
+		left: auto;
+		right: -20px;
+		transform: translateY(50%);
+		width: 40px;
+		height: 2px;
+	}
+}
+.price-card:hover {
+	transform: scale(1.03);
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}

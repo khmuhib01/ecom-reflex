@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Our Services | EcomReflex - Full-Service eCommerce Development Agency</title>
+		<meta
+			name="description"
+			content="Explore our comprehensive eCommerce services including development, migration, optimization, and ongoing support."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.service-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.service-feature-list li {
+				position: relative;
+				padding-left: 1.75rem;
+				margin-bottom: 0.75rem;
+			}
+			.service-feature-list li:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0.5rem;
+				width: 0.75rem;
+				height: 0.75rem;
+				background-color: #4f46e5;
+				border-radius: 50%;
+			}
+			.platform-badge {
+				display: inline-block;
+				background-color: #e0e7ff;
+				color: #4f46e5;
+				padding: 0.25rem 0.75rem;
+				border-radius: 9999px;
+				font-size: 0.75rem;
+				font-weight: 600;
+				margin-right: 0.5rem;
+				margin-bottom: 0.5rem;
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-600">Reflex</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="services.html" class="text-indigo-600 font-medium transition">Services</a>
+						<a href="process.html" class="text-gray-700 hover:text-indigo-600 transition">Process</a>
+						<a href="pricing.html" class="text-gray-700 hover:text-indigo-600 transition">Pricing</a>
+						<a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+						<a href="blog.html" class="text-gray-700 hover:text-indigo-600 transition">Blog</a>
+						<a
+							href="contact.html"
+							class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Get Started</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="services.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50"
+							>Services</a
+						>
+						<a
+							href="process.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Process</a
+						>
+						<a
+							href="pricing.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Pricing</a
+						>
+						<a
+							href="portfolio.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Portfolio</a
+						>
+						<a
+							href="blog.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Blog</a
+						>
+						<a
+							href="contact.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Get Started</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20">
+				<div class="max-w-3xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Our eCommerce Services</h1>
+					<p class="text-xl text-indigo-100 mb-8">
+						Comprehensive solutions to build, optimize, and scale your online store for maximum performance and growth.
+					</p>
+					<a
+						href="#contact"
+						class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"
+						>Get Free Consultation</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">End-to-End eCommerce Solutions</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						From initial setup to ongoing optimization, we provide everything your online business needs to succeed.
+					</p>
+				</div>
+
+				<!-- Service 1 -->
+				<div class="flex flex-col lg:flex-row items-center mb-20">
+					<div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-laptop-code text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-4">eCommerce Development</h3>
+						<p class="text-gray-600 mb-6">
+							We specialize in creating custom online stores that are tailored to your brand and business needs. Our
+							development process focuses on creating mobile-responsive, SEO-optimized storefronts with intuitive user
+							experiences and secure checkout systems.
+						</p>
+						<ul class="service-feature-list mb-8">
+							<li>Custom storefront design and development</li>
+							<li>Mobile-first responsive design</li>
+							<li>SEO-optimized architecture</li>
+							<li>Secure payment gateways integration</li>
+							<li>Product catalog setup and management</li>
+							<li>Checkout optimization</li>
+						</ul>
+						<div class="mb-6">
+							<h4 class="font-bold mb-2">Platforms we work with:</h4>
+							<div>
+								<span class="platform-badge">Shopify</span>
+								<span class="platform-badge">Shopify Plus</span>
+								<span class="platform-badge">Magento</span>
+								<span class="platform-badge">WooCommerce</span>
+								<span class="platform-badge">BigCommerce</span>
+								<span class="platform-badge">Custom Solutions</span>
+							</div>
+						</div>
+						<a
+							href="contact.html"
+							class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+							>Start Your Project</a
+						>
+					</div>
+					<div class="lg:w-1/2">
+						<img
+							src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="eCommerce Development"
+							class="rounded-lg shadow-xl w-full"
+						/>
+					</div>
+				</div>
+
+				<!-- Service 2 -->
+				<div class="flex flex-col lg:flex-row items-center mb-20">
+					<div class="lg:w-1/2 order-2 lg:order-1 lg:pr-10">
+						<img
+							src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Migration & Integration"
+							class="rounded-lg shadow-xl w-full"
+						/>
+					</div>
+					<div class="lg:w-1/2 order-1 lg:order-2 mb-10 lg:mb-0 lg:pl-10">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-exchange-alt text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-4">Migration & Integration</h3>
+						<p class="text-gray-600 mb-6">
+							Our migration experts ensure smooth transitions between platforms while maintaining data integrity and
+							minimizing downtime. We also integrate all the essential tools your business needs to operate efficiently.
+						</p>
+						<ul class="service-feature-list mb-8">
+							<li>Platform-to-platform migrations</li>
+							<li>Data migration (products, customers, orders)</li>
+							<li>ERP system integrations</li>
+							<li>CRM integrations (Salesforce, HubSpot)</li>
+							<li>Payment gateway connections</li>
+							<li>Shipping and fulfillment system integrations</li>
+							<li>Custom API development</li>
+						</ul>
+						<a
+							href="contact.html"
+							class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+							>Discuss Your Migration</a
+						>
+					</div>
+				</div>
+
+				<!-- Service 3 -->
+				<div class="flex flex-col lg:flex-row items-center mb-20">
+					<div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+						<div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-search text-blue-600 text-2xl"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-4">Audit & Analysis</h3>
+						<p class="text-gray-600 mb-6">
+							Our comprehensive audits identify performance bottlenecks, security vulnerabilities, and growth opportunities
+							in your eCommerce operation. We provide actionable insights to improve your store's performance.
+						</p>
+						<ul class="service-feature-list mb-8">
+							<li>Technical performance audit</li>
+							<li>UX/UI design review</li>
+							<li>Page speed analysis</li>
+							<li>SEO health check</li>
+							<li>Mobile responsiveness evaluation</li>
+							<li>Conversion funnel analysis</li>
+							<li>Security assessment</li>
+							<li>Competitive benchmarking</li>
+						</ul>
+						<a
+							href="contact.html"
+							class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+							>Request an Audit</a
+						>
+					</div>
+					<div class="lg:w-1/2">
+						<img
+							src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Audit & Analysis"
+							class="rounded-lg shadow-xl w-full"
+						/>
+					</div>
+				</div>
+
+				<!-- Service 4 -->
+				<div class="flex flex-col lg:flex-row items-center mb-20">
+					<div class="lg:w-1/2 order-2 lg:order-1 lg:pr-10">
+						<img
+							src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Growth & Optimization"
+							class="rounded-lg shadow-xl w-full"
+						/>
+					</div>
+					<div class="lg:w-1/2 order-1 lg:order-2 mb-10 lg:mb-0 lg:pl-10">
+						<div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-chart-line text-green-600 text-2xl"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-4">Growth & Optimization</h3>
+						<p class="text-gray-600 mb-6">
+							We help you scale through data-led strategies that improve conversion rates, increase average order value,
+							and boost customer retention.
+						</p>
+						<ul class="service-feature-list mb-8">
+							<li>Conversion rate optimization (CRO)</li>
+							<li>A/B and multivariate testing</li>
+							<li>Cart abandonment recovery</li>
+							<li>Customer retention strategies</li>
+							<li>Upsell and cross-sell implementation</li>
+							<li>Personalization and recommendation engines</li>
+							<li>Analytics and tracking setup</li>
+							<li>Performance marketing integration</li>
+						</ul>
+						<a
+							href="contact.html"
+							class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+							>Optimize Your Store</a
+						>
+					</div>
+				</div>
+
+				<!-- Service 5 -->
+				<div class="flex flex-col lg:flex-row items-center mb-20">
+					<div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+						<div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-cogs text-yellow-600 text-2xl"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-4">Support & Maintenance</h3>
+						<p class="text-gray-600 mb-6">
+							Your eCommerce store requires ongoing care to perform at its best. Our support packages ensure your store
+							remains secure, up-to-date, and fully functional at all times.
+						</p>
+						<ul class="service-feature-list mb-8">
+							<li>24/7 monitoring and incident response</li>
+							<li>Regular maintenance and updates</li>
+							<li>Bug fixes and troubleshooting</li>
+							<li>Performance optimization</li>
+							<li>Security patches and enhancements</li>
+							<li>Backup management</li>
+							<li>Content updates</li>
+							<li>Dedicated support team</li>
+						</ul>
+						<a
+							href="contact.html"
+							class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+							>Explore Support Plans</a
+						>
+					</div>
+					<div class="lg:w-1/2">
+						<img
+							src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Support & Maintenance"
+							class="rounded-lg shadow-xl w-full"
+						/>
+					</div>
+				</div>
+
+				<!-- Service 6 -->
+				<div class="flex flex-col lg:flex-row items-center">
+					<div class="lg:w-1/2 order-2 lg:order-1 lg:pr-10">
+						<img
+							src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Custom Development"
+							class="rounded-lg shadow-xl w-full"
+						/>
+					</div>
+					<div class="lg:w-1/2 order-1 lg:order-2 mb-10 lg:mb-0 lg:pl-10">
+						<div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-code text-red-600 text-2xl"></i>
+						</div>
+						<h3 class="text-2xl font-bold mb-4">Custom Development</h3>
+						<p class="text-gray-600 mb-6">
+							When off-the-shelf solutions don't meet your needs, our custom development services can create exactly what
+							your business requires to operate efficiently and stand out from competitors.
+						</p>
+						<ul class="service-feature-list mb-8">
+							<li>Custom Magento modules</li>
+							<li>WooCommerce plugin development</li>
+							<li>Tailor-made APIs</li>
+							<li>Advanced product configuration tools</li>
+							<li>Custom checkout flows</li>
+							<li>Subscription and membership systems</li>
+							<li>Headless commerce solutions</li>
+							<li>Progressive Web Apps (PWAs)</li>
+						</ul>
+						<a
+							href="contact.html"
+							class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+							>Discuss Custom Needs</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-20 bg-indigo-600 text-white">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your eCommerce Business?</h2>
+				<p class="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">
+					Whether you're launching a new store or optimizing an existing one, our team is ready to help you achieve your
+					goals.
+				</p>
+				<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+					<a
+						href="contact.html"
+						class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"
+						>Get Free Consultation</a
+					>
+					<a
+						href="tel:+18005551234"
+						class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition"
+						><i class="fas fa-phone-alt mr-2"></i> Call Us Now</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-400">Reflex</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">
+							Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+						</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Services</h3>
+						<ul class="space-y-3">
+							<li><a href="services.html" class="text-gray-400 hover:text-white">eCommerce Development</a></li>
+							<li><a href="services.html" class="text-gray-400 hover:text-white">Migration & Integration</a></li>
+							<li><a href="services.html" class="text-gray-400 hover:text-white">Audit & Analysis</a></li>
+							<li><a href="services.html" class="text-gray-400 hover:text-white">Growth & Optimization</a></li>
+							<li><a href="services.html" class="text-gray-400 hover:text-white">Support & Maintenance</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="team.html" class="text-gray-400 hover:text-white">Our Team</a></li>
+							<li><a href="portfolio.html" class="text-gray-400 hover:text-white">Case Studies</a></li>
+							<li><a href="careers.html" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="terms.html" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="cookies.html" class="text-gray-400 hover:text-white">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

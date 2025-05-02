@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact EcomReflex - eCommerce Development Agency</title>
+		<meta
+			name="description"
+			content="Get in touch with EcomReflex for eCommerce development, consulting, and support. We're here to help grow your online business."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.contact-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.map-container {
+				height: 400px;
+			}
+			@media (min-width: 768px) {
+				.map-container {
+					height: 500px;
+				}
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-600">Reflex</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html#services" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+						<a href="index.html#process" class="text-gray-700 hover:text-indigo-600 transition">Process</a>
+						<a href="index.html#pricing" class="text-gray-700 hover:text-indigo-600 transition">Pricing</a>
+						<a href="index.html#portfolio" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+						<a href="get-started.html" class="text-gray-700 hover:text-indigo-600 transition">Get Started</a>
+						<a href="contact.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Contact Us</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html#services"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Services</a
+						>
+						<a
+							href="index.html#process"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Process</a
+						>
+						<a
+							href="index.html#pricing"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Pricing</a
+						>
+						<a
+							href="index.html#portfolio"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Portfolio</a
+						>
+						<a
+							href="get-started.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Get Started</a
+						>
+						<a
+							href="contact.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Contact Us</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-28">
+				<div class="max-w-4xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Let's Build Something Amazing Together</h1>
+					<p class="text-xl text-indigo-100 mb-8">
+						Whether you're ready to start your eCommerce project or just have questions, our team is here to help. Reach
+						out today and let's discuss how we can grow your business.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="#contact-form"
+							class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Send Us a Message</a
+						>
+						<a
+							href="tel:+18005551234"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+						>
+							<i class="fas fa-phone-alt mr-2"></i> Call Us Now
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Methods -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">How Would You Like to Connect?</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Choose the most convenient way to get in touch with our eCommerce experts.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+					<!-- Contact Card 1 -->
+					<div class="contact-card bg-gray-50 p-8 rounded-xl shadow-md text-center transition duration-300">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<i class="fas fa-envelope text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Email Us</h3>
+						<p class="text-gray-600 mb-4">
+							Send us your questions or project details and we'll respond within 24 hours.
+						</p>
+						<a href="mailto:hello@ecomreflex.com" class="text-indigo-600 font-medium hover:text-indigo-800"
+							>hello@ecomreflex.com</a
+						>
+					</div>
+
+					<!-- Contact Card 2 -->
+					<div class="contact-card bg-gray-50 p-8 rounded-xl shadow-md text-center transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<i class="fas fa-phone-alt text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Call Us</h3>
+						<p class="text-gray-600 mb-4">Speak directly with our team during business hours (9am-5pm PST, Mon-Fri).</p>
+						<a href="tel:+18005551234" class="text-purple-600 font-medium hover:text-purple-800">+1 (800) 555-1234</a>
+					</div>
+
+					<!-- Contact Card 3 -->
+					<div class="contact-card bg-gray-50 p-8 rounded-xl shadow-md text-center transition duration-300">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<i class="fas fa-calendar-alt text-blue-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Schedule a Call</h3>
+						<p class="text-gray-600 mb-4">Book a free 30-minute consultation with our eCommerce specialists.</p>
+						<a href="#contact-form" class="text-blue-600 font-medium hover:text-blue-800">Book Consultation</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Form + Map -->
+		<section id="contact-form" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="flex flex-col lg:flex-row">
+					<!-- Contact Form -->
+					<div class="lg:w-1/2 lg:pr-8 mb-12 lg:mb-0">
+						<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+							<div class="p-8 md:p-12">
+								<h2 class="text-3xl font-bold mb-6">Send Us a Message</h2>
+								<form id="contactForm" class="space-y-4">
+									<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+										<div>
+											<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name*</label>
+											<input
+												type="text"
+												id="name"
+												name="name"
+												required
+												class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+											/>
+										</div>
+										<div>
+											<label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+											<input
+												type="text"
+												id="company"
+												name="company"
+												class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+											/>
+										</div>
+									</div>
+
+									<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+										<div>
+											<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+											<input
+												type="email"
+												id="email"
+												name="email"
+												required
+												class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+											/>
+										</div>
+										<div>
+											<label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+											<input
+												type="tel"
+												id="phone"
+												name="phone"
+												class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+											/>
+										</div>
+									</div>
+
+									<div>
+										<label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject*</label>
+										<select
+											id="subject"
+											name="subject"
+											required
+											class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+										>
+											<option value="">Select a subject</option>
+											<option value="new-project">New Project Inquiry</option>
+											<option value="existing-project">Existing Project Question</option>
+											<option value="partnership">Partnership Opportunity</option>
+											<option value="careers">Careers</option>
+											<option value="other">Other</option>
+										</select>
+									</div>
+
+									<div>
+										<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message*</label>
+										<textarea
+											id="message"
+											name="message"
+											rows="4"
+											required
+											class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+										></textarea>
+									</div>
+
+									<div class="flex items-start">
+										<div class="flex items-center h-5">
+											<input
+												id="agree"
+												name="agree"
+												type="checkbox"
+												required
+												class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+											/>
+										</div>
+										<div class="ml-3 text-sm">
+											<label for="agree" class="font-medium text-gray-700"
+												>I agree to the
+												<a href="#" class="text-indigo-600 hover:text-indigo-500">privacy policy</a></label
+											>
+										</div>
+									</div>
+
+									<button
+										type="submit"
+										class="w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+									>
+										Send Message
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<!-- Map & Address -->
+					<div class="lg:w-1/2 lg:pl-8">
+						<div class="bg-white rounded-xl shadow-lg overflow-hidden h-full">
+							<div class="map-container">
+								<!-- Embedded Google Map -->
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.787889045717!2d-122.40384392412903!3d37.78577277197103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807d10af6e51%3A0x1122879c36e6f3b3!2s123%20Commerce%20St%2C%20San%20Francisco%2C%20CA%2094107%2C%20USA!5e0!3m2!1sen!2s!4v1690832484164!5m2!1sen!2s"
+									width="100%"
+									height="100%"
+									style="border: 0"
+									allowfullscreen=""
+									loading="lazy"
+									referrerpolicy="no-referrer-when-downgrade"
+								></iframe>
+							</div>
+							<div class="p-8">
+								<h3 class="text-xl font-bold mb-4">Our Office</h3>
+								<address class="not-italic text-gray-600">
+									<p class="flex items-start mb-3">
+										<i class="fas fa-map-marker-alt text-indigo-600 mt-1 mr-3"></i>
+										<span>123 Commerce St, Suite 500<br />San Francisco, CA 94107</span>
+									</p>
+									<p class="flex items-center mb-3">
+										<i class="fas fa-phone-alt text-indigo-600 mr-3"></i>
+										<a href="tel:+18005551234" class="hover:text-indigo-600">+1 (800) 555-1234</a>
+									</p>
+									<p class="flex items-center mb-3">
+										<i class="fas fa-envelope text-indigo-600 mr-3"></i>
+										<a href="mailto:hello@ecomreflex.com" class="hover:text-indigo-600">hello@ecomreflex.com</a>
+									</p>
+									<p class="flex items-start">
+										<i class="fas fa-clock text-indigo-600 mt-1 mr-3"></i>
+										<span>Monday-Friday: 9am-5pm PST<br />Weekends: Closed</span>
+									</p>
+								</address>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Teaser -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Common Questions</h2>
+					<p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+						Before you contact us, you might find answers to your questions here.
+					</p>
+					<div class="bg-gray-50 rounded-xl p-6 text-left max-w-3xl mx-auto">
+						<div class="space-y-4">
+							<div>
+								<h3 class="text-lg font-bold mb-2">What's your typical response time?</h3>
+								<p class="text-gray-600">
+									We respond to all inquiries within 24 hours during business days. For urgent matters, please call us
+									directly.
+								</p>
+							</div>
+							<div>
+								<h3 class="text-lg font-bold mb-2">Do you offer free consultations?</h3>
+								<p class="text-gray-600">
+									Yes! We offer free 30-minute consultations to discuss your project needs and how we can help.
+								</p>
+							</div>
+							<div>
+								<h3 class="text-lg font-bold mb-2">What information should I include in my inquiry?</h3>
+								<p class="text-gray-600">
+									Please include details about your business, project goals, timeline, and budget (if available) to help
+									us provide the most accurate response.
+								</p>
+							</div>
+						</div>
+						<div class="mt-6 text-center">
+							<a
+								href="index.html#faq"
+								class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center"
+							>
+								View Full FAQ <i class="fas fa-arrow-right ml-2"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-20 bg-indigo-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Grow Your eCommerce Business?</h2>
+					<p class="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+						Whether you're just starting out or looking to scale, we have the expertise to help you succeed online.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="get-started.html"
+							class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Get Started</a
+						>
+						<a
+							href="tel:+18005551234"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+						>
+							<i class="fas fa-phone-alt mr-2"></i> Call Now
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-400">Reflex</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">
+							Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+						</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Services</h3>
+						<ul class="space-y-3">
+							<li><a href="index.html#services" class="text-gray-400 hover:text-white">Ecommerce Development</a></li>
+							<li><a href="index.html#services" class="text-gray-400 hover:text-white">Migration & Integration</a></li>
+							<li><a href="index.html#services" class="text-gray-400 hover:text-white">Audit & Analysis</a></li>
+							<li><a href="index.html#services" class="text-gray-400 hover:text-white">Growth & Optimization</a></li>
+							<li><a href="index.html#services" class="text-gray-400 hover:text-white">Support & Maintenance</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Our Team</a></li>
+							<li><a href="index.html#portfolio" class="text-gray-400 hover:text-white">Case Studies</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// Form submission
+			document.getElementById('contactForm').addEventListener('submit', function (e) {
+				e.preventDefault();
+				// Here you would typically send the form data to your server
+				alert('Thank you for your message! We will get back to you within 24 hours.');
+				this.reset();
+			});
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

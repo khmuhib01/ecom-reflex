@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | EcomReflex - Full-Service eCommerce Development Agency</title>
+    <meta name="description" content="Explore our eCommerce portfolio showcasing successful online stores we've built for clients across industries.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        .portfolio-item {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+        }
+        .portfolio-image {
+            transition: transform 0.5s ease;
+        }
+        .portfolio-item:hover .portfolio-image {
+            transform: scale(1.05);
+        }
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(79, 70, 229, 0.9), transparent);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        .filter-btn.active {
+            background-color: #4f46e5;
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-600">Reflex</span></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="services.html" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+                    <a href="process.html" class="text-gray-700 hover:text-indigo-600 transition">Process</a>
+                    <a href="pricing.html" class="text-gray-700 hover:text-indigo-600 transition">Pricing</a>
+                    <a href="portfolio.html" class="text-indigo-600 font-medium transition">Portfolio</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-indigo-600 transition">Blog</a>
+                    <a href="contact.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Get Started</a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Services</a>
+                    <a href="process.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Process</a>
+                    <a href="pricing.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Pricing</a>
+                    <a href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">Portfolio</a>
+                    <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Blog</a>
+                    <a href="contact.html" class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Our eCommerce Portfolio</h1>
+                <p class="text-xl text-indigo-100 mb-8">
+                    Explore our successful eCommerce projects that have driven real results for our clients
+                </p>
+                <div class="flex justify-center">
+                    <a href="#portfolio" class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filters -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-6">Featured Work</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Filter by platform or industry to see relevant case studies
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100 active" data-filter="all">All Projects</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100" data-filter="shopify">Shopify</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100" data-filter="magento">Magento</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100" data-filter="woocommerce">WooCommerce</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100" data-filter="bigcommerce">BigCommerce</button>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100" data-filter="fashion">Fashion</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100" data-filter="electronics">Electronics</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100" data-filter="health">Health & Beauty</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100" data-filter="home">Home Goods</button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-indigo-100" data-filter="food">Food & Beverage</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item rounded-xl shadow-md overflow-hidden" data-category="shopify fashion">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                             alt="Luxe Fashion Store" 
+                             class="w-full h-full object-cover portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold">Luxe Fashion</h3>
+                            <p class="text-indigo-100">+320% revenue growth</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Luxe Fashion</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">+320% ROAS</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Premium fashion brand scaled from $50k to $500k/month in 6 months through our full-funnel strategy.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Shopify Plus</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Facebook Ads</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Email Flows</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item rounded-xl shadow-md overflow-hidden" data-category="magento electronics">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                             alt="TechGadgets Store" 
+                             class="w-full h-full object-cover portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold">TechGadgets</h3>
+                            <p class="text-indigo-100">+180% mobile conversions</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">TechGadgets</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">+180% Revenue</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Electronics retailer increased conversion rate by 42% through our UX redesign and CRO strategy.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Magento 2</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Google Ads</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">A/B Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item rounded-xl shadow-md overflow-hidden" data-category="woocommerce health">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                             alt="PureGlow Store" 
+                             class="w-full h-full object-cover portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold">PureGlow</h3>
+                            <p class="text-indigo-100">+400% subscribers</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">PureGlow</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">+400% Subscribers</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Skincare brand grew email list by 400% and increased repeat purchase rate by 65%.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">WooCommerce</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Klaviyo</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SMS Marketing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item rounded-xl shadow-md overflow-hidden" data-category="bigcommerce home">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                             alt="HomeHaven Store" 
+                             class="w-full h-full object-cover portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold">HomeHaven</h3>
+                            <p class="text-indigo-100">3x average order value</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">HomeHaven</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">3x AOV</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Home decor retailer tripled average order value through our bundling and upsell strategies.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">BigCommerce</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Product Bundles</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">AR Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item rounded-xl shadow-md overflow-hidden" data-category="shopify food">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                             alt="FreshBites Store" 
+                             class="w-full h-full object-cover portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold">FreshBites</h3>
+                            <p class="text-indigo-100">90% cart recovery</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">FreshBites</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">90% Recovery</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Organic meal delivery service recovered 90% of abandoned carts through our automation flows.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Shopify</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Subscription Model</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Cart Recovery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item rounded-xl shadow-md overflow-hidden" data-category="magento fashion">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" 
+                             alt="UrbanThreads Store" 
+                             class="w-full h-full object-cover portfolio-image">
+                        <div class="portfolio-overlay">
+                            <h3 class="text-xl font-bold">UrbanThreads</h3>
+                            <p class="text-indigo-100">5x international sales</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">UrbanThreads</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">5x Global</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Streetwear brand expanded internationally with 5x sales growth in new markets.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Magento</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Multi-Currency</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Global Shipping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="contact.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                    Ready to Start Your Project?
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Don't just take our word for it - hear from businesses we've helped grow
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "EcomReflex transformed our online store from outdated to cutting-edge. Our revenue increased by 320% within 6 months of launch, and their ongoing support has been invaluable."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">CEO, Luxe Fashion</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "The team's attention to detail and strategic approach to UX design helped us nearly double our conversion rate. They truly understand eCommerce best practices."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-600 text-sm">Director, TechGadgets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "From migration to ongoing optimization, EcomReflex has been a trusted partner. Their ability to solve complex technical challenges is unmatched in the industry."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Amanda Rodriguez" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Amanda Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">Ecommerce Manager, UrbanThreads</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your eCommerce Business?</h2>
+                <p class="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">
+                    Let's discuss how we can help you achieve similar results
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="contact.html" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">Get Free Consultation</a>
+                    <a href="tel:+18005551234" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition"><i class="fas fa-phone-alt mr-2"></i> Call Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-400">Reflex</span></span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">eCommerce Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Migration & Integration</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Audit & Analysis</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Growth & Optimization</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Support & Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white">Our Team</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+                            <a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="cookies.html" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        });
+
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth',
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

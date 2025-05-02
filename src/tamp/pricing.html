@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | EcomReflex - Full-Service eCommerce Development Agency</title>
+    <meta name="description" content="Transparent pricing for our eCommerce development services. Find the perfect package for your business needs and budget.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        .price-card {
+            transition: all 0.3s ease;
+        }
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+        }
+        .price-card.popular {
+            border: 2px solid #4f46e5;
+            transform: scale(1.03);
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .feature-list li:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: #4f46e5;
+            border-radius: 50%;
+        }
+        .toggle-bg {
+            background-color: #e0e7ff;
+        }
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #4f46e5;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #4f46e5;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-600">Reflex</span></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="services.html" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+                    <a href="process.html" class="text-gray-700 hover:text-indigo-600 transition">Process</a>
+                    <a href="pricing.html" class="text-indigo-600 font-medium transition">Pricing</a>
+                    <a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-indigo-600 transition">Blog</a>
+                    <a href="contact.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Get Started</a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Services</a>
+                    <a href="process.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Process</a>
+                    <a href="pricing.html" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">Pricing</a>
+                    <a href="portfolio.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Portfolio</a>
+                    <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Blog</a>
+                    <a href="contact.html" class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Simple, Transparent Pricing</h1>
+                <p class="text-xl text-indigo-100 mb-8">
+                    Choose the perfect package for your eCommerce needs. All plans include our quality guarantee and dedicated support.
+                </p>
+                <div class="flex justify-center">
+                    <a href="#pricing-plans" class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">View Plans</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Toggle -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-md mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold mb-6">Flexible Pricing Options</h2>
+                <p class="text-gray-600 mb-6">
+                    Select the billing option that works best for your business
+                </p>
+                <div class="flex items-center justify-center">
+                    <span class="mr-4 font-medium text-gray-700">Annual (Save 15%)</span>
+                    <div class="relative inline-block w-12 mr-4 align-middle select-none">
+                        <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                        <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                    </div>
+                    <span class="font-medium text-gray-700">Monthly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section id="pricing-plans" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">eCommerce Development Packages</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive solutions tailored to businesses of all sizes
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Startup Plan -->
+                <div class="price-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                    <div class="p-8 text-center">
+                        <h3 class="text-xl font-bold mb-4">Startup</h3>
+                        <p class="text-gray-600 mb-6">
+                            Perfect for new businesses launching their first online store
+                        </p>
+                        <div class="text-4xl font-bold text-indigo-600 mb-6">$25,000<span class="text-lg font-normal">/project</span></div>
+                        <ul class="feature-list space-y-3 mb-8 text-left">
+                            <li>Custom design (3-5 pages)</li>
+                            <li>Basic product catalog setup</li>
+                            <li>Mobile-responsive development</li>
+                            <li>Standard payment gateways</li>
+                            <li>Basic SEO configuration</li>
+                            <li>1-month post-launch support</li>
+                        </ul>
+                        <a href="contact.html" class="block w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Business Plan (Popular) -->
+                <div class="price-card bg-white rounded-xl shadow-md overflow-hidden popular">
+                    <div class="absolute top-0 right-0 bg-indigo-500 text-white px-4 py-1 text-sm font-bold rounded-bl-lg">
+                        Most Popular
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-xl font-bold mb-4">Business</h3>
+                        <p class="text-gray-600 mb-6">
+                            Ideal for growing brands needing advanced functionality
+                        </p>
+                        <div class="text-4xl font-bold text-indigo-600 mb-6">$55,000<span class="text-lg font-normal">/project</span></div>
+                        <ul class="feature-list space-y-3 mb-8 text-left">
+                            <li>Custom design (5-10 pages)</li>
+                            <li>Advanced product options</li>
+                            <li>Multiple payment options</li>
+                            <li>CRM integration</li>
+                            <li>Advanced SEO setup</li>
+                            <li>Performance optimization</li>
+                            <li>3-month post-launch support</li>
+                        </ul>
+                        <a href="contact.html" class="block w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="price-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                    <div class="p-8 text-center">
+                        <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+                        <p class="text-gray-600 mb-6">
+                            For large-scale operations with complex requirements
+                        </p>
+                        <div class="text-4xl font-bold text-indigo-600 mb-6">$200,000<span class="text-lg font-normal">/project</span></div>
+                        <ul class="feature-list space-y-3 mb-8 text-left">
+                            <li>Custom design (unlimited pages)</li>
+                            <li>Enterprise-grade architecture</li>
+                            <li>Full system integrations</li>
+                            <li>Multi-store management</li>
+                            <li>Custom API development</li>
+                            <li>Headless commerce options</li>
+                            <li>6-month post-launch support</li>
+                        </ul>
+                        <a href="contact.html" class="block w-full bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-On Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Add-On Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Enhance your package with these additional services
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Add-On 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-search text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">SEO Optimization</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive on-page SEO setup and optimization to improve your store's visibility.
+                    </p>
+                    <div class="text-indigo-600 font-bold">From $2,500</div>
+                </div>
+
+                <!-- Add-On 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Email Marketing Setup</h3>
+                    <p class="text-gray-600 mb-4">
+                        Klaviyo or Mailchimp integration with automated flows and template design.
+                    </p>
+                    <div class="text-purple-600 font-bold">From $3,500</div>
+                </div>
+
+                <!-- Add-On 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-ad text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Paid Ads Setup</h3>
+                    <p class="text-gray-600 mb-4">
+                        Facebook, Google, and Instagram ad account configuration and pixel setup.
+                    </p>
+                    <div class="text-blue-600 font-bold">From $1,500</div>
+                </div>
+
+                <!-- Add-On 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-pie text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Analytics Configuration</h3>
+                    <p class="text-gray-600 mb-4">
+                        Advanced Google Analytics and tracking setup with custom dashboards.
+                    </p>
+                    <div class="text-green-600 font-bold">From $1,800</div>
+                </div>
+
+                <!-- Add-On 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-language text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Multilingual Setup</h3>
+                    <p class="text-gray-600 mb-4">
+                        Add multiple languages to your store with professional translation.
+                    </p>
+                    <div class="text-yellow-600 font-bold">From $3,000</div>
+                </div>
+
+                <!-- Add-On 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Ongoing Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        Extended support packages for maintenance and updates.
+                    </p>
+                    <div class="text-red-600 font-bold">From $500/month</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pricing FAQs</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Answers to common questions about our pricing and services
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">What's included in your pricing?</h3>
+                            <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Our project-based pricing includes all design, development, testing, and launch services. Each package includes a specific number of design pages, product setups, integrations, and post-launch support. Hosting, domain registration, and third-party service fees are not included unless specified.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">Do you offer payment plans?</h3>
+                            <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Yes, we offer flexible payment plans for most projects. Typically, we require a 30% deposit to begin work, with the balance divided into milestone payments throughout the project. For annual contracts, we can arrange monthly or quarterly billing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">Can I upgrade my package later?</h3>
+                            <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Absolutely. Many clients start with a smaller package and add features as their business grows. We'll apply any payments you've already made toward the upgraded package.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">How long does a typical project take?</h3>
+                            <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                Project timelines vary based on complexity: Startup packages typically take 4-8 weeks, Business packages 8-12 weeks, and Enterprise solutions 12-20 weeks. We'll provide a detailed timeline during our discovery phase.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <h3 class="text-lg font-medium text-gray-900">What if I need custom features not listed?</h3>
+                            <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-gray-600">
+                                We specialize in custom development. Contact us for a free consultation, and we'll prepare a custom quote based on your specific requirements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Need a Custom Solution?</h2>
+                <p class="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">
+                    Tell us about your project and we'll prepare a tailored quote just for you.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="contact.html" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">Request Custom Quote</a>
+                    <a href="tel:+18005551234" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition"><i class="fas fa-phone-alt mr-2"></i> Call Us Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-400">Reflex</span></span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">eCommerce Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Migration & Integration</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Audit & Analysis</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Growth & Optimization</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Support & Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white">Our Team</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+                            <a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="cookies.html" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach((button) => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                // Toggle content
+                content.classList.toggle('hidden');
+
+                // Rotate icon
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('transform', 'rotate-180');
+                } else {
+                    icon.classList.add('transform', 'rotate-180');
+                }
+            });
+        });
+
+        // Pricing toggle
+        const toggle = document.getElementById('toggle');
+        const startupPrice = document.querySelectorAll('.price-card .text-4xl')[0];
+        const businessPrice = document.querySelectorAll('.price-card .text-4xl')[1];
+        const enterprisePrice = document.querySelectorAll('.price-card .text-4xl')[2];
+
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                // Monthly pricing
+                startupPrice.innerHTML = '$2,500<span class="text-lg font-normal">/month</span>';
+                businessPrice.innerHTML = '$5,500<span class="text-lg font-normal">/month</span>';
+                enterprisePrice.innerHTML = '$15,000<span class="text-lg font-normal">/month</span>';
+            } else {
+                // Annual pricing (with discount)
+                startupPrice.innerHTML = '$25,000<span class="text-lg font-normal">/project</span>';
+                businessPrice.innerHTML = '$55,000<span class="text-lg font-normal">/project</span>';
+                enterprisePrice.innerHTML = '$200,000<span class="text-lg font-normal">/project</span>';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth',
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
