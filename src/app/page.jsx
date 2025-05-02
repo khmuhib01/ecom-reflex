@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import {useState} from 'react';
 import {FaLaptopCode, FaExchangeAlt, FaSearch, FaChartLine, FaCogs, FaCode, FaArrowRight} from 'react-icons/fa';
 import {FaLayerGroup, FaTachometerAlt, FaProjectDiagram, FaChartBar, FaCheckCircle} from 'react-icons/fa';
@@ -144,9 +145,12 @@ export default function Home() {
 								WooCommerce. Our team designs mobile-responsive, SEO-optimized storefronts with intuitive user
 								experiences and secure checkout systems.
 							</p>
-							<a href="#" className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center">
+							<Link
+								href="/service/ecommerce-development"
+								className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
+							>
 								Learn more <FaArrowRight className="ml-2" />
-							</a>
+							</Link>
 						</div>
 
 						{/* Service 2 */}
@@ -555,9 +559,12 @@ export default function Home() {
 									We helped an online retailer build a fully functional eCommerce platform, increasing their sales by
 									30%.
 								</p>
-								<a href="#" className="text-indigo-600 hover:text-indigo-500 font-medium">
+								<Link
+									href="/service/ecommerce-development"
+									className="text-indigo-600 hover:text-indigo-500 font-medium"
+								>
 									Read More →
-								</a>
+								</Link>
 							</div>
 						</div>
 

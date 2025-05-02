@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ecommerce Development Services | EcomReflex</title>
+		<meta
+			name="description"
+			content="Professional eCommerce development services for Shopify, Magento, WooCommerce and custom solutions. Build a high-converting online store with our experts."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.service-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+			}
+			.platform-card {
+				transition: all 0.3s ease;
+			}
+			.platform-card:hover {
+				transform: scale(1.03);
+			}
+			.feature-icon {
+				width: 60px;
+				height: 60px;
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.tab-content {
+				display: none;
+			}
+			.tab-content.active {
+				display: block;
+				animation: fadeIn 0.5s ease-in-out;
+			}
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-600">Reflex</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+						<a href="ecommerce-development.html" class="text-indigo-600 font-medium">Services</a>
+						<a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+						<a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+						<a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+						<a
+							href="get-started.html"
+							class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Get Started</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Home</a
+						>
+						<a
+							href="ecommerce-development.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50"
+							>Services</a
+						>
+						<a
+							href="portfolio.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Portfolio</a
+						>
+						<a
+							href="about.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>About</a
+						>
+						<a
+							href="contact.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Contact</a
+						>
+						<a
+							href="get-started.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Get Started</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-28">
+				<div class="max-w-4xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">eCommerce Development Services</h1>
+					<p class="text-xl text-indigo-100 mb-8">
+						Your eCommerce website is more than just a place to sell your products. It's the heart of your brand, the
+						experience your customers have, and a way for you to make money. We build strong, flexible, and effective
+						online stores that convert and grow.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="#platforms"
+							class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>View Our Platforms</a
+						>
+						<a
+							href="contact.html"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+							>Get a Free Consultation</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Introduction -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Complete eCommerce Solutions for Modern Businesses</h2>
+					<p class="text-xl text-gray-600 mb-8">
+						Our eCommerce Development Services cover everything modern businesses need. From platform selection to
+						custom features, mobile readiness, multi-store management, and ongoing support - we help businesses of all
+						sizes bring their digital vision to life.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+					<div class="bg-gray-50 p-8 rounded-lg text-center">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<i class="fas fa-mobile-alt text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Mobile-First Approach</h3>
+						<p class="text-gray-600">
+							With over 70% of shopping on mobile, we prioritize seamless mobile experiences that convert.
+						</p>
+					</div>
+
+					<div class="bg-gray-50 p-8 rounded-lg text-center">
+						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Conversion Optimized</h3>
+						<p class="text-gray-600">Every element is designed to maximize conversions and average order value.</p>
+					</div>
+
+					<div class="bg-gray-50 p-8 rounded-lg text-center">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<i class="fas fa-expand text-blue-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Built to Scale</h3>
+						<p class="text-gray-600">
+							Architected for growth, handling traffic spikes and expanding product catalogs with ease.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Platform Tabs -->
+		<section id="platforms" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Our eCommerce Platform Expertise</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						We work with all major eCommerce platforms to deliver the perfect solution for your business needs.
+					</p>
+				</div>
+
+				<!-- Platform Tabs Navigation -->
+				<div class="flex flex-wrap justify-center mb-8 border-b border-gray-200">
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 transition"
+						data-tab="shopify"
+					>
+						Shopify
+					</button>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 transition"
+						data-tab="magento"
+					>
+						Magento
+					</button>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 transition"
+						data-tab="woocommerce"
+					>
+						WooCommerce
+					</button>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 transition"
+						data-tab="headless"
+					>
+						Headless
+					</button>
+					<button
+						class="tab-btn px-6 py-3 font-medium text-gray-600 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-300 transition"
+						data-tab="laravel"
+					>
+						Laravel
+					</button>
+				</div>
+
+				<!-- Platform Tab Contents -->
+				<div class="max-w-6xl mx-auto">
+					<!-- Shopify Tab -->
+					<div id="shopify" class="tab-content active">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-2xl font-bold mb-4">Shopify & Shopify Plus Development</h3>
+								<p class="text-gray-600 mb-6">
+									Create beautiful, mobile-friendly, and easy-to-use Shopify stores that are simple to manage and
+									designed to grow. Perfect for DTC brands and retailers who want quick setup with top-notch
+									performance.
+								</p>
+								<div class="space-y-4">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Shopify Store Setup & Configuration</h4>
+											<p class="text-gray-600">
+												Complete store configuration including payments, shipping, taxes, and product setup.
+											</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Shopify Theme Design & Customization</h4>
+											<p class="text-gray-600">Pixel-perfect themes that match your brand and optimize UX/UI.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Shopify Plus Development</h4>
+											<p class="text-gray-600">
+												Advanced automation, customized checkout flows, and API-powered integrations.
+											</p>
+										</div>
+									</div>
+								</div>
+								<a
+									href="contact.html"
+									class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+									>Get Shopify Help</a
+								>
+							</div>
+							<div class="bg-white p-6 rounded-xl shadow-md">
+								<img
+									src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="Shopify Store Example"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Magento Tab -->
+					<div id="magento" class="tab-content">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-2xl font-bold mb-4">Magento eCommerce Development</h3>
+								<p class="text-gray-600 mb-6">
+									Powerful, customizable eCommerce solutions with Magento. We build high-performance stores with rich
+									features, flexible product types, and seamless backend workflows tailored for complex business needs.
+								</p>
+								<div class="space-y-4">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Magento Custom Development</h4>
+											<p class="text-gray-600">
+												Tailor your Magento store's functionality to fit unique business needs.
+											</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Magento 2 PWA Development</h4>
+											<p class="text-gray-600">
+												Offer a fast, app-like experience with Progressive Web App technology.
+											</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Magento Migration Services</h4>
+											<p class="text-gray-600">
+												Migrate from Magento 1 or other platforms to Magento 2 with zero data loss.
+											</p>
+										</div>
+									</div>
+								</div>
+								<a
+									href="contact.html"
+									class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+									>Get Magento Help</a
+								>
+							</div>
+							<div class="bg-white p-6 rounded-xl shadow-md">
+								<img
+									src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="Magento Store Example"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- WooCommerce Tab -->
+					<div id="woocommerce" class="tab-content">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-2xl font-bold mb-4">WooCommerce Development</h3>
+								<p class="text-gray-600 mb-6">
+									Turn your WordPress site into a fully functional online store. Perfect for content-heavy brands or
+									smaller shops needing flexibility, control, and seamless blogging and selling capabilities.
+								</p>
+								<div class="space-y-4">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">WooCommerce Store Setup</h4>
+											<p class="text-gray-600">Complete configuration including payments, shipping, and products.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">WooCommerce Plugin Development</h4>
+											<p class="text-gray-600">Custom plugins to add or enhance functionality in your store.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Multi-Vendor Marketplace</h4>
+											<p class="text-gray-600">
+												Turn your store into a full-featured marketplace with vendor management.
+											</p>
+										</div>
+									</div>
+								</div>
+								<a
+									href="contact.html"
+									class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+									>Get WooCommerce Help</a
+								>
+							</div>
+							<div class="bg-white p-6 rounded-xl shadow-md">
+								<img
+									src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="WooCommerce Store Example"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Headless Tab -->
+					<div id="headless" class="tab-content">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-2xl font-bold mb-4">Headless Commerce Development</h3>
+								<p class="text-gray-600 mb-6">
+									Complete flexibility with future-ready architecture. We separate your frontend from backend to support
+									multi-channel selling across web, mobile, apps, and beyond using technologies like React, Vue.js, and
+									APIs.
+								</p>
+								<div class="space-y-4">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">API-First Architecture</h4>
+											<p class="text-gray-600">Decoupled frontend and backend for ultimate flexibility.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Omnichannel Ready</h4>
+											<p class="text-gray-600">Sell across web, mobile apps, IoT devices, and more from one backend.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Lightning Fast Performance</h4>
+											<p class="text-gray-600">
+												JAMstack architecture delivers unparalleled speed and user experience.
+											</p>
+										</div>
+									</div>
+								</div>
+								<a
+									href="contact.html"
+									class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+									>Explore Headless</a
+								>
+							</div>
+							<div class="bg-white p-6 rounded-xl shadow-md">
+								<img
+									src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="Headless Commerce Example"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Laravel Tab -->
+					<div id="laravel" class="tab-content">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+							<div>
+								<h3 class="text-2xl font-bold mb-4">Laravel eCommerce Development</h3>
+								<p class="text-gray-600 mb-6">
+									Build fast, secure, and scalable eCommerce platforms using Laravel, the most popular PHP framework.
+									Perfect for businesses needing high customization, seamless performance, and clean architecture.
+								</p>
+								<div class="space-y-4">
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Custom Laravel Development</h4>
+											<p class="text-gray-600">Fully tailored eCommerce solutions built from the ground up.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Bagisto Development</h4>
+											<p class="text-gray-600">Scalable, feature-rich stores with open-source Laravel-based Bagisto.</p>
+										</div>
+									</div>
+									<div class="flex items-start">
+										<div class="flex-shrink-0 mt-1 text-indigo-600 mr-4">
+											<i class="fas fa-check-circle"></i>
+										</div>
+										<div>
+											<h4 class="font-bold">Multi-Vendor Marketplaces</h4>
+											<p class="text-gray-600">Scalable platforms with vendor dashboards and commission logic.</p>
+										</div>
+									</div>
+								</div>
+								<a
+									href="contact.html"
+									class="inline-block mt-6 bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+									>Get Laravel Help</a
+								>
+							</div>
+							<div class="bg-white p-6 rounded-xl shadow-md">
+								<img
+									src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="Laravel eCommerce Example"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Specialized Services -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Specialized eCommerce Services</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Beyond platform development, we offer specialized solutions for unique business needs.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Service 1 -->
+					<div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+							<i class="fas fa-briefcase text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">B2B eCommerce Development</h3>
+						<p class="text-gray-600 mb-4">
+							Powerful platforms for wholesalers and manufacturers with advanced pricing, quote requests, and ERP
+							integrations.
+						</p>
+						<ul class="space-y-2 text-gray-600 mb-6">
+							<li class="flex items-start">
+								<i class="fas fa-check text-indigo-600 mr-2 mt-1"></i>
+								<span>Customer-specific pricing</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-indigo-600 mr-2 mt-1"></i>
+								<span>Quote management systems</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-indigo-600 mr-2 mt-1"></i>
+								<span>Bulk ordering capabilities</span>
+							</li>
+						</ul>
+						<a href="contact.html" class="text-indigo-600 font-medium hover:text-indigo-800">Learn More →</a>
+					</div>
+
+					<!-- Service 2 -->
+					<div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+							<i class="fas fa-mobile-alt text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Mobile Commerce & PWAs</h3>
+						<p class="text-gray-600 mb-4">
+							Progressive Web Apps and mobile-optimized stores that deliver app-like experiences without app store
+							hurdles.
+						</p>
+						<ul class="space-y-2 text-gray-600 mb-6">
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-600 mr-2 mt-1"></i>
+								<span>Offline functionality</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-600 mr-2 mt-1"></i>
+								<span>Push notifications</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-600 mr-2 mt-1"></i>
+								<span>Home screen installation</span>
+							</li>
+						</ul>
+						<a href="contact.html" class="text-purple-600 font-medium hover:text-purple-800">Learn More →</a>
+					</div>
+
+					<!-- Service 3 -->
+					<div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+							<i class="fas fa-exchange-alt text-blue-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Platform Migration</h3>
+						<p class="text-gray-600 mb-4">
+							Seamlessly move your store to a new platform without losing data, SEO rankings, or customer information.
+						</p>
+						<ul class="space-y-2 text-gray-600 mb-6">
+							<li class="flex items-start">
+								<i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+								<span>Zero downtime migration</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+								<span>SEO preservation</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
+								<span>Data integrity checks</span>
+							</li>
+						</ul>
+						<a href="contact.html" class="text-blue-600 font-medium hover:text-blue-800">Learn More →</a>
+					</div>
+
+					<!-- Service 4 -->
+					<div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+							<i class="fas fa-store text-green-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Multi-Store Management</h3>
+						<p class="text-gray-600 mb-4">
+							Run multiple brands, regions, or languages under one umbrella with centralized control.
+						</p>
+						<ul class="space-y-2 text-gray-600 mb-6">
+							<li class="flex items-start">
+								<i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+								<span>Shared inventory management</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+								<span>Localized experiences</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-green-600 mr-2 mt-1"></i>
+								<span>Unified reporting</span>
+							</li>
+						</ul>
+						<a href="contact.html" class="text-green-600 font-medium hover:text-green-800">Learn More →</a>
+					</div>
+
+					<!-- Service 5 -->
+					<div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+							<i class="fas fa-search text-yellow-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">eCommerce SEO Services</h3>
+						<p class="text-gray-600 mb-4">
+							Technical and on-page SEO optimization to improve visibility and drive organic traffic to your store.
+						</p>
+						<ul class="space-y-2 text-gray-600 mb-6">
+							<li class="flex items-start">
+								<i class="fas fa-check text-yellow-600 mr-2 mt-1"></i>
+								<span>Technical SEO audits</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-yellow-600 mr-2 mt-1"></i>
+								<span>Product schema markup</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-yellow-600 mr-2 mt-1"></i>
+								<span>Content strategy</span>
+							</li>
+						</ul>
+						<a href="contact.html" class="text-yellow-600 font-medium hover:text-yellow-800">Learn More →</a>
+					</div>
+
+					<!-- Service 6 -->
+					<div class="service-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+							<i class="fas fa-cogs text-red-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Ongoing Support</h3>
+						<p class="text-gray-600 mb-4">
+							Maintenance, security updates, performance tuning, and feature enhancements to keep your store running
+							smoothly.
+						</p>
+						<ul class="space-y-2 text-gray-600 mb-6">
+							<li class="flex items-start">
+								<i class="fas fa-check text-red-600 mr-2 mt-1"></i>
+								<span>24/7 monitoring</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-red-600 mr-2 mt-1"></i>
+								<span>Security patches</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-red-600 mr-2 mt-1"></i>
+								<span>Performance optimization</span>
+							</li>
+						</ul>
+						<a href="contact.html" class="text-red-600 font-medium hover:text-red-800">Learn More →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Choose Us -->
+		<section class="py-20 bg-indigo-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose eComReflex?</h2>
+					<p class="text-xl text-gray-600">
+						Your strategic partner in building high-performance eCommerce experiences.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Reason 1 -->
+					<div class="bg-white p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-star text-indigo-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Full-Spectrum Expertise</h3>
+						<p class="text-gray-600">
+							From Shopify to Magento, WooCommerce, and custom solutions — we have platform-certified experts who
+							deliver the right solution for your needs.
+						</p>
+					</div>
+
+					<!-- Reason 2 -->
+					<div class="bg-white p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-puzzle-piece text-purple-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Custom-Tailored Development</h3>
+						<p class="text-gray-600">
+							We don't believe in one-size-fits-all. Every project is customized to match your unique workflows and
+							customer journey.
+						</p>
+					</div>
+
+					<!-- Reason 3 -->
+					<div class="bg-white p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-expand text-blue-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Scalable Solutions</h3>
+						<p class="text-gray-600">
+							Our websites are built with performance, flexibility, and long-term growth in mind to handle your
+							expanding business.
+						</p>
+					</div>
+
+					<!-- Reason 4 -->
+					<div class="bg-white p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-mobile-alt text-green-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Mobile-First Approach</h3>
+						<p class="text-gray-600">
+							We build with a mobile-first mindset using PWA and multi-device optimization so you're ready for mobile
+							commerce.
+						</p>
+					</div>
+
+					<!-- Reason 5 -->
+					<div class="bg-white p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-plug text-yellow-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Seamless Integrations</h3>
+						<p class="text-gray-600">
+							We connect your store with payment gateways, CRMs, ERPs, shipping APIs, and marketing tools for a
+							frictionless operation.
+						</p>
+					</div>
+
+					<!-- Reason 6 -->
+					<div class="bg-white p-8 rounded-xl shadow-md">
+						<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-headset text-red-600"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Reliable Support</h3>
+						<p class="text-gray-600">
+							Our relationship doesn't end after launch. We offer tailored support packages to keep your store running
+							at full power.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+						<p class="text-xl text-gray-600">Answers to common questions about our eCommerce development services.</p>
+					</div>
+
+					<div class="space-y-4 max-w-3xl mx-auto">
+						<!-- FAQ Item 1 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">What eCommerce platforms do you specialize in?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We work with all major platforms including Shopify, Shopify Plus, Magento 2, WooCommerce, Laravel
+									(Bagisto/Aimeos), and custom Headless Commerce solutions. We recommend the best fit based on your
+									business model, scale, and technical needs.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 2 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">
+									How much does it cost to develop an eCommerce website?
+								</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									The cost depends on factors like platform, features, design complexity, integrations, and store size.
+									Projects typically start from $3,000 for small businesses and can go higher for enterprise-level or
+									multi-store solutions. We offer free consultations and custom quotes.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 3 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How long does it take to build an eCommerce website?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Timelines vary depending on the project scope. A basic store might take 3–4 weeks, while a complex,
+									customized solution could take 8–12 weeks or more. We always define a timeline during project
+									onboarding and stick to clear milestones.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 4 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Can you migrate my existing store to a new platform?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Yes! We handle complete store migrations (data, design, SEO, integrations) from platforms like Wix,
+									BigCommerce, Magento 1, or WooCommerce to Shopify, Magento 2, Laravel, and others — with minimal
+									downtime and zero data loss.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 5 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Do you provide post-launch support and maintenance?</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Absolutely. eComReflex offers ongoing maintenance plans that include updates, bug fixes, security
+									patches, performance monitoring, and feature enhancements. We're here for long-term support beyond
+									launch day.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 6 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">
+									What makes eComReflex different from other eCommerce agencies?
+								</h3>
+								<i class="fas fa-chevron-down text-indigo-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We combine deep platform expertise, business-focused development, and personalized service. We don't
+									just build stores — we help you scale, optimize, and compete in your industry with confidence. Our
+									end-to-end partnership approach means we're with you from strategy through development to long-term
+									growth.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-20 bg-indigo-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Build Your eCommerce Store?</h2>
+					<p class="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+						Whether you're launching a new store or upgrading an existing one, our team is ready to help you succeed
+						online.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="get-started.html"
+							class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Get Started Now</a
+						>
+						<a
+							href="contact.html"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+							>Talk to an Expert</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-400">Reflex</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">
+							Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+						</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Services</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="ecommerce-development.html" class="text-gray-400 hover:text-white">Shopify Development</a>
+							</li>
+							<li>
+								<a href="ecommerce-development.html" class="text-gray-400 hover:text-white">Magento Development</a>
+							</li>
+							<li>
+								<a href="ecommerce-development.html" class="text-gray-400 hover:text-white">WooCommerce Development</a>
+							</li>
+							<li><a href="ecommerce-development.html" class="text-gray-400 hover:text-white">Headless Commerce</a></li>
+							<li>
+								<a href="ecommerce-development.html" class="text-gray-400 hover:text-white">eCommerce Migration</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="portfolio.html" class="text-gray-400 hover:text-white">Portfolio</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+							<li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// FAQ accordion
+			document.querySelectorAll('.faq-toggle').forEach((button) => {
+				button.addEventListener('click', () => {
+					const content = button.nextElementSibling;
+					const icon = button.querySelector('i');
+
+					// Toggle content
+					content.classList.toggle('hidden');
+
+					// Rotate icon
+					if (content.classList.contains('hidden')) {
+						icon.classList.remove('transform', 'rotate-180');
+					} else {
+						icon.classList.add('transform', 'rotate-180');
+					}
+				});
+			});
+
+			// Platform tabs
+			const tabButtons = document.querySelectorAll('.tab-btn');
+			const tabContents = document.querySelectorAll('.tab-content');
+
+			tabButtons.forEach((button) => {
+				button.addEventListener('click', () => {
+					const tabId = button.getAttribute('data-tab');
+
+					// Remove active class from all buttons and contents
+					tabButtons.forEach((btn) => btn.classList.remove('border-indigo-600', 'text-indigo-600'));
+					tabContents.forEach((content) => content.classList.remove('active'));
+
+					// Add active class to clicked button and corresponding content
+					button.classList.add('border-indigo-600', 'text-indigo-600');
+					document.getElementById(tabId).classList.add('active');
+				});
+			});
+
+			// Set first tab as active by default
+			if (tabButtons.length > 0) {
+				tabButtons[0].classList.add('border-indigo-600', 'text-indigo-600');
+			}
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
