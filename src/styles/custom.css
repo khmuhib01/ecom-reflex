@@ -268,3 +268,57 @@
 .map-container {
 	height: 400px;
 }
+
+/* About page  */
+
+.timeline-item {
+	position: relative;
+	padding-left: 2.5rem;
+}
+.timeline-item:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background-color: #7c3aed;
+}
+.timeline-item:after {
+	content: '';
+	position: absolute;
+	left: 0.75rem;
+	top: 1.5rem;
+	bottom: -1.5rem;
+	width: 2px;
+	background-color: #e9d5ff;
+}
+.timeline-item:last-child:after {
+	display: none;
+}
+.team-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+}
+.value-card {
+	transition: all 0.3s ease;
+}
+.value-card:hover {
+	transform: scale(1.05);
+}
+.stat-highlight {
+	position: relative;
+	z-index: 1;
+}
+.stat-highlight:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30%;
+	background-color: #ddd6fe;
+	z-index: -1;
+	transform: rotate(-1deg);
+}
