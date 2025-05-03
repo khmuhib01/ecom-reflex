@@ -576,7 +576,13 @@ export default function Home() {
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
 						{/* Case Study 1 */}
 						<div className="bg-white rounded-lg shadow-lg overflow-hidden">
-							<img src="https://via.placeholder.com/600x400" alt="Case Study 1" className="w-full h-56 object-cover" />
+							<Image
+								src="/assets/images/case-study/ecommerce_development.jpg"
+								alt="Case Study 1"
+								width={600}
+								height={400}
+								className="w-full h-56 object-cover"
+							/>
 							<div className="p-6">
 								<h3 className="text-2xl font-bold mb-4">Ecommerce Development</h3>
 								<p className="text-gray-700 mb-4">
@@ -594,7 +600,13 @@ export default function Home() {
 
 						{/* Case Study 2 */}
 						<div className="bg-white rounded-lg shadow-lg overflow-hidden">
-							<img src="https://via.placeholder.com/600x400" alt="Case Study 2" className="w-full h-56 object-cover" />
+							<Image
+								src="/assets/images/case-study/custom_development.jpg"
+								alt="Case Study 1"
+								width={600}
+								height={400}
+								className="w-full h-56 object-cover"
+							/>
 							<div className="p-6">
 								<h3 className="text-2xl font-bold mb-4">Custom Development</h3>
 								<p className="text-gray-700 mb-4">
@@ -609,7 +621,13 @@ export default function Home() {
 
 						{/* Case Study 3 */}
 						<div className="bg-white rounded-lg shadow-lg overflow-hidden">
-							<img src="https://via.placeholder.com/600x400" alt="Case Study 3" className="w-full h-56 object-cover" />
+							<Image
+								src="/assets/images/case-study/growth_and_optimization.jpg"
+								alt="Case Study 1"
+								width={600}
+								height={400}
+								className="w-full h-56 object-cover"
+							/>
 							<div className="p-6">
 								<h3 className="text-2xl font-bold mb-4">Growth & Optimization</h3>
 								<p className="text-gray-700 mb-4">
