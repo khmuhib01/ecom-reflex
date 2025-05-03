@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>eCommerce Platform Migration Services | EcomReflex</title>
+		<meta
+			name="description"
+			content="Seamless eCommerce platform migration with zero downtime. We securely transfer your store data, design, and functionality to a new platform with minimal disruption."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%);
+			}
+			.migration-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(147, 51, 234, 0.3);
+			}
+			.platform-card:hover {
+				transform: scale(1.03);
+				box-shadow: 0 10px 25px -5px rgba(126, 34, 206, 0.2);
+			}
+			.process-step {
+				position: relative;
+			}
+			.process-step:not(:last-child):after {
+				content: '';
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 2px;
+				height: 40px;
+				background-color: #e5e7eb;
+			}
+			@media (min-width: 1024px) {
+				.process-step:not(:last-child):after {
+					bottom: 50%;
+					left: auto;
+					right: -20px;
+					transform: translateY(50%);
+					width: 40px;
+					height: 2px;
+				}
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.tab-content {
+				display: none;
+			}
+			.tab-content.active {
+				display: block;
+				animation: fadeIn 0.5s ease-in-out;
+			}
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-600">Reflex</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+						<a href="ecommerce-development.html" class="text-indigo-600 font-medium transition">Services</a>
+						<a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+						<a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+						<a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+						<a
+							href="get-started.html"
+							class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Get Started</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Home</a
+						>
+						<a
+							href="ecommerce-development.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 hover:bg-gray-50"
+							>Services</a
+						>
+						<a
+							href="portfolio.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Portfolio</a
+						>
+						<a
+							href="about.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>About</a
+						>
+						<a
+							href="contact.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Contact</a
+						>
+						<a
+							href="get-started.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Get Started</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-28">
+				<div class="max-w-4xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">eCommerce Platform Migration Services</h1>
+					<p class="text-xl text-purple-100 mb-8">
+						Seamlessly transfer your store to a new platform with zero downtime and no data loss. We handle the complex
+						transition so you can focus on sales.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="#migration-process"
+							class="bg-white text-purple-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Our Process</a
+						>
+						<a
+							href="#platforms"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-purple-600 transition text-center"
+							>Supported Platforms</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Migrate Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-5xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+						<div>
+							<h2 class="text-3xl md:text-4xl font-bold mb-6">Why Consider Platform Migration?</h2>
+							<p class="text-xl text-gray-600 mb-6">
+								Your eCommerce platform should grow with your business. If you're experiencing limitations, it might be
+								time for a change.
+							</p>
+							<div class="space-y-4">
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-purple-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Overcoming Limitations</h3>
+										<p class="text-gray-600">Your current platform can't support your growth or needed features</p>
+									</div>
+								</div>
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-purple-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Reducing Costs</h3>
+										<p class="text-gray-600">Moving to a more cost-effective solution with better ROI</p>
+									</div>
+								</div>
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-purple-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Improving Performance</h3>
+										<p class="text-gray-600">Slow load times and poor mobile experience hurting conversions</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+							<img
+								src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+								alt="Platform Migration"
+								class="rounded-lg w-full h-auto"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Migration Challenges -->
+		<section class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Common Migration Challenges We Solve</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Platform migration is complex - we handle the technical hurdles so you don't have to.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Challenge 1 -->
+					<div class="migration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-database text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Data Loss & Corruption</h3>
+						<p class="text-gray-600">
+							We implement rigorous data mapping and validation to ensure all products, customers, and orders transfer
+							accurately.
+						</p>
+					</div>
+
+					<!-- Challenge 2 -->
+					<div class="migration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-clock text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Downtime & Revenue Loss</h3>
+						<p class="text-gray-600">
+							Our phased migration approach keeps your store operational throughout the transition.
+						</p>
+					</div>
+
+					<!-- Challenge 3 -->
+					<div class="migration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-link text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Broken Links & SEO Impact</h3>
+						<p class="text-gray-600">
+							We maintain URL structures and implement 301 redirects to preserve search rankings.
+						</p>
+					</div>
+
+					<!-- Challenge 4 -->
+					<div class="migration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-plug text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Integration Breakdown</h3>
+						<p class="text-gray-600">
+							All third-party integrations (payment, shipping, ERP) are carefully migrated or reimplemented.
+						</p>
+					</div>
+
+					<!-- Challenge 5 -->
+					<div class="migration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-shopping-cart text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Functionality Gaps</h3>
+						<p class="text-gray-600">We analyze and recreate all custom features to match your current capabilities.</p>
+					</div>
+
+					<!-- Challenge 6 -->
+					<div class="migration-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-lock text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Security Risks</h3>
+						<p class="text-gray-600">
+							Secure data transfer protocols and thorough post-migration testing ensure no vulnerabilities.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Supported Platforms -->
+		<section id="platforms" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Platforms We Migrate To & From</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Experience with all major eCommerce platforms and custom solutions.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+					<!-- Platform 1 -->
+					<div class="platform-card bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center">
+						<img src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify" class="h-12 mb-4" />
+						<h3 class="text-lg font-bold mb-2">Shopify</h3>
+						<p class="text-gray-600 text-center text-sm">
+							Plus migrations, headless setups, and custom theme transfers
+						</p>
+					</div>
+
+					<!-- Platform 2 -->
+					<div class="platform-card bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center">
+						<img src="https://cdn.worldvectorlogo.com/logos/magento.svg" alt="Magento" class="h-12 mb-4" />
+						<h3 class="text-lg font-bold mb-2">Magento</h3>
+						<p class="text-gray-600 text-center text-sm">
+							Open Source to Commerce, version upgrades, and cloud migrations
+						</p>
+					</div>
+
+					<!-- Platform 3 -->
+					<div class="platform-card bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center">
+						<img src="https://cdn.worldvectorlogo.com/logos/woocommerce.svg" alt="WooCommerce" class="h-12 mb-4" />
+						<h3 class="text-lg font-bold mb-2">WooCommerce</h3>
+						<p class="text-gray-600 text-center text-sm">
+							WordPress migrations, hosting transfers, and scalability upgrades
+						</p>
+					</div>
+
+					<!-- Platform 4 -->
+					<div class="platform-card bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center">
+						<img src="https://cdn.worldvectorlogo.com/logos/bigcommerce.svg" alt="BigCommerce" class="h-12 mb-4" />
+						<h3 class="text-lg font-bold mb-2">BigCommerce</h3>
+						<p class="text-gray-600 text-center text-sm">
+							Enterprise migrations, headless implementations, and theme transfers
+						</p>
+					</div>
+
+					<!-- Platform 5 -->
+					<div class="platform-card bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center">
+						<img
+							src="https://cdn.worldvectorlogo.com/logos/salesforce.svg"
+							alt="Salesforce Commerce Cloud"
+							class="h-12 mb-4"
+						/>
+						<h3 class="text-lg font-bold mb-2">Salesforce CC</h3>
+						<p class="text-gray-600 text-center text-sm">Complex B2B/B2C implementations and data migrations</p>
+					</div>
+
+					<!-- Platform 6 -->
+					<div class="platform-card bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center">
+						<img src="https://cdn.worldvectorlogo.com/logos/prestashop.svg" alt="PrestaShop" class="h-12 mb-4" />
+						<h3 class="text-lg font-bold mb-2">PrestaShop</h3>
+						<p class="text-gray-600 text-center text-sm">Version upgrades and platform transitions</p>
+					</div>
+
+					<!-- Platform 7 -->
+					<div class="platform-card bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center">
+						<img src="https://cdn.worldvectorlogo.com/logos/opencart.svg" alt="OpenCart" class="h-12 mb-4" />
+						<h3 class="text-lg font-bold mb-2">OpenCart</h3>
+						<p class="text-gray-600 text-center text-sm">Legacy system upgrades and data migrations</p>
+					</div>
+
+					<!-- Platform 8 -->
+					<div class="platform-card bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center">
+						<img
+							src="https://cdn.worldvectorlogo.com/logos/custom-platform.svg"
+							alt="Custom Platforms"
+							class="h-12 mb-4"
+						/>
+						<h3 class="text-lg font-bold mb-2">Custom Platforms</h3>
+						<p class="text-gray-600 text-center text-sm">Proprietary systems and legacy eCommerce solutions</p>
+					</div>
+				</div>
+
+				<div class="mt-12 text-center">
+					<p class="text-lg text-gray-600 mb-6">
+						Don't see your current or target platform? We've handled hundreds of custom migration scenarios.
+					</p>
+					<a
+						href="contact.html"
+						class="inline-block bg-purple-600 text-white px-6 py-3 rounded-md font-medium hover:bg-purple-700 transition"
+						>Discuss Your Migration</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Migration Process -->
+		<section id="migration-process" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Proven Migration Process</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						A structured approach to ensure smooth, risk-free platform transitions.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+					<!-- Step 1 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-purple-600 font-bold text-xl">1</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Discovery & Planning</h3>
+						<p class="text-gray-600">Comprehensive audit of current setup and requirements definition.</p>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-purple-600 font-bold text-xl">2</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Data Mapping</h3>
+						<p class="text-gray-600">Schema analysis and transformation planning between platforms.</p>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-purple-600 font-bold text-xl">3</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Test Migration</h3>
+						<p class="text-gray-600">Dry run with sample data to validate the migration approach.</p>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-purple-600 font-bold text-xl">4</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Full Migration</h3>
+						<p class="text-gray-600">Complete data transfer with validation at each stage.</p>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="process-step bg-white p-8 rounded-xl shadow-md text-center">
+						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-purple-600 font-bold text-xl">5</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Go-Live & Optimization</h3>
+						<p class="text-gray-600">Final deployment and performance tuning.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Data We Migrate -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">What We Migrate</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Comprehensive transfer of all critical eCommerce data and functionality.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Data Type 1 -->
+					<div class="bg-gray-50 p-8 rounded-xl shadow-md">
+						<h3 class="text-xl font-bold mb-4 flex items-center">
+							<div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+								<i class="fas fa-box text-purple-600"></i>
+							</div>
+							Product Data
+						</h3>
+						<ul class="space-y-2 text-gray-600">
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>SKUs, names, descriptions</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Pricing & inventory levels</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Product images & media</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Categories & attributes</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Custom fields & variants</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Data Type 2 -->
+					<div class="bg-gray-50 p-8 rounded-xl shadow-md">
+						<h3 class="text-xl font-bold mb-4 flex items-center">
+							<div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+								<i class="fas fa-users text-purple-600"></i>
+							</div>
+							Customer Data
+						</h3>
+						<ul class="space-y-2 text-gray-600">
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Account information</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Order history</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Address books</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Wishlists</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Loyalty points</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Data Type 3 -->
+					<div class="bg-gray-50 p-8 rounded-xl shadow-md">
+						<h3 class="text-xl font-bold mb-4 flex items-center">
+							<div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+								<i class="fas fa-shopping-cart text-purple-600"></i>
+							</div>
+							Operational Data
+						</h3>
+						<ul class="space-y-2 text-gray-600">
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Orders & transactions</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Discounts & promotions</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Shipping rules</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>Tax configurations</span>
+							</li>
+							<li class="flex items-start">
+								<i class="fas fa-check text-purple-500 mr-2 mt-1"></i>
+								<span>CMS pages & blogs</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Case Studies -->
+		<section class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Migration Success Stories</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						How we've helped businesses transition to better platforms.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+					<!-- Case Study 1 -->
+					<div class="bg-white rounded-xl overflow-hidden shadow-md">
+						<img
+							src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Case Study"
+							class="w-full h-48 object-cover"
+						/>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2">Magento 1 to Shopify Plus</h3>
+							<p class="text-gray-600 mb-4">
+								Migrated 85,000+ products and 5 years of order history with zero downtime, resulting in 40% lower
+								operational costs.
+							</p>
+							<div class="flex flex-wrap gap-2 mb-4">
+								<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Zero Downtime</span>
+								<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Complex Data</span>
+								<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">SEO Preserved</span>
+							</div>
+							<a href="#" class="text-purple-600 font-medium hover:text-purple-800">Read Case Study →</a>
+						</div>
+					</div>
+
+					<!-- Case Study 2 -->
+					<div class="bg-white rounded-xl overflow-hidden shadow-md">
+						<img
+							src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Case Study"
+							class="w-full h-48 object-cover"
+						/>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2">WooCommerce to BigCommerce</h3>
+							<p class="text-gray-600 mb-4">
+								Transitioned a high-volume store with custom integrations, improving site speed by 60% and reducing
+								abandoned carts.
+							</p>
+							<div class="flex flex-wrap gap-2 mb-4">
+								<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Custom Integrations</span>
+								<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Performance Boost</span>
+								<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Seamless Transition</span>
+							</div>
+							<a href="#" class="text-purple-600 font-medium hover:text-purple-800">Read Case Study →</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-12 text-center">
+					<a
+						href="portfolio.html"
+						class="inline-block border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-md font-medium hover:bg-purple-600 hover:text-white transition"
+						>View More Migration Projects</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl md:text-4xl font-bold mb-4">Platform Migration FAQs</h2>
+						<p class="text-xl text-gray-600">Answers to common questions about eCommerce platform migration.</p>
+					</div>
+
+					<div class="space-y-4">
+						<!-- FAQ Item 1 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How long does a typical platform migration take?</h3>
+								<i class="fas fa-chevron-down text-purple-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Migration timelines vary based on complexity, but here are general guidelines:
+									<br /><br />
+									• Small stores (under 1,000 products): 4-8 weeks<br />
+									• Medium stores (1,000-10,000 products): 8-12 weeks<br />
+									• Large enterprises (10,000+ products): 3-6 months<br /><br />
+									Factors affecting timeline include data complexity, custom features, integration requirements, and the
+									platforms involved. We provide a detailed project plan after our initial discovery phase.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 2 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Will my SEO be affected by the migration?</h3>
+								<i class="fas fa-chevron-down text-purple-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									When done correctly, platform migration should have minimal negative SEO impact. We implement
+									comprehensive strategies to preserve your search rankings:
+									<br /><br />
+									1. Maintain URL structures whenever possible<br />
+									2. Implement 301 redirects for any changed URLs<br />
+									3. Migrate all metadata (titles, descriptions, alt text)<br />
+									4. Submit updated sitemaps to search engines<br />
+									5. Monitor rankings and traffic post-launch<br /><br />
+									Our clients typically see rankings fully recover within 4-8 weeks, often with improvements due to
+									better site architecture.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 3 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">What about my custom features and integrations?</h3>
+								<i class="fas fa-chevron-down text-purple-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We thoroughly document all custom functionality during the discovery phase and develop a migration
+									plan for each element:
+									<br /><br />
+									• <strong>Custom features</strong>: We rebuild using native capabilities of the new platform or
+									develop equivalent custom solutions<br />
+									• <strong>Integrations</strong>: We reconnect with existing APIs or implement alternative solutions
+									that provide the same functionality<br />
+									• <strong>Workflows</strong>: We analyze and adapt business processes to work optimally on the new
+									platform<br /><br />
+									Our goal is to match or improve upon your current capabilities, never downgrade.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 4 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How do you handle downtime during migration?</h3>
+								<i class="fas fa-chevron-down text-purple-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We employ several strategies to minimize or eliminate downtime:
+									<br /><br />
+									• <strong>Staged migrations</strong>: Transfer data in phases while keeping the old site running<br />
+									• <strong>Maintenance mode</strong>: Brief read-only periods if absolutely necessary (typically <1
+									hour)<br />
+									• <strong>DNS propagation</strong>: Careful timing of DNS changes to minimize disruption<br />
+									• <strong>Order syncing</strong>: Dual-system operation during critical periods to prevent lost
+									sales<br /><br />
+									For most migrations, we achieve true zero-downtime transitions where customers never see a "closed for
+									maintenance" message.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 5 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">What post-migration support do you provide?</h3>
+								<i class="fas fa-chevron-down text-purple-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Our migration service includes comprehensive post-launch support:
+									<br /><br />
+									• <strong>30-day warranty period</strong>: Fix any migration-related issues at no extra cost<br />
+									• <strong>Performance monitoring</strong>: Track site speed and functionality for 60 days<br />
+									• <strong>SEO tracking</strong>: Monitor search rankings and traffic recovery<br />
+									• <strong>Training</strong>: Admin and content team training on the new platform<br />
+									• <strong>Ongoing support</strong>: Optional maintenance plans for continued optimization<br /><br />
+									We're committed to your long-term success, not just the technical migration.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 6 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How much does platform migration cost?</h3>
+								<i class="fas fa-chevron-down text-purple-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Migration costs depend on several factors:
+									<br /><br />
+									• <strong>Platforms involved</strong>: Some transitions are more complex than others<br />
+									• <strong>Data volume</strong>: Number of products, customers, and orders<br />
+									• <strong>Custom features</strong>: Amount of unique functionality to recreate<br />
+									• <strong>Integrations</strong>: Third-party systems that need reconnection<br /><br />
+									Typical project ranges:
+									<br /><br />
+									• Basic migrations: $10,000-$25,000<br />
+									• Medium complexity: $25,000-$75,000<br />
+									• Enterprise migrations: $75,000+<br /><br />
+									We provide fixed-price quotes after a detailed discovery process to eliminate surprises.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-20 bg-purple-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Migrate to a Better Platform?</h2>
+					<p class="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+						Let's discuss how we can seamlessly transition your eCommerce store with zero downtime and no data loss.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="contact.html"
+							class="bg-white text-purple-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Get Migration Consultation</a
+						>
+						<a
+							href="tel:+18005551234"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-purple-600 transition text-center"
+						>
+							<i class="fas fa-phone-alt mr-2"></i> Call Our Migration Team
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-400">Reflex</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">
+							Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+						</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Services</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="ecommerce-development.html" class="text-gray-400 hover:text-white">eCommerce Development</a>
+							</li>
+							<li>
+								<a href="ecommerce-migration-integration.html" class="text-gray-400 hover:text-white"
+									>Migration & Integration</a
+								>
+							</li>
+							<li>
+								<a href="ecommerce-audit-analysis.html" class="text-gray-400 hover:text-white">Audit & Analysis</a>
+							</li>
+							<li>
+								<a href="ecommerce-growth-optimization.html" class="text-gray-400 hover:text-white"
+									>Growth & Optimization</a
+								>
+							</li>
+							<li>
+								<a href="ecommerce-support-maintenance.html" class="text-gray-400 hover:text-white"
+									>Support & Maintenance</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="portfolio.html" class="text-gray-400 hover:text-white">Portfolio</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+							<li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// FAQ accordion
+			document.querySelectorAll('.faq-toggle').forEach((button) => {
+				button.addEventListener('click', () => {
+					const content = button.nextElementSibling;
+					const icon = button.querySelector('i');
+
+					// Toggle content
+					content.classList.toggle('hidden');
+
+					// Rotate icon
+					if (content.classList.contains('hidden')) {
+						icon.classList.remove('transform', 'rotate-180');
+					} else {
+						icon.classList.add('transform', 'rotate-180');
+					}
+				});
+			});
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mobile Commerce & PWA Development | EcomReflex</title>
+		<meta
+			name="description"
+			content="Transform your eCommerce store with Progressive Web Apps (PWAs) and mobile-optimized solutions. Boost engagement, speed, and conversions with app-like experiences."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+			}
+			.benefit-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3);
+			}
+			.feature-card:hover {
+				transform: scale(1.03);
+				box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.2);
+			}
+			.process-step {
+				position: relative;
+			}
+			.process-step:not(:last-child):after {
+				content: '';
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 2px;
+				height: 40px;
+				background-color: #e5e7eb;
+			}
+			@media (min-width: 1024px) {
+				.process-step:not(:last-child):after {
+					bottom: 50%;
+					left: auto;
+					right: -20px;
+					transform: translateY(50%);
+					width: 40px;
+					height: 2px;
+				}
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.pwa-showcase {
+				background: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%);
+			}
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-600">Reflex</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+						<a href="ecommerce-development.html" class="text-indigo-600 font-medium transition">Services</a>
+						<a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+						<a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+						<a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+						<a
+							href="get-started.html"
+							class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Get Started</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Home</a
+						>
+						<a
+							href="ecommerce-development.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 hover:bg-gray-50"
+							>Services</a
+						>
+						<a
+							href="portfolio.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Portfolio</a
+						>
+						<a
+							href="about.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>About</a
+						>
+						<a
+							href="contact.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Contact</a
+						>
+						<a
+							href="get-started.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Get Started</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-28">
+				<div class="max-w-4xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Mobile Commerce & Progressive Web Apps</h1>
+					<p class="text-xl text-emerald-100 mb-8">
+						Transform your eCommerce store with app-like experiences that boost engagement, speed, and conversions -
+						without app store limitations.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="#pwa-benefits"
+							class="bg-white text-emerald-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Why PWAs?</a
+						>
+						<a
+							href="#mobile-features"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-emerald-600 transition text-center"
+							>Key Features</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Mobile Commerce Stats -->
+		<section class="py-16 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto text-center">
+					<div class="p-6">
+						<div class="text-3xl md:text-4xl font-bold text-emerald-600 mb-2">72%</div>
+						<p class="text-gray-600">of eCommerce traffic comes from mobile devices</p>
+					</div>
+					<div class="p-6">
+						<div class="text-3xl md:text-4xl font-bold text-emerald-600 mb-2">3x</div>
+						<p class="text-gray-600">higher conversion rates with PWAs vs. mobile sites</p>
+					</div>
+					<div class="p-6">
+						<div class="text-3xl md:text-4xl font-bold text-emerald-600 mb-2">50%</div>
+						<p class="text-gray-600">faster page loads with PWA technology</p>
+					</div>
+					<div class="p-6">
+						<div class="text-3xl md:text-4xl font-bold text-emerald-600 mb-2">25%</div>
+						<p class="text-gray-600">higher average order value on PWA stores</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PWA Introduction -->
+		<section class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-5xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+						<div>
+							<h2 class="text-3xl md:text-4xl font-bold mb-6">What Are Progressive Web Apps?</h2>
+							<p class="text-xl text-gray-600 mb-6">
+								PWAs combine the best of websites and mobile apps - delivering app-like experiences through web browsers
+								with no app store downloads required.
+							</p>
+							<div class="space-y-4">
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Installable</h3>
+										<p class="text-gray-600">Users can add to home screen just like native apps</p>
+									</div>
+								</div>
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Offline Capable</h3>
+										<p class="text-gray-600">Works without internet connection</p>
+									</div>
+								</div>
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Lightning Fast</h3>
+										<p class="text-gray-600">Near-instant loading with service workers</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="relative">
+							<div class="bg-emerald-100 p-6 rounded-xl shadow-lg">
+								<img
+									src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									alt="PWA Mobile Commerce"
+									class="rounded-lg w-full h-auto"
+								/>
+							</div>
+							<div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-md border border-gray-200">
+								<div class="flex items-center">
+									<div class="bg-emerald-100 p-3 rounded-full mr-3">
+										<i class="fas fa-mobile-alt text-emerald-600 text-xl"></i>
+									</div>
+									<div>
+										<div class="font-bold">Try Our PWA Demo</div>
+										<a href="#" class="text-emerald-600 text-sm hover:underline">Experience it yourself →</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PWA Benefits -->
+		<section id="pwa-benefits" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose PWAs for eCommerce?</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						The smart alternative to native mobile apps with significant advantages.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Benefit 1 -->
+					<div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-dollar-sign text-emerald-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Lower Development Costs</h3>
+						<p class="text-gray-600">
+							Build once for all platforms instead of separate iOS and Android apps. Updates deploy instantly without
+							app store approvals.
+						</p>
+					</div>
+
+					<!-- Benefit 2 -->
+					<div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-rocket text-emerald-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Better Performance</h3>
+						<p class="text-gray-600">
+							PWAs load instantly even on slow networks, with average page load times under 2 seconds thanks to service
+							worker caching.
+						</p>
+					</div>
+
+					<!-- Benefit 3 -->
+					<div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-chart-line text-emerald-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Higher Conversions</h3>
+						<p class="text-gray-600">
+							The app-like interface and speed boost conversion rates by 30-50% compared to traditional mobile sites.
+						</p>
+					</div>
+
+					<!-- Benefit 4 -->
+					<div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-search text-emerald-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">SEO Friendly</h3>
+						<p class="text-gray-600">
+							Unlike native apps, PWAs are indexable by search engines and can drive organic traffic to your store.
+						</p>
+					</div>
+
+					<!-- Benefit 5 -->
+					<div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-bell text-emerald-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Push Notifications</h3>
+						<p class="text-gray-600">
+							Re-engage customers with web push notifications that work just like native app notifications.
+						</p>
+					</div>
+
+					<!-- Benefit 6 -->
+					<div class="benefit-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-sync-alt text-emerald-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Offline Functionality</h3>
+						<p class="text-gray-600">
+							Customers can browse products, view carts, and even complete purchases when offline with sync when
+							connection returns.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PWA vs Native vs Responsive -->
+		<section class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">PWA vs Native App vs Responsive Site</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">How PWAs compare to other mobile commerce approaches.</p>
+				</div>
+
+				<div class="max-w-5xl mx-auto overflow-hidden shadow-md rounded-lg">
+					<table class="min-w-full divide-y divide-gray-200">
+						<thead class="bg-gray-100">
+							<tr>
+								<th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+									Feature
+								</th>
+								<th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+									Progressive Web App
+								</th>
+								<th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+									Native Mobile App
+								</th>
+								<th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+									Responsive Website
+								</th>
+							</tr>
+						</thead>
+						<tbody class="bg-white divide-y divide-gray-200">
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Installation</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Add to home screen</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">App store download</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Browser only</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Offline Use</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Yes</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Yes</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">No</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Push Notifications</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Yes</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Yes</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">No</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">App Store Presence</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">No</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Yes</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">No</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Development Cost</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Low (single codebase)</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">High (multiple platforms)</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Low</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Updates</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Instant</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">App store approval</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Instant</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Discoverability</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Search engines</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">App stores</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Search engines</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<!-- Mobile Features -->
+		<section id="mobile-features" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Mobile Commerce Features We Implement</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Cutting-edge functionality to optimize the mobile shopping experience.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Feature 1 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-bolt text-emerald-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Instant Loading</h3>
+						<p class="text-gray-600 mb-4">
+							Service worker caching for near-instant page loads, even on flaky networks.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded">Cache First</span>
+							<span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded">Lazy Loading</span>
+						</div>
+					</div>
+
+					<!-- Feature 2 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-mobile-alt text-blue-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">App-Like UI</h3>
+						<p class="text-gray-600 mb-4">
+							Native-style navigation, gestures, and animations that feel like a real app.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Smooth Transitions</span>
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Gesture Support</span>
+						</div>
+					</div>
+
+					<!-- Feature 3 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-wifi-slash text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Offline Mode</h3>
+						<p class="text-gray-600 mb-4">Browse products, view cart, and complete purchases without internet.</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Cache API</span>
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">IndexedDB</span>
+						</div>
+					</div>
+
+					<!-- Feature 4 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-bell text-red-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Push Notifications</h3>
+						<p class="text-gray-600 mb-4">Re-engage users with timely promotions, cart reminders, and order updates.</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Web Push API</span>
+							<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Personalized</span>
+						</div>
+					</div>
+
+					<!-- Feature 5 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-home text-yellow-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Home Screen Installation</h3>
+						<p class="text-gray-600 mb-4">Prompt users to add your PWA to their home screen for easy access.</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Web App Manifest</span>
+							<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Install Prompt</span>
+						</div>
+					</div>
+
+					<!-- Feature 6 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-fingerprint text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Biometric Auth</h3>
+						<p class="text-gray-600 mb-4">Secure login with fingerprint or face ID for faster checkout.</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">WebAuthn</span>
+							<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">FIDO2</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PWA Showcase -->
+		<section class="pwa-showcase py-20">
+			<div class="container mx-auto px-4">
+				<div class="max-w-5xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+						<div class="order-2 md:order-1">
+							<h2 class="text-3xl md:text-4xl font-bold mb-6">See Our PWA Demo</h2>
+							<p class="text-xl text-gray-700 mb-6">
+								Experience the app-like feel of a Progressive Web App on your mobile device.
+							</p>
+							<div class="space-y-4">
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+										<i class="fas fa-qrcode"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Scan QR Code</h3>
+										<p class="text-gray-700">Open your camera and scan to try our demo PWA</p>
+										<img
+											src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://ecomreflex.com/pwa-demo"
+											alt="PWA Demo QR Code"
+											class="mt-2 h-32 w-32"
+										/>
+									</div>
+								</div>
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-emerald-600 mr-4">
+										<i class="fas fa-mobile-alt"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Add to Home Screen</h3>
+										<p class="text-gray-700">Follow the prompt to install our demo like a native app</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="order-1 md:order-2 relative">
+							<div class="bg-white p-2 rounded-2xl shadow-xl inline-block">
+								<div class="relative">
+									<img
+										src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+										alt="PWA Demo"
+										class="rounded-xl w-full max-w-xs border-8 border-white"
+									/>
+									<div class="absolute -bottom-4 -right-4 bg-emerald-600 text-white px-4 py-2 rounded-lg shadow-md">
+										Try It Live
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Implementation Process -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Our PWA Implementation Process</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						A structured approach to delivering high-performance mobile experiences.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+					<!-- Step 1 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-emerald-600 font-bold text-xl">1</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Mobile Audit</h3>
+						<p class="text-gray-600">Analyze current mobile performance and identify optimization opportunities.</p>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-emerald-600 font-bold text-xl">2</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">UX Design</h3>
+						<p class="text-gray-600">Create app-like interfaces with mobile-first navigation and gestures.</p>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-emerald-600 font-bold text-xl">3</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">PWA Development</h3>
+						<p class="text-gray-600">Implement service workers, manifest, and core PWA features.</p>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-emerald-600 font-bold text-xl">4</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Performance Optimization</h3>
+						<p class="text-gray-600">Fine-tune for speed, offline capabilities, and Core Web Vitals.</p>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center">
+						<div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-emerald-600 font-bold text-xl">5</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Launch & Analytics</h3>
+						<p class="text-gray-600">Deploy with monitoring for installs, engagement, and conversions.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Case Studies -->
+		<section class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Mobile Commerce Success Stories</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						How we've helped businesses transform their mobile experience.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+					<!-- Case Study 1 -->
+					<div class="bg-white rounded-xl overflow-hidden shadow-md">
+						<img
+							src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Case Study"
+							class="w-full h-48 object-cover"
+						/>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2">Fashion Retailer</h3>
+							<p class="text-gray-600 mb-4">
+								Implemented PWA that increased mobile conversions by 42% and reduced bounce rate by 35%.
+							</p>
+							<div class="flex flex-wrap gap-2 mb-4">
+								<span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded">Shopify PWA</span>
+								<span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded">3.2s Load Time</span>
+								<span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded">Offline Mode</span>
+							</div>
+							<a href="#" class="text-emerald-600 font-medium hover:text-emerald-800">Read Case Study →</a>
+						</div>
+					</div>
+
+					<!-- Case Study 2 -->
+					<div class="bg-white rounded-xl overflow-hidden shadow-md">
+						<img
+							src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Case Study"
+							class="w-full h-48 object-cover"
+						/>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2">Home Goods Store</h3>
+							<p class="text-gray-600 mb-4">
+								Mobile-first redesign with PWA features increased mobile revenue by 65% in 3 months.
+							</p>
+							<div class="flex flex-wrap gap-2 mb-4">
+								<span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded">Magento PWA</span>
+								<span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded">Push Notifications</span>
+								<span class="bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded">1.8s Load Time</span>
+							</div>
+							<a href="#" class="text-emerald-600 font-medium hover:text-emerald-800">Read Case Study →</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-12 text-center">
+					<a
+						href="portfolio.html"
+						class="inline-block border-2 border-emerald-600 text-emerald-600 px-6 py-3 rounded-md font-medium hover:bg-emerald-600 hover:text-white transition"
+						>View More Case Studies</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl md:text-4xl font-bold mb-4">Mobile Commerce & PWA FAQs</h2>
+						<p class="text-xl text-gray-600">Answers to common questions about mobile optimization and PWAs.</p>
+					</div>
+
+					<div class="space-y-4">
+						<!-- FAQ Item 1 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How do PWAs compare to native mobile apps?</h3>
+								<i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									PWAs offer many native app features (home screen icon, push notifications, offline use) without
+									requiring app store downloads. They're cheaper to develop (single codebase), easier to maintain, and
+									discoverable via search engines. However, native apps may still be better for complex gaming or heavy
+									device hardware access.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 2 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Do PWAs work on all devices and browsers?</h3>
+								<i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									PWAs work on all modern browsers (Chrome, Firefox, Safari, Edge) across Android and iOS. Feature
+									support varies slightly by platform - for example, iOS Safari has limited PWA capabilities compared to
+									Android Chrome. We implement graceful degradation so features work appropriately on each platform.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 3 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Can we convert our existing site to a PWA?</h3>
+								<i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Yes! Most existing eCommerce sites can be enhanced with PWA capabilities. We typically:<br /><br />
+									1. Audit your current mobile experience<br />
+									2. Implement service workers for caching<br />
+									3. Add a web app manifest<br />
+									4. Optimize for Core Web Vitals<br />
+									5. Add progressive enhancement features<br /><br />
+									The process preserves your existing design while adding PWA benefits.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 4 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How much does PWA development cost?</h3>
+								<i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Costs vary based on your platform and requirements, but generally:<br /><br />
+									• Basic PWA enhancements: $5,000-$15,000<br />
+									• Complete PWA storefront: $15,000-$50,000<br />
+									• Enterprise PWA solutions: $50,000+<br /><br />
+									Compared to native apps (which often cost $100,000+ for both platforms), PWAs provide excellent ROI.
+									We offer fixed-price packages and custom quotes based on your needs.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 5 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How do you measure PWA success?</h3>
+								<i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We track these key metrics:<br /><br />
+									• <strong>Installations</strong>: How many users add to home screen<br />
+									• <strong>Engagement</strong>: Session duration, pages per visit<br />
+									• <strong>Performance</strong>: Load times, Core Web Vitals scores<br />
+									• <strong>Conversions</strong>: Mobile conversion rate changes<br />
+									• <strong>Re-engagement</strong>: Push notification effectiveness<br /><br />
+									Most clients see significant improvements across all metrics within 3-6 months.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 6 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Can PWAs be listed in app stores?</h3>
+								<i class="fas fa-chevron-down text-emerald-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Yes! With technologies like Trusted Web Activities (Android) and Apple's upcoming Web App support,
+									PWAs can now be distributed through app stores while maintaining all their web advantages. We can help
+									package your PWA for app store submission if that distribution channel is important for your business.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-20 bg-emerald-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Mobile Commerce?</h2>
+					<p class="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+						Let's discuss how Progressive Web Apps can boost your mobile conversions and customer engagement.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="contact.html"
+							class="bg-white text-emerald-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Get PWA Consultation</a
+						>
+						<a
+							href="tel:+18005551234"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-emerald-600 transition text-center"
+						>
+							<i class="fas fa-phone-alt mr-2"></i> Call Our Mobile Team
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-400">Reflex</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">
+							Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+						</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Services</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="ecommerce-development.html" class="text-gray-400 hover:text-white">eCommerce Development</a>
+							</li>
+							<li>
+								<a href="ecommerce-migration-integration.html" class="text-gray-400 hover:text-white"
+									>Migration & Integration</a
+								>
+							</li>
+							<li>
+								<a href="ecommerce-audit-analysis.html" class="text-gray-400 hover:text-white">Audit & Analysis</a>
+							</li>
+							<li>
+								<a href="ecommerce-growth-optimization.html" class="text-gray-400 hover:text-white"
+									>Growth & Optimization</a
+								>
+							</li>
+							<li>
+								<a href="ecommerce-support-maintenance.html" class="text-gray-400 hover:text-white"
+									>Support & Maintenance</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="portfolio.html" class="text-gray-400 hover:text-white">Portfolio</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+							<li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// FAQ accordion
+			document.querySelectorAll('.faq-toggle').forEach((button) => {
+				button.addEventListener('click', () => {
+					const content = button.nextElementSibling;
+					const icon = button.querySelector('i');
+
+					// Toggle content
+					content.classList.toggle('hidden');
+
+					// Rotate icon
+					if (content.classList.contains('hidden')) {
+						icon.classList.remove('transform', 'rotate-180');
+					} else {
+						icon.classList.add('transform', 'rotate-180');
+					}
+				});
+			});
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

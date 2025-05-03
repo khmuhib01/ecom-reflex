@@ -21,22 +21,25 @@ export default function HeaderComponent() {
 					</div>
 
 					<div className="hidden md:flex items-center space-x-8">
-						<a href="#services" className="text-gray-700 hover:text-indigo-600 transition">
+						<a href="/services" className="text-gray-700 hover:text-indigo-600 transition">
 							Services
 						</a>
-						<a href="#process" className="text-gray-700 hover:text-indigo-600 transition">
-							Process
+						<a href="/solutions" className="text-gray-700 hover:text-indigo-600 transition">
+							Solutions
 						</a>
-						<a href="#pricing" className="text-gray-700 hover:text-indigo-600 transition">
-							Pricing
+						<a href="/team" className="text-gray-700 hover:text-indigo-600 transition">
+							Team
 						</a>
-						<a href="#portfolio" className="text-gray-700 hover:text-indigo-600 transition">
-							Portfolio
+						<a href="/blog" className="text-gray-700 hover:text-indigo-600 transition">
+							Blog
 						</a>
-						<a href="#faq" className="text-gray-700 hover:text-indigo-600 transition">
-							FAQ
+						<a href="/career" className="text-gray-700 hover:text-indigo-600 transition">
+							Career
 						</a>
-						<a href="#contact" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+						<a
+							href="/get-started"
+							className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+						>
 							Get Started
 						</a>
 					</div>
@@ -49,42 +52,51 @@ export default function HeaderComponent() {
 				{mobileOpen && (
 					<div className="md:hidden">
 						<div className="px-2 pt-2 pb-4 space-y-1">
-							<a
-								href="#services"
+							<Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">
+								Home
+							</Link>
+
+							<Link
+								href="/services"
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
 							>
 								Services
-							</a>
-							<a
-								href="#process"
+							</Link>
+
+							<Link
+								href="/solutions"
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
 							>
-								Process
-							</a>
-							<a
-								href="#pricing"
+								Solutions
+							</Link>
+
+							<Link
+								href="/team"
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
 							>
-								Pricing
-							</a>
-							<a
-								href="#portfolio"
+								Team
+							</Link>
+
+							<Link
+								href="/blog"
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
 							>
-								Portfolio
-							</a>
-							<a
-								href="#faq"
+								Blog
+							</Link>
+
+							<Link
+								href="/career"
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
 							>
-								FAQ
-							</a>
-							<a
-								href="#contact"
+								Career
+							</Link>
+
+							<Link
+								href="/get-started"
 								className="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
 							>
 								Get Started
-							</a>
+							</Link>
 						</div>
 					</div>
 				)}

@@ -49,3 +49,47 @@
 	transform: scale(1.03);
 	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
+
+/* Service page css */
+
+.hero-gradient {
+	background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+.service-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+}
+.mobile-menu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+}
+.mobile-menu.open {
+	max-height: 500px;
+}
+.service-feature-list li {
+	position: relative;
+	padding-left: 1.75rem;
+	margin-bottom: 0.75rem;
+}
+.service-feature-list li:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.5rem;
+	width: 0.75rem;
+	height: 0.75rem;
+	background-color: #4f46e5;
+	border-radius: 50%;
+}
+.platform-badge {
+	display: inline-block;
+	background-color: #e0e7ff;
+	color: #4f46e5;
+	padding: 0.25rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.75rem;
+	font-weight: 600;
+	margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
+}

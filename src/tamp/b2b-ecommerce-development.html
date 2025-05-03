@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>B2B eCommerce Development Services | EcomReflex</title>
+		<meta
+			name="description"
+			content="Specialized B2B eCommerce solutions for wholesalers, manufacturers, and distributors. Build a powerful digital sales channel with custom quoting, tiered pricing, and ERP integrations."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+			}
+			.feature-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.3);
+			}
+			.process-step {
+				position: relative;
+			}
+			.process-step:not(:last-child):after {
+				content: '';
+				position: absolute;
+				bottom: -20px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 2px;
+				height: 40px;
+				background-color: #e5e7eb;
+			}
+			@media (min-width: 1024px) {
+				.process-step:not(:last-child):after {
+					bottom: 50%;
+					left: auto;
+					right: -20px;
+					transform: translateY(50%);
+					width: 40px;
+					height: 2px;
+				}
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.tab-content {
+				display: none;
+			}
+			.tab-content.active {
+				display: block;
+				animation: fadeIn 0.5s ease-in-out;
+			}
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			.pricing-tier:hover {
+				transform: scale(1.02);
+				box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.2);
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-600">Reflex</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+						<a href="ecommerce-development.html" class="text-indigo-600 font-medium transition">Services</a>
+						<a href="portfolio.html" class="text-gray-700 hover:text-indigo-600 transition">Portfolio</a>
+						<a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+						<a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+						<a
+							href="get-started.html"
+							class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Get Started</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Home</a
+						>
+						<a
+							href="ecommerce-development.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 hover:bg-gray-50"
+							>Services</a
+						>
+						<a
+							href="portfolio.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Portfolio</a
+						>
+						<a
+							href="about.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>About</a
+						>
+						<a
+							href="contact.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Contact</a
+						>
+						<a
+							href="get-started.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Get Started</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-28">
+				<div class="max-w-4xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">B2B eCommerce Development Solutions</h1>
+					<p class="text-xl text-blue-100 mb-8">
+						Transform your wholesale, manufacturing, or distribution business with a digital sales channel built for
+						complex B2B requirements.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="#b2b-features"
+							class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Key Features</a
+						>
+						<a
+							href="#b2b-platforms"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-blue-600 transition text-center"
+							>Our Platforms</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- B2B Introduction -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-5xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+						<div>
+							<h2 class="text-3xl md:text-4xl font-bold mb-6">B2B eCommerce Isn't B2C</h2>
+							<p class="text-xl text-gray-600 mb-6">
+								Your business customers have different needs than consumers. We build B2B commerce experiences that
+								match your complex sales processes, pricing structures, and ordering workflows.
+							</p>
+							<div class="space-y-4">
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Account-Based Experiences</h3>
+										<p class="text-gray-600">Personalized catalogs, pricing, and payment terms for each customer.</p>
+									</div>
+								</div>
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Enterprise Integration</h3>
+										<p class="text-gray-600">Seamless connection with ERP, CRM, PIM, and other business systems.</p>
+									</div>
+								</div>
+								<div class="flex items-start">
+									<div class="flex-shrink-0 mt-1 text-blue-600 mr-4">
+										<i class="fas fa-check-circle"></i>
+									</div>
+									<div>
+										<h3 class="text-lg font-bold">Complex Order Management</h3>
+										<p class="text-gray-600">Support for bulk orders, recurring orders, and approval workflows.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+							<img
+								src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+								alt="B2B eCommerce Development"
+								class="rounded-lg w-full h-auto"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- B2B vs B2C -->
+		<section class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">B2B eCommerce vs. B2C: Key Differences</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Understanding the unique requirements of business buyers.
+					</p>
+				</div>
+
+				<div class="max-w-5xl mx-auto overflow-hidden shadow-md rounded-lg">
+					<table class="min-w-full divide-y divide-gray-200">
+						<thead class="bg-gray-100">
+							<tr>
+								<th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+									Feature
+								</th>
+								<th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+									B2C eCommerce
+								</th>
+								<th scope="col" class="px-6 py-3 text-left text-sm font-medium text-gray-700 uppercase tracking-wider">
+									B2B eCommerce
+								</th>
+							</tr>
+						</thead>
+						<tbody class="bg-white divide-y divide-gray-200">
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Pricing</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Fixed retail pricing</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Tiered, negotiated, contract-based</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Order Size</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Single items or small bundles</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bulk quantities, pallet orders</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Checkout</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Instant purchase</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Quote requests, approval workflows</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Payment</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Credit card, PayPal</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Net terms, purchase orders, ACH</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Catalog</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Standard public catalog</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Account-specific products/pricing</td>
+							</tr>
+							<tr>
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Users</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Individual shoppers</td>
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+									Multiple roles with different permissions
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<!-- B2B Features -->
+		<section id="b2b-features" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Essential B2B eCommerce Features</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Functionality designed specifically for business buyers.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Feature 1 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-layer-group text-blue-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Tiered Pricing & Discounts</h3>
+						<p class="text-gray-600 mb-4">
+							Automatic price breaks based on order volume, customer type, or contract terms with custom discount
+							structures.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Volume Pricing</span>
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Customer Groups</span>
+						</div>
+					</div>
+
+					<!-- Feature 2 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-file-invoice-dollar text-green-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Quote Management</h3>
+						<p class="text-gray-600 mb-4">
+							Request, negotiate, and convert quotes to orders with approval workflows and version tracking.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Multi-level Approval</span>
+							<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">PDF Generation</span>
+						</div>
+					</div>
+
+					<!-- Feature 3 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-users-cog text-purple-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Account Management</h3>
+						<p class="text-gray-600 mb-4">
+							Hierarchical account structures with multiple users, roles, and permissions for large organizations.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">User Roles</span>
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Purchase Limits</span>
+						</div>
+					</div>
+
+					<!-- Feature 4 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-boxes text-yellow-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Bulk Ordering</h3>
+						<p class="text-gray-600 mb-4">
+							Advanced product grids, CSV uploads, and quick order forms for high-volume purchasing.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Order Templates</span>
+							<span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Reordering</span>
+						</div>
+					</div>
+
+					<!-- Feature 5 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-random text-red-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">ERP Integration</h3>
+						<p class="text-gray-600 mb-4">
+							Real-time sync with SAP, NetSuite, Microsoft Dynamics, and other ERP systems for inventory, pricing, and
+							orders.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Real-time Data</span>
+							<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Bi-directional</span>
+						</div>
+					</div>
+
+					<!-- Feature 6 -->
+					<div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-truck-loading text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Complex Shipping</h3>
+						<p class="text-gray-600 mb-4">
+							Support for freight shipping, drop shipments, partial shipments, and custom carrier integrations.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Freight Quotes</span>
+							<span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Shipment Tracking</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- B2B Platforms -->
+		<section id="b2b-platforms" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">B2B eCommerce Platforms We Specialize In</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						We work with the leading platforms designed for B2B commerce.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Platform 1 -->
+					<div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center">
+						<img src="https://cdn.worldvectorlogo.com/logos/magento.svg" alt="Magento" class="h-12 mb-6" />
+						<h3 class="text-xl font-bold mb-3">Magento B2B</h3>
+						<p class="text-gray-600 text-center mb-4">
+							Enterprise-grade B2B features with powerful customization capabilities.
+						</p>
+						<div class="flex flex-wrap justify-center gap-2">
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Company Accounts</span>
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Quick Order</span>
+							<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Quote Management</span>
+						</div>
+					</div>
+
+					<!-- Platform 2 -->
+					<div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center">
+						<img src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify" class="h-12 mb-6" />
+						<h3 class="text-xl font-bold mb-3">Shopify Plus</h3>
+						<p class="text-gray-600 text-center mb-4">
+							Scalable B2B solutions with wholesale channels and custom pricing.
+						</p>
+						<div class="flex flex-wrap justify-center gap-2">
+							<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Wholesale Portal</span>
+							<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Bulk Discounts</span>
+							<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Headless Options</span>
+						</div>
+					</div>
+
+					<!-- Platform 3 -->
+					<div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center">
+						<img src="https://cdn.worldvectorlogo.com/logos/bigcommerce.svg" alt="BigCommerce" class="h-12 mb-6" />
+						<h3 class="text-xl font-bold mb-3">BigCommerce B2B</h3>
+						<p class="text-gray-600 text-center mb-4">
+							Native B2B features with excellent API capabilities for integrations.
+						</p>
+						<div class="flex flex-wrap justify-center gap-2">
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Customer Groups</span>
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Quote Requests</span>
+							<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Account Pricing</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-12 text-center">
+					<p class="text-lg text-gray-600 mb-6">
+						We also build custom B2B solutions from scratch when off-the-shelf platforms don't meet your requirements.
+					</p>
+					<a
+						href="contact.html"
+						class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition"
+						>Discuss Platform Options</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Implementation Process -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Our B2B Implementation Process</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						A proven methodology for successful B2B eCommerce projects.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-6xl mx-auto">
+					<!-- Step 1 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-blue-600 font-bold text-xl">1</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Business Process Mapping</h3>
+						<p class="text-gray-600">Document all sales workflows, approval chains, and integration points.</p>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-blue-600 font-bold text-xl">2</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Data Architecture</h3>
+						<p class="text-gray-600">Structure customer, product, and pricing data for B2B requirements.</p>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-blue-600 font-bold text-xl">3</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Integration Planning</h3>
+						<p class="text-gray-600">Design connections between eCommerce and business systems.</p>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center relative">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-blue-600 font-bold text-xl">4</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Custom Development</h3>
+						<p class="text-gray-600">Build specialized B2B features and workflows.</p>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="process-step bg-gray-50 p-8 rounded-xl shadow-md text-center">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+							<span class="text-blue-600 font-bold text-xl">5</span>
+						</div>
+						<h3 class="text-xl font-bold mb-3">User Training & Launch</h3>
+						<p class="text-gray-600">Prepare your team and customers for the new system.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Case Studies -->
+		<section class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">B2B eCommerce Success Stories</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						How we've helped B2B companies transform their digital sales.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+					<!-- Case Study 1 -->
+					<div class="bg-white rounded-xl overflow-hidden shadow-md">
+						<img
+							src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Case Study"
+							class="w-full h-48 object-cover"
+						/>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2">Industrial Parts Distributor</h3>
+							<p class="text-gray-600 mb-4">
+								Built a Magento B2B portal with 50,000+ SKUs, custom quoting tools, and ERP integration that increased
+								online orders by 220%.
+							</p>
+							<div class="flex flex-wrap gap-2 mb-4">
+								<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Magento</span>
+								<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">SAP Integration</span>
+								<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Complex Catalog</span>
+							</div>
+							<a href="#" class="text-blue-600 font-medium hover:text-blue-800">Read Case Study →</a>
+						</div>
+					</div>
+
+					<!-- Case Study 2 -->
+					<div class="bg-white rounded-xl overflow-hidden shadow-md">
+						<img
+							src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+							alt="Case Study"
+							class="w-full h-48 object-cover"
+						/>
+						<div class="p-6">
+							<h3 class="text-xl font-bold mb-2">Food Service Wholesaler</h3>
+							<p class="text-gray-600 mb-4">
+								Developed a custom Shopify Plus B2B solution with bulk ordering, scheduled deliveries, and Net 60 terms
+								that reduced order processing time by 75%.
+							</p>
+							<div class="flex flex-wrap gap-2 mb-4">
+								<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Shopify Plus</span>
+								<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Wholesale Portal</span>
+								<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Order Automation</span>
+							</div>
+							<a href="#" class="text-blue-600 font-medium hover:text-blue-800">Read Case Study →</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-12 text-center">
+					<a
+						href="portfolio.html"
+						class="inline-block border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-blue-600 hover:text-white transition"
+						>View More B2B Case Studies</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl md:text-4xl font-bold mb-4">B2B eCommerce FAQs</h2>
+						<p class="text-xl text-gray-600">Answers to common questions about B2B eCommerce development.</p>
+					</div>
+
+					<div class="space-y-4">
+						<!-- FAQ Item 1 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How is B2B eCommerce different from B2C development?</h3>
+								<i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									B2B eCommerce requires fundamentally different features: account hierarchies with multiple users,
+									complex pricing structures, quote management, bulk ordering, approval workflows, and deep ERP/CRM
+									integrations. The user experience must accommodate professional buyers who need efficiency and access
+									to specialized product data, not just attractive merchandising.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 2 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">What's the ROI of B2B eCommerce for our business?</h3>
+								<i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Our B2B clients typically see:<br /><br />
+									• 30-50% reduction in order processing costs<br />
+									• 20-40% increase in order frequency<br />
+									• 15-30% larger average order values<br />
+									• 25-60% decrease in customer service inquiries<br />
+									• 2-5x more products per order compared to phone/email orders<br /><br />
+									The exact ROI depends on your industry, product complexity, and current sales processes.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 3 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How do you handle our complex pricing structures?</h3>
+								<i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We implement sophisticated pricing engines that can handle: customer-specific contracts, volume
+									discounts, seasonal promotions, geographic pricing, and even real-time price calculations based on
+									current inventory levels or commodity prices. Prices can be pulled from your ERP or managed within the
+									eCommerce platform with appropriate approval workflows.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 4 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">Can we keep our existing ERP system?</h3>
+								<i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									Absolutely. We specialize in integrating eCommerce platforms with existing ERP, CRM, PIM, and other
+									business systems. In fact, we recommend against replacing operational systems that are working well.
+									Our integration approach maintains your ERP as the system of record while providing a modern digital
+									commerce layer for your customers.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 5 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">How do you train our customers to use the new system?</h3>
+								<i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We take a phased approach: 1) Create comprehensive help documentation and video tutorials, 2) Train
+									your internal sales team first so they can support customers, 3) Offer live training webinars for key
+									accounts, 4) Implement in-app guidance and tooltips, 5) Provide dedicated onboarding for high-volume
+									buyers. We also recommend running a pilot program with your most tech-savvy customers before full
+									launch.
+								</p>
+							</div>
+						</div>
+
+						<!-- FAQ Item 6 -->
+						<div class="border border-gray-200 rounded-lg overflow-hidden">
+							<button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+								<h3 class="text-lg font-medium text-gray-900">
+									What about customers who still want to order by phone/email?
+								</h3>
+								<i class="fas fa-chevron-down text-blue-600 transition-transform duration-200"></i>
+							</button>
+							<div class="faq-content hidden px-6 pb-6">
+								<p class="text-gray-600">
+									We design hybrid solutions where your sales team can place orders through the same system customers
+									use, ensuring consistency whether orders come through the website, email, or phone. This gives you the
+									flexibility to gradually transition customers to self-service while maintaining service for those who
+									need it. Many clients implement incentives for customers to move online.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-20 bg-blue-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your B2B Sales?</h2>
+					<p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+						Let's discuss how a custom B2B eCommerce solution can streamline your operations and grow your revenue.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="contact.html"
+							class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Get B2B Consultation</a
+						>
+						<a
+							href="tel:+18005551234"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-blue-600 transition text-center"
+						>
+							<i class="fas fa-phone-alt mr-2"></i> Call Our B2B Team
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-shopping-cart mr-2"></i>
+							<span>Ecom<span class="text-purple-400">Reflex</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">
+							Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+						</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Services</h3>
+						<ul class="space-y-3">
+							<li>
+								<a href="ecommerce-development.html" class="text-gray-400 hover:text-white">eCommerce Development</a>
+							</li>
+							<li>
+								<a href="ecommerce-migration-integration.html" class="text-gray-400 hover:text-white"
+									>Migration & Integration</a
+								>
+							</li>
+							<li>
+								<a href="ecommerce-audit-analysis.html" class="text-gray-400 hover:text-white">Audit & Analysis</a>
+							</li>
+							<li>
+								<a href="ecommerce-growth-optimization.html" class="text-gray-400 hover:text-white"
+									>Growth & Optimization</a
+								>
+							</li>
+							<li>
+								<a href="ecommerce-support-maintenance.html" class="text-gray-400 hover:text-white"
+									>Support & Maintenance</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="portfolio.html" class="text-gray-400 hover:text-white">Portfolio</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+							<li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:hello@ecomreflex.com" class="text-gray-400 hover:text-white">hello@ecomreflex.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// FAQ accordion
+			document.querySelectorAll('.faq-toggle').forEach((button) => {
+				button.addEventListener('click', () => {
+					const content = button.nextElementSibling;
+					const icon = button.querySelector('i');
+
+					// Toggle content
+					content.classList.toggle('hidden');
+
+					// Rotate icon
+					if (content.classList.contains('hidden')) {
+						icon.classList.remove('transform', 'rotate-180');
+					} else {
+						icon.classList.add('transform', 'rotate-180');
+					}
+				});
+			});
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 80,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

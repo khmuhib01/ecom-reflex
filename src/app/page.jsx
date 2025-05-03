@@ -1,5 +1,6 @@
 'use client';
 
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import {useState} from 'react';
@@ -79,6 +80,10 @@ export default function Home() {
 
 	return (
 		<>
+			<Head>
+				<title>EcomReflex - Full-Service eCommerce Development Agency</title>
+				<meta name="description" content="EcomReflex - Full-Service eCommerce Development Agency" />
+			</Head>
 			{/* Hero */}
 			<section className="hero-gradient text-white">
 				<div className="container mx-auto px-4 py-20 md:py-32">
@@ -110,7 +115,7 @@ export default function Home() {
 						<div className="md:w-1/2 flex justify-center">
 							<div className="relative w-full max-w-md h-[300px] md:h-[400px]">
 								<Image
-									src="https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+									src="/images/home/hero.png"
 									alt="eCommerce Dashboard"
 									fill
 									className="rounded-lg shadow-2xl object-cover"
@@ -147,7 +152,7 @@ export default function Home() {
 								experiences and secure checkout systems.
 							</p>
 							<Link
-								href="/services/ecommerce-development-service"
+								href="/services/ecommerce-development"
 								className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
 							>
 								Learn more <FaArrowRight className="ml-2" />
@@ -166,7 +171,7 @@ export default function Home() {
 								shipping gateways, and payment processors.
 							</p>
 							<Link
-								href="/services/ecommerce-migration-and-integration-service"
+								href="/services/ecommerce-migration-and-integration"
 								className="text-purple-600 font-medium hover:text-purple-800 flex items-center"
 							>
 								Learn more <FaArrowRight className="ml-2" />
@@ -187,9 +192,12 @@ export default function Home() {
 								design, page speed, SEO health, and mobile responsiveness. We also assess your conversion funnels and
 								security setup.
 							</p>
-							<a href="#" className="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+							<Link
+								href="/services/audit-and-analysis"
+								className="text-blue-600 font-medium hover:text-blue-800 flex items-center"
+							>
 								Learn more <FaArrowRight className="ml-2" />
-							</a>
+							</Link>
 						</div>
 
 						{/* Service 4 */}
@@ -202,9 +210,12 @@ export default function Home() {
 								We help you scale through data-led strategies. This includes CRO tactics, A/B testing, cart abandonment
 								recovery, funnel analysis, and retention strategies. Using analytics and user behavior tracking.
 							</p>
-							<a href="#" className="text-green-600 font-medium hover:text-green-800 flex items-center">
+							<Link
+								href="/services/growth-and-optimization"
+								className="text-green-600 font-medium hover:text-green-800 flex items-center"
+							>
 								Learn more <FaArrowRight className="ml-2" />
-							</a>
+							</Link>
 						</div>
 
 						{/* Service 5 */}
@@ -217,9 +228,12 @@ export default function Home() {
 								We handle 24/7 monitoring, regular maintenance, patch updates, bug fixing, speed optimization, and
 								security enhancements. Whether it's Magento or WooCommerce, we make sure your store is always stable.
 							</p>
-							<a href="#" className="text-yellow-600 font-medium hover:text-yellow-800 flex items-center">
+							<Link
+								href="/services/support-and-maintenance"
+								className="text-yellow-600 font-medium hover:text-yellow-800 flex items-center"
+							>
 								Learn more <FaArrowRight className="ml-2" />
-							</a>
+							</Link>
 						</div>
 
 						{/* Service 6 */}
@@ -233,9 +247,12 @@ export default function Home() {
 								plugins, and tailor-made APIs to expand functionality. From advanced product options to custom checkout
 								flows.
 							</p>
-							<a href="#" className="text-red-600 font-medium hover:text-red-800 flex items-center">
+							<Link
+								href="/services/custom-development"
+								className="text-red-600 font-medium hover:text-red-800 flex items-center"
+							>
 								Learn more <FaArrowRight className="ml-2" />
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
