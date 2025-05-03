@@ -30,14 +30,8 @@ export default function HeaderComponent() {
 						<Link href="/products" className="text-gray-700 hover:text-indigo-600 transition">
 							Products
 						</Link>
-						<Link href="/team" className="text-gray-700 hover:text-indigo-600 transition">
-							Team
-						</Link>
-						<Link href="/blog" className="text-gray-700 hover:text-indigo-600 transition">
-							Blog
-						</Link>
-						<Link href="/career" className="text-gray-700 hover:text-indigo-600 transition">
-							Career
+						<Link href="/case-studies" className="text-gray-700 hover:text-indigo-600 transition">
+							Case Studies
 						</Link>
 						<Link href="/contact" className="text-gray-700 hover:text-indigo-600 transition">
 							Contact
@@ -77,24 +71,17 @@ export default function HeaderComponent() {
 							</Link>
 
 							<Link
-								href="/team"
+								href="/case-studies"
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
 							>
-								Team
+								Case Studies
 							</Link>
 
 							<Link
-								href="/blog"
+								href="/contact"
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
 							>
-								Blog
-							</Link>
-
-							<Link
-								href="/career"
-								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
-							>
-								Career
+								Contact
 							</Link>
 
 							<Link

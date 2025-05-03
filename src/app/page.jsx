@@ -643,12 +643,12 @@ export default function Home() {
 
 					{/* View All Button */}
 					<div className="text-center">
-						<a
+						<Link
 							href="/case-studies"
 							className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
 						>
 							View All Case Studies
-						</a>
+						</Link>
 					</div>
 				</div>
 			</section>
@@ -751,13 +751,13 @@ export default function Home() {
 					</div>
 
 					<div className="text-center mt-12">
-						<a
-							href="#"
+						<Link
+							href="/success-stories"
 							className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
 						>
-							View All Case Studies
+							View All Success Stories
 							<i className="fas fa-arrow-right ml-2"></i>
-						</a>
+						</Link>
 					</div>
 				</div>
 			</section>

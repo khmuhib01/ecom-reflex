@@ -50,29 +50,29 @@ export default function FooterComponent() {
 						<h3 className="text-lg font-bold mb-6">Services</h3>
 						<ul className="space-y-3">
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/services/ecommerce-development" className="text-gray-400 hover:text-white">
 									Ecommerce Development
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/services/ecommerce-migration-and-integration" className="text-gray-400 hover:text-white">
 									Migration & Integration
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/services/audit-and-analysis" className="text-gray-400 hover:text-white">
 									Audit & Analysis
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/services/growth-and-optimization" className="text-gray-400 hover:text-white">
 									Growth & Optimization
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/services/support-and-maintenance" className="text-gray-400 hover:text-white">
 									Support & Maintenance
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -82,29 +82,29 @@ export default function FooterComponent() {
 						<h3 className="text-lg font-bold mb-6">Company</h3>
 						<ul className="space-y-3">
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/about" className="text-gray-400 hover:text-white">
 									About Us
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/team" className="text-gray-400 hover:text-white">
 									Our Team
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/case-study" className="text-gray-400 hover:text-white">
 									Case Studies
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/careers" className="text-gray-400 hover:text-white">
 									Careers
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className="text-gray-400 hover:text-white">
+								<Link href="/blog" className="text-gray-400 hover:text-white">
 									Blog
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
