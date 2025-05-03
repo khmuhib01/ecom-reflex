@@ -21,6 +21,9 @@ export default function HeaderComponent() {
 					</div>
 
 					<div className="hidden md:flex items-center space-x-8">
+						<Link href="/" className="text-gray-700 hover:text-indigo-600 transition">
+							Home
+						</Link>
 						<a href="/services" className="text-gray-700 hover:text-indigo-600 transition">
 							Services
 						</a>
@@ -35,6 +38,9 @@ export default function HeaderComponent() {
 						</a>
 						<a href="/career" className="text-gray-700 hover:text-indigo-600 transition">
 							Career
+						</a>
+						<a href="/contact" className="text-gray-700 hover:text-indigo-600 transition">
+							Contact
 						</a>
 						<a
 							href="/get-started"

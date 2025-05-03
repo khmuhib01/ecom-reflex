@@ -21,8 +21,7 @@ export default function ServicesPage() {
 			platforms: ['Shopify', 'Shopify Plus', 'Magento', 'WooCommerce', 'BigCommerce', 'Custom Solutions'],
 			icon: FaLaptopCode,
 			iconColor: 'bg-indigo-100 text-indigo-600',
-			image:
-				'https://images.unsplash.com/photo-1556740738-b6a63ed27c26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+			image: '/assets/images/services/ecommerce_development.jpg',
 			cta: 'Start Your Project',
 			detailLink: '/services/ecommerce-development',
 			ctaLink: 'contact.html',
