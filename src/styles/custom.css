@@ -373,3 +373,67 @@
 .timeline-item:last-child:after {
 	display: none;
 }
+
+/* Case study detail */
+
+.stat-card {
+	transition: all 0.3s ease;
+}
+.stat-card:hover {
+	transform: scale(1.05);
+}
+.testimonial-card {
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.solution-tag {
+	display: inline-block;
+	padding: 0.25rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+.timeline-item {
+	position: relative;
+	padding-left: 2.5rem;
+}
+.timeline-item:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background-color: #7c3aed;
+}
+.timeline-item:after {
+	content: '';
+	position: absolute;
+	left: 0.75rem;
+	top: 1.5rem;
+	bottom: -1.5rem;
+	width: 2px;
+	background-color: #e9d5ff;
+}
+.timeline-item:last-child:after {
+	display: none;
+}
+.challenge-icon {
+	background-color: #fee2e2;
+	color: #dc2626;
+}
+.solution-icon {
+	background-color: #dbeafe;
+	color: #2563eb;
+}
+.result-icon {
+	background-color: #d1fae5;
+	color: #059669;
+}
+.sticky-sidebar {
+	position: sticky;
+	top: 100px;
+	align-self: flex-start;
+}
