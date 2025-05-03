@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>UrbanEats Case Study | NexaSuite - Cloud Kitchen Transformation</title>
+		<meta
+			name="description"
+			content="See how UrbanEats scaled their cloud kitchen operation with NexaSuite's integrated food delivery and ePOS solution, achieving 220% revenue growth."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.stat-card {
+				transition: all 0.3s ease;
+			}
+			.stat-card:hover {
+				transform: scale(1.05);
+			}
+			.testimonial-card {
+				box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.solution-tag {
+				display: inline-block;
+				padding: 0.25rem 0.75rem;
+				border-radius: 9999px;
+				font-size: 0.75rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+			}
+			.timeline-item {
+				position: relative;
+				padding-left: 2.5rem;
+			}
+			.timeline-item:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 1.5rem;
+				height: 1.5rem;
+				border-radius: 50%;
+				background-color: #7c3aed;
+			}
+			.timeline-item:after {
+				content: '';
+				position: absolute;
+				left: 0.75rem;
+				top: 1.5rem;
+				bottom: -1.5rem;
+				width: 2px;
+				background-color: #e9d5ff;
+			}
+			.timeline-item:last-child:after {
+				display: none;
+			}
+			.challenge-icon {
+				background-color: #fee2e2;
+				color: #dc2626;
+			}
+			.solution-icon {
+				background-color: #dbeafe;
+				color: #2563eb;
+			}
+			.result-icon {
+				background-color: #d1fae5;
+				color: #059669;
+			}
+			.sticky-sidebar {
+				position: sticky;
+				top: 100px;
+				align-self: flex-start;
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-cubes mr-2"></i>
+							<span>Nexa<span class="text-purple-600">Suite</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+						<a href="products.html" class="text-gray-700 hover:text-indigo-600 transition">Products</a>
+						<a href="case-studies.html" class="text-indigo-600 font-medium transition">Case Studies</a>
+						<a href="about.html" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+						<a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+						<a href="demo.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Request Demo</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Home</a
+						>
+						<a
+							href="products.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Products</a
+						>
+						<a
+							href="case-studies.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 hover:bg-gray-50"
+							>Case Studies</a
+						>
+						<a
+							href="about.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>About</a
+						>
+						<a
+							href="contact.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Contact</a
+						>
+						<a
+							href="demo.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Request Demo</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-28">
+				<div class="max-w-4xl mx-auto text-center">
+					<span class="solution-tag bg-white text-indigo-600 mb-4">Food Delivery + ePOS</span>
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">UrbanEats: Cloud Kitchen Transformation</h1>
+					<p class="text-xl text-indigo-100 mb-8">
+						How a delivery-only restaurant scaled operations with 220% revenue growth
+					</p>
+					<div class="flex justify-center">
+						<div class="inline-flex items-center bg-indigo-700 bg-opacity-50 rounded-full px-6 py-2">
+							<i class="fas fa-industry mr-2"></i>
+							<span>Food & Beverage</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Case Study Content -->
+		<section class="py-16 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
+					<!-- Main Content -->
+					<div class="lg:w-2/3">
+						<!-- Overview -->
+						<div class="mb-16">
+							<h2 class="text-3xl font-bold mb-6">Overview</h2>
+							<div class="prose max-w-none">
+								<p class="text-gray-600 mb-4">
+									UrbanEats operates a delivery-only cloud kitchen in Chicago, serving three distinct virtual brands
+									from a single physical location. As their popularity grew across multiple delivery platforms, they
+									faced increasing operational complexity that threatened their ability to scale.
+								</p>
+								<p class="text-gray-600">
+									NexaSuite implemented an integrated solution combining our Food Delivery Platform with mPOS and Cloud
+									Kitchen Management tools, enabling UrbanEats to triple their order volume while reducing operational
+									friction.
+								</p>
+							</div>
+						</div>
+
+						<!-- Challenge -->
+						<div class="mb-16">
+							<div class="flex items-center mb-6">
+								<div class="challenge-icon rounded-lg p-3 mr-4">
+									<i class="fas fa-exclamation-triangle text-2xl"></i>
+								</div>
+								<h2 class="text-3xl font-bold">The Challenge</h2>
+							</div>
+							<div class="prose max-w-none">
+								<p class="text-gray-600 mb-6">
+									UrbanEats was experiencing growing pains from their rapid success. Their existing patchwork of systems
+									created significant inefficiencies:
+								</p>
+								<ul class="space-y-4 mb-6">
+									<li class="flex items-start">
+										<div class="bg-red-100 rounded-full p-2 mr-4">
+											<i class="fas fa-exclamation text-red-600"></i>
+										</div>
+										<div>
+											<h4 class="font-bold mb-1">Disconnected Operations</h4>
+											<p class="text-gray-600">
+												Separate systems for orders (Uber Eats, DoorDash, Grubhub), inventory (spreadsheets), and
+												kitchen operations (paper tickets) led to constant reconciliation errors.
+											</p>
+										</div>
+									</li>
+									<li class="flex items-start">
+										<div class="bg-red-100 rounded-full p-2 mr-4">
+											<i class="fas fa-exclamation text-red-600"></i>
+										</div>
+										<div>
+											<h4 class="font-bold mb-1">Delivery Coordination Chaos</h4>
+											<p class="text-gray-600">
+												Drivers from multiple platforms crowded the pickup area while kitchen staff struggled to
+												prioritize orders based on delivery ETAs.
+											</p>
+										</div>
+									</li>
+									<li class="flex items-start">
+										<div class="bg-red-100 rounded-full p-2 mr-4">
+											<i class="fas fa-exclamation text-red-600"></i>
+										</div>
+										<div>
+											<h4 class="font-bold mb-1">Inventory Waste</h4>
+											<p class="text-gray-600">
+												With no cross-brand visibility, ingredients would run out for one brand while going unused for
+												others, resulting in 30% waste.
+											</p>
+										</div>
+									</li>
+									<li class="flex items-start">
+										<div class="bg-red-100 rounded-full p-2 mr-4">
+											<i class="fas fa-exclamation text-red-600"></i>
+										</div>
+										<div>
+											<h4 class="font-bold mb-1">Limited Growth Potential</h4>
+											<p class="text-gray-600">
+												The manual processes couldn't support additional brands or locations without proportional staff
+												increases.
+											</p>
+										</div>
+									</li>
+								</ul>
+								<div class="bg-gray-50 rounded-xl p-6 border-l-4 border-red-500">
+									<h4 class="font-bold text-lg mb-2">Critical Pain Point</h4>
+									<p class="text-gray-600">
+										"During peak hours, we had 15-20 drivers waiting while our kitchen fell behind. Customers received
+										cold food, and our ratings were dropping. We knew we needed a complete operational overhaul."
+										<span class="block font-medium mt-2">— Sarah Chen, COO</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Solution -->
+						<div class="mb-16">
+							<div class="flex items-center mb-6">
+								<div class="solution-icon rounded-lg p-3 mr-4">
+									<i class="fas fa-lightbulb text-2xl"></i>
+								</div>
+								<h2 class="text-3xl font-bold">The Solution</h2>
+							</div>
+							<div class="prose max-w-none">
+								<p class="text-gray-600 mb-6">
+									NexaSuite implemented a comprehensive solution tailored to UrbanEats' multi-brand cloud kitchen
+									operation:
+								</p>
+
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+									<div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+										<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-project-diagram text-blue-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Unified Operations Hub</h4>
+										<p class="text-gray-600">
+											Single dashboard integrating all delivery platforms with real-time order aggregation and
+											prioritization
+										</p>
+									</div>
+									<div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+										<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-boxes text-blue-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Smart Inventory System</h4>
+										<p class="text-gray-600">
+											Cross-brand ingredient tracking with automated low-stock alerts and suggested substitutions
+										</p>
+									</div>
+									<div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+										<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-biking text-blue-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Delivery Orchestration</h4>
+										<p class="text-gray-600">
+											Driver staging system with automated notifications and optimized pickup sequencing
+										</p>
+									</div>
+									<div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+										<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-chart-line text-blue-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Performance Analytics</h4>
+										<p class="text-gray-600">
+											Brand-by-brand metrics with profitability analysis and menu optimization suggestions
+										</p>
+									</div>
+								</div>
+
+								<h3 class="text-2xl font-bold mb-4">Implementation Process</h3>
+								<div class="mb-8">
+									<div class="space-y-8">
+										<div class="timeline-item">
+											<h5 class="font-bold mb-2">Phase 1: Discovery & Planning (2 weeks)</h5>
+											<ul class="list-disc pl-5 text-gray-600 space-y-2">
+												<li>Comprehensive workflow analysis</li>
+												<li>Integration requirements mapping</li>
+												<li>Customization planning for multi-brand support</li>
+											</ul>
+										</div>
+										<div class="timeline-item">
+											<h5 class="font-bold mb-2">Phase 2: System Setup (3 weeks)</h5>
+											<ul class="list-disc pl-5 text-gray-600 space-y-2">
+												<li>Menu migration and categorization</li>
+												<li>Staff training on new workflows</li>
+												<li>Inventory system initialization</li>
+											</ul>
+										</div>
+										<div class="timeline-item">
+											<h5 class="font-bold mb-2">Phase 3: Delivery Integration (2 weeks)</h5>
+											<ul class="list-disc pl-5 text-gray-600 space-y-2">
+												<li>Connected Uber Eats, DoorDash, and Grubhub APIs</li>
+												<li>Driver staging area setup</li>
+												<li>Automated notification system configuration</li>
+											</ul>
+										</div>
+										<div class="timeline-item">
+											<h5 class="font-bold mb-2">Phase 4: Go Live & Optimization (3 weeks)</h5>
+											<ul class="list-disc pl-5 text-gray-600 space-y-2">
+												<li>Phased rollout with performance monitoring</li>
+												<li>Staff feedback incorporation</li>
+												<li>Continuous improvement adjustments</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="bg-gray-50 rounded-xl p-6 border-l-4 border-blue-500">
+									<h4 class="font-bold text-lg mb-2">Key Implementation Insight</h4>
+									<p class="text-gray-600">
+										"We scheduled the final go-live for a Tuesday, traditionally their slowest day. This allowed staff
+										to get comfortable with the system before weekend rushes. By the second week, they were handling 30%
+										more orders with less stress."
+										<span class="block font-medium mt-2">— Mark Williams, NexaSuite Implementation Lead</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Results -->
+						<div class="mb-16">
+							<div class="flex items-center mb-6">
+								<div class="result-icon rounded-lg p-3 mr-4">
+									<i class="fas fa-chart-bar text-2xl"></i>
+								</div>
+								<h2 class="text-3xl font-bold">The Results</h2>
+							</div>
+							<div class="prose max-w-none">
+								<p class="text-gray-600 mb-8">
+									Within six months of implementation, UrbanEats achieved dramatic improvements across all operational
+									metrics:
+								</p>
+
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+									<div class="stat-card bg-green-50 p-6 rounded-lg border border-green-100 text-center">
+										<div class="text-4xl font-bold mb-2 text-green-600">220%</div>
+										<h4 class="font-bold mb-2">Revenue Growth</h4>
+										<p class="text-gray-600">
+											Increased monthly revenue from $85k to $272k through expanded capacity and reduced order declines
+										</p>
+									</div>
+									<div class="stat-card bg-green-50 p-6 rounded-lg border border-green-100 text-center">
+										<div class="text-4xl font-bold mb-2 text-green-600">45%</div>
+										<h4 class="font-bold mb-2">Waste Reduction</h4>
+										<p class="text-gray-600">
+											Decreased ingredient costs through optimized cross-brand utilization and automated ordering
+										</p>
+									</div>
+									<div class="stat-card bg-green-50 p-6 rounded-lg border border-green-100 text-center">
+										<div class="text-4xl font-bold mb-2 text-green-600">4.7★</div>
+										<h4 class="font-bold mb-2">Customer Rating</h4>
+										<p class="text-gray-600">
+											Improved from 3.8★ through faster, more accurate deliveries and better food quality
+										</p>
+									</div>
+									<div class="stat-card bg-green-50 p-6 rounded-lg border border-green-100 text-center">
+										<div class="text-4xl font-bold mb-2 text-green-600">12 min</div>
+										<h4 class="font-bold mb-2">Avg. Delivery Time</h4>
+										<p class="text-gray-600">
+											Reduced from 22 minutes through optimized driver staging and kitchen prioritization
+										</p>
+									</div>
+								</div>
+
+								<h3 class="text-2xl font-bold mb-4">Long-Term Impact</h3>
+								<p class="text-gray-600 mb-6">
+									The operational efficiencies enabled by NexaSuite allowed UrbanEats to:
+								</p>
+								<ul class="list-disc pl-5 text-gray-600 space-y-2 mb-6">
+									<li>Expand to two additional locations with the same management overhead</li>
+									<li>Launch a fourth virtual brand targeting health-conscious consumers</li>
+									<li>Reduce kitchen staff turnover by 60% through less stressful workflows</li>
+									<li>Implement dynamic pricing that increased margins by 8% during peak hours</li>
+								</ul>
+
+								<div class="bg-gray-50 rounded-xl p-6 border-l-4 border-green-500">
+									<h4 class="font-bold text-lg mb-2">Client Perspective</h4>
+									<p class="text-gray-600">
+										"NexaSuite didn't just solve our immediate problems—it completely transformed how we think about our
+										business. The data insights helped us identify that one of our virtual brands was actually losing
+										money despite high sales. We repositioned it and turned it into our second most profitable concept."
+										<span class="block font-medium mt-2">— Sarah Chen, COO</span>
+									</p>
+									<div class="mt-4 flex text-yellow-400">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Technologies -->
+						<div class="mb-16">
+							<h2 class="text-3xl font-bold mb-6">Technologies Used</h2>
+							<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+								<div class="bg-gray-50 p-4 rounded-lg flex items-center">
+									<div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+										<i class="fas fa-utensils text-purple-600"></i>
+									</div>
+									<span class="font-medium">Food Delivery Platform</span>
+								</div>
+								<div class="bg-gray-50 p-4 rounded-lg flex items-center">
+									<div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+										<i class="fas fa-cash-register text-blue-600"></i>
+									</div>
+									<span class="font-medium">mPOS System</span>
+								</div>
+								<div class="bg-gray-50 p-4 rounded-lg flex items-center">
+									<div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center mr-4">
+										<i class="fas fa-cloud text-pink-600"></i>
+									</div>
+									<span class="font-medium">Cloud Kitchen Tools</span>
+								</div>
+								<div class="bg-gray-50 p-4 rounded-lg flex items-center">
+									<div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mr-4">
+										<i class="fas fa-plug text-teal-600"></i>
+									</div>
+									<span class="font-medium">API Integrations</span>
+								</div>
+								<div class="bg-gray-50 p-4 rounded-lg flex items-center">
+									<div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+										<i class="fas fa-chart-pie text-yellow-600"></i>
+									</div>
+									<span class="font-medium">Advanced Analytics</span>
+								</div>
+								<div class="bg-gray-50 p-4 rounded-lg flex items-center">
+									<div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+										<i class="fas fa-mobile-alt text-red-600"></i>
+									</div>
+									<span class="font-medium">Driver App</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Gallery -->
+						<div class="mb-16">
+							<h2 class="text-3xl font-bold mb-6">Gallery</h2>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+								<div class="bg-gray-100 rounded-lg overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+										alt="UrbanEats kitchen"
+										class="w-full h-64 object-cover"
+									/>
+									<div class="p-4">
+										<p class="text-gray-600 text-sm">UrbanEats kitchen staff using the unified display system</p>
+									</div>
+								</div>
+								<div class="bg-gray-100 rounded-lg overflow-hidden">
+									<img
+										src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+										alt="Delivery driver"
+										class="w-full h-64 object-cover"
+									/>
+									<div class="p-4">
+										<p class="text-gray-600 text-sm">Optimized driver staging area with digital notifications</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- CTA -->
+						<div class="bg-indigo-50 rounded-xl p-8 text-center">
+							<h3 class="text-2xl font-bold mb-4">Ready to Transform Your Operations?</h3>
+							<p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+								Discover how NexaSuite can help your food business achieve similar results
+							</p>
+							<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+								<a
+									href="contact.html"
+									class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition text-center"
+									>Get Started</a
+								>
+								<a
+									href="case-studies.html"
+									class="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition text-center"
+									>View More Case Studies</a
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- Sidebar -->
+					<div class="lg:w-1/3">
+						<div class="sticky-sidebar space-y-6">
+							<!-- Key Stats -->
+							<div class="bg-white rounded-xl shadow-md p-6">
+								<h3 class="text-xl font-bold mb-4">Key Statistics</h3>
+								<div class="space-y-4">
+									<div class="flex justify-between border-b border-gray-100 pb-3">
+										<span class="text-gray-600">Implementation Time</span>
+										<span class="font-medium">8 weeks</span>
+									</div>
+									<div class="flex justify-between border-b border-gray-100 pb-3">
+										<span class="text-gray-600">ROI Achieved</span>
+										<span class="font-medium">6 months</span>
+									</div>
+									<div class="flex justify-between border-b border-gray-100 pb-3">
+										<span class="text-gray-600">Order Volume</span>
+										<span class="font-medium">3.2x increase</span>
+									</div>
+									<div class="flex justify-between border-b border-gray-100 pb-3">
+										<span class="text-gray-600">Staff Efficiency</span>
+										<span class="font-medium">35% improvement</span>
+									</div>
+									<div class="flex justify-between">
+										<span class="text-gray-600">Customer Retention</span>
+										<span class="font-medium">42% increase</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- Client Info -->
+							<div class="bg-white rounded-xl shadow-md p-6">
+								<h3 class="text-xl font-bold mb-4">Client Profile</h3>
+								<div class="flex items-center mb-4">
+									<img
+										src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+										alt="UrbanEats"
+										class="w-16 h-16 rounded-full mr-4"
+									/>
+									<div>
+										<h4 class="font-bold">UrbanEats</h4>
+										<p class="text-gray-600">Cloud Kitchen Operator</p>
+									</div>
+								</div>
+								<ul class="space-y-3">
+									<li class="flex items-start">
+										<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+										<span class="text-gray-600">Chicago, IL</span>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-utensils text-gray-400 mt-1 mr-3"></i>
+										<span class="text-gray-600">3 Virtual Brands</span>
+									</li>
+									<li class="flex items-start">
+										<i class="fas fa-calendar-alt text-gray-400 mt-1 mr-3"></i>
+										<span class="text-gray-600">Implemented: March 2022</span>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Download Case Study -->
+							<div class="bg-white rounded-xl shadow-md p-6">
+								<h3 class="text-xl font-bold mb-4">Download Full Case Study</h3>
+								<p class="text-gray-600 mb-4">
+									Get the complete UrbanEats case study with additional data and analysis.
+								</p>
+								<form class="space-y-4">
+									<input
+										type="text"
+										placeholder="Your Name"
+										class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+									/>
+									<input
+										type="email"
+										placeholder="Email Address"
+										class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+									/>
+									<button
+										type="submit"
+										class="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+									>
+										Download PDF <i class="fas fa-download ml-2"></i>
+									</button>
+								</form>
+							</div>
+
+							<!-- Related Case Studies -->
+							<div class="bg-white rounded-xl shadow-md p-6">
+								<h3 class="text-xl font-bold mb-4">Related Case Studies</h3>
+								<div class="space-y-4">
+									<a href="#" class="group flex items-start">
+										<img
+											src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+											alt="Retail POS"
+											class="w-16 h-16 rounded-md object-cover mr-4"
+										/>
+										<div>
+											<h4 class="font-bold group-hover:text-indigo-600 transition">StyleHub: Omnichannel Retail</h4>
+											<p class="text-sm text-gray-600">ePOS/mPOS implementation</p>
+										</div>
+									</a>
+									<a href="#" class="group flex items-start">
+										<img
+											src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+											alt="Booking System"
+											class="w-16 h-16 rounded-md object-cover mr-4"
+										/>
+										<div>
+											<h4 class="font-bold group-hover:text-indigo-600 transition">SpaRelax: Online Reservations</h4>
+											<p class="text-sm text-gray-600">Booking system transformation</p>
+										</div>
+									</a>
+									<a href="#" class="group flex items-start">
+										<img
+											src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+											alt="eCommerce"
+											class="w-16 h-16 rounded-md object-cover mr-4"
+										/>
+										<div>
+											<h4 class="font-bold group-hover:text-indigo-600 transition">CraftMarket: Global Expansion</h4>
+											<p class="text-sm text-gray-600">eCommerce platform scaling</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
