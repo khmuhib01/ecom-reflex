@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Complete Business Solutions | NexaSuite - Integrated Digital Solutions</title>
+		<meta
+			name="description"
+			content="Comprehensive suite of digital solutions including food delivery, eCommerce, booking systems, payment solutions, ride sharing, and virtual classroom platforms."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.solution-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+			}
+			.feature-card:hover {
+				transform: scale(1.03);
+				box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.2);
+			}
+			.benefit-item {
+				position: relative;
+				padding-left: 2rem;
+			}
+			.benefit-item:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0.5rem;
+				width: 1.5rem;
+				height: 1.5rem;
+				background-color: #8b5cf6;
+				mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z' clip-rule='evenodd' /%3E%3C/svg%3E");
+				mask-repeat: no-repeat;
+			}
+			.product-tabs .active {
+				border-bottom: 3px solid #7c3aed;
+				color: #7c3aed;
+				font-weight: 600;
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.product-icon {
+				width: 80px;
+				height: 80px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 20px;
+				margin: 0 auto 20px;
+			}
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-cubes mr-2"></i>
+							<span>Nexa<span class="text-purple-600">Suite</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+						<a href="products.html" class="text-indigo-600 font-medium transition">Products</a>
+						<a href="industries.html" class="text-gray-700 hover:text-indigo-600 transition">Industries</a>
+						<a href="case-studies.html" class="text-gray-700 hover:text-indigo-600 transition">Case Studies</a>
+						<a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+						<a href="demo.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Request Demo</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Home</a
+						>
+						<a
+							href="products.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 hover:bg-gray-50"
+							>Products</a
+						>
+						<a
+							href="industries.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Industries</a
+						>
+						<a
+							href="case-studies.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Case Studies</a
+						>
+						<a
+							href="contact.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Contact</a
+						>
+						<a
+							href="demo.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Request Demo</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-28">
+				<div class="max-w-4xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+						Integrated Digital Solutions for Modern Businesses
+					</h1>
+					<p class="text-xl text-indigo-100 mb-8">
+						Comprehensive suite of products designed to digitize and streamline your business operations
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="#products"
+							class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Explore Products</a
+						>
+						<a
+							href="#features"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+							>Key Features</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Products Overview -->
+		<section id="products" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Product Suite</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						End-to-end solutions covering all aspects of modern digital business needs
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+					<!-- Product 1 -->
+					<div
+						class="solution-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="product-icon bg-purple-100">
+							<i class="fas fa-utensils text-purple-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Food Delivery</h3>
+						<p class="text-gray-600 mb-4">Complete platform for restaurant owners and food delivery services</p>
+						<a href="#food-delivery" class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+							>Learn more →</a
+						>
+					</div>
+
+					<!-- Product 2 -->
+					<div
+						class="solution-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="product-icon bg-blue-100">
+							<i class="fas fa-shopping-cart text-blue-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">eCommerce</h3>
+						<p class="text-gray-600 mb-4">Robust online store solutions with inventory and order management</p>
+						<a href="#ecommerce" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Learn more →</a>
+					</div>
+
+					<!-- Product 3 -->
+					<div
+						class="solution-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="product-icon bg-green-100">
+							<i class="fas fa-calendar-check text-green-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Booking Systems</h3>
+						<p class="text-gray-600 mb-4">Table reservations, appointments, and service booking solutions</p>
+						<a href="#booking" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Learn more →</a>
+					</div>
+
+					<!-- Product 4 -->
+					<div
+						class="solution-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="product-icon bg-yellow-100">
+							<i class="fas fa-cash-register text-yellow-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">ePOS/mPOS</h3>
+						<p class="text-gray-600 mb-4">Point of sale systems for retail and hospitality businesses</p>
+						<a href="#epos" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Learn more →</a>
+					</div>
+
+					<!-- Product 5 -->
+					<div
+						class="solution-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="product-icon bg-red-100">
+							<i class="fas fa-car text-red-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Ride Sharing</h3>
+						<p class="text-gray-600 mb-4">Complete transportation solution for drivers and passengers</p>
+						<a href="#ride-sharing" class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+							>Learn more →</a
+						>
+					</div>
+
+					<!-- Product 6 -->
+					<div
+						class="solution-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="product-icon bg-indigo-100">
+							<i class="fas fa-chalkboard-teacher text-indigo-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Virtual Classroom</h3>
+						<p class="text-gray-600 mb-4">Online education platform with group video calling features</p>
+						<a href="#classroom" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Learn more →</a>
+					</div>
+
+					<!-- Product 7 -->
+					<div
+						class="solution-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="product-icon bg-pink-100">
+							<i class="fas fa-cloud text-pink-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Cloud Kitchen</h3>
+						<p class="text-gray-600 mb-4">Management system for delivery-only restaurant operations</p>
+						<a href="#cloud-kitchen" class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+							>Learn more →</a
+						>
+					</div>
+
+					<!-- Product 8 -->
+					<div
+						class="solution-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="product-icon bg-teal-100">
+							<i class="fas fa-plug text-teal-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">API Suite</h3>
+						<p class="text-gray-600 mb-4">Integration solutions connecting all our platforms</p>
+						<a href="#api" class="text-indigo-600 font-medium hover:text-indigo-800 transition">Learn more →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Product Details Tabs -->
+		<section id="product-details" class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-6xl mx-auto">
+					<div class="product-tabs flex overflow-x-auto space-x-8 border-b border-gray-200 mb-8">
+						<button class="tab-button py-4 px-1 whitespace-nowrap active" data-tab="food-delivery">
+							Food Delivery
+						</button>
+						<button class="tab-button py-4 px-1 whitespace-nowrap" data-tab="ecommerce">eCommerce</button>
+						<button class="tab-button py-4 px-1 whitespace-nowrap" data-tab="booking">Booking Systems</button>
+						<button class="tab-button py-4 px-1 whitespace-nowrap" data-tab="epos">ePOS/mPOS</button>
+						<button class="tab-button py-4 px-1 whitespace-nowrap" data-tab="ride-sharing">Ride Sharing</button>
+						<button class="tab-button py-4 px-1 whitespace-nowrap" data-tab="classroom">Virtual Classroom</button>
+						<button class="tab-button py-4 px-1 whitespace-nowrap" data-tab="cloud-kitchen">Cloud Kitchen</button>
+					</div>
+
+					<!-- Food Delivery Tab Content -->
+					<div id="food-delivery" class="tab-content py-8 active">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+							<div>
+								<h3 class="text-3xl font-bold mb-6">Food Delivery Platform</h3>
+								<p class="text-gray-600 mb-6">
+									Our comprehensive food delivery solution connects restaurants with hungry customers through a seamless
+									ordering experience. Manage menus, track orders, and optimize delivery routes all from one dashboard.
+								</p>
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-mobile-alt text-purple-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Customer Apps</h4>
+										<p class="text-gray-600 text-sm">iOS and Android apps for easy ordering</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-biking text-purple-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Driver Management</h4>
+										<p class="text-gray-600 text-sm">Real-time tracking and dispatch system</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-chart-line text-purple-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Analytics Dashboard</h4>
+										<p class="text-gray-600 text-sm">Track sales, popular items, and customer trends</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-cog text-purple-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Restaurant Portal</h4>
+										<p class="text-gray-600 text-sm">Manage orders, menus, and promotions</p>
+									</div>
+								</div>
+								<a
+									href="#"
+									class="bg-purple-600 text-white px-6 py-3 rounded-md font-medium hover:bg-purple-700 transition inline-flex items-center"
+								>
+									<i class="fas fa-utensils mr-2"></i> See Food Delivery Demo
+								</a>
+							</div>
+							<div>
+								<img
+									src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+									alt="Food Delivery App"
+									class="rounded-lg shadow-xl"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- eCommerce Tab Content -->
+					<div id="ecommerce" class="tab-content py-8 hidden">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+							<div>
+								<h3 class="text-3xl font-bold mb-6">eCommerce Solutions</h3>
+								<p class="text-gray-600 mb-6">
+									Launch and scale your online store with our powerful eCommerce platform. From inventory management to
+									secure checkout, we provide all the tools you need to succeed in online retail.
+								</p>
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-boxes text-blue-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Inventory Management</h4>
+										<p class="text-gray-600 text-sm">Real-time stock tracking across locations</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-credit-card text-blue-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Payment Gateway</h4>
+										<p class="text-gray-600 text-sm">Multiple payment options with secure processing</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-truck text-blue-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Shipping Integration</h4>
+										<p class="text-gray-600 text-sm">Connect with major carriers worldwide</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-chart-pie text-blue-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Sales Analytics</h4>
+										<p class="text-gray-600 text-sm">Detailed reports on products and customer behavior</p>
+									</div>
+								</div>
+								<a
+									href="#"
+									class="bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition inline-flex items-center"
+								>
+									<i class="fas fa-shopping-cart mr-2"></i> Explore eCommerce Features
+								</a>
+							</div>
+							<div>
+								<img
+									src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+									alt="eCommerce Platform"
+									class="rounded-lg shadow-xl"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Booking Systems Tab Content -->
+					<div id="booking" class="tab-content py-8 hidden">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+							<div>
+								<h3 class="text-3xl font-bold mb-6">Booking & Reservation Systems</h3>
+								<p class="text-gray-600 mb-6">
+									Streamline your appointment scheduling, table reservations, and service bookings with our intuitive
+									platform. Reduce no-shows and maximize your business capacity.
+								</p>
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-calendar-alt text-green-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Online Booking</h4>
+										<p class="text-gray-600 text-sm">24/7 availability for customers</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-sync-alt text-green-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Real-time Sync</h4>
+										<p class="text-gray-600 text-sm">Instant updates across all devices</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-bell text-green-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Automated Reminders</h4>
+										<p class="text-gray-600 text-sm">Reduce no-shows with SMS/email alerts</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-users text-green-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Staff Management</h4>
+										<p class="text-gray-600 text-sm">Assign staff and manage availability</p>
+									</div>
+								</div>
+								<a
+									href="#"
+									class="bg-green-600 text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 transition inline-flex items-center"
+								>
+									<i class="fas fa-calendar-check mr-2"></i> View Booking Solutions
+								</a>
+							</div>
+							<div>
+								<img
+									src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+									alt="Booking System"
+									class="rounded-lg shadow-xl"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- ePOS/mPOS Tab Content -->
+					<div id="epos" class="tab-content py-8 hidden">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+							<div>
+								<h3 class="text-3xl font-bold mb-6">ePOS & mPOS Solutions</h3>
+								<p class="text-gray-600 mb-6">
+									Modern point of sale systems for retail stores, restaurants, and service businesses. Process payments,
+									manage inventory, and track sales from any device.
+								</p>
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-tablet-alt text-yellow-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Mobile POS</h4>
+										<p class="text-gray-600 text-sm">Process payments anywhere in your store</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-receipt text-yellow-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Digital Receipts</h4>
+										<p class="text-gray-600 text-sm">Email or SMS receipts to customers</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-exchange-alt text-yellow-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Omnichannel Sync</h4>
+										<p class="text-gray-600 text-sm">Sync with online and physical stores</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-user-shield text-yellow-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Employee Accounts</h4>
+										<p class="text-gray-600 text-sm">Role-based access with permissions</p>
+									</div>
+								</div>
+								<a
+									href="#"
+									class="bg-yellow-600 text-white px-6 py-3 rounded-md font-medium hover:bg-yellow-700 transition inline-flex items-center"
+								>
+									<i class="fas fa-cash-register mr-2"></i> Discover POS Features
+								</a>
+							</div>
+							<div>
+								<img
+									src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+									alt="POS System"
+									class="rounded-lg shadow-xl"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Ride Sharing Tab Content -->
+					<div id="ride-sharing" class="tab-content py-8 hidden">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+							<div>
+								<h3 class="text-3xl font-bold mb-6">Ride Sharing Platform</h3>
+								<p class="text-gray-600 mb-6">
+									Complete transportation solution connecting passengers with drivers. Manage fleets, optimize routes,
+									and provide excellent service through our comprehensive platform.
+								</p>
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-map-marked-alt text-red-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Live Tracking</h4>
+										<p class="text-gray-600 text-sm">Real-time vehicle location and ETA</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-money-bill-wave text-red-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Dynamic Pricing</h4>
+										<p class="text-gray-600 text-sm">Adjust fares based on demand</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-id-card text-red-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Driver Verification</h4>
+										<p class="text-gray-600 text-sm">Comprehensive background checks</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-star text-red-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Rating System</h4>
+										<p class="text-gray-600 text-sm">Two-way feedback for quality control</p>
+									</div>
+								</div>
+								<a
+									href="#"
+									class="bg-red-600 text-white px-6 py-3 rounded-md font-medium hover:bg-red-700 transition inline-flex items-center"
+								>
+									<i class="fas fa-car mr-2"></i> Learn About Ride Sharing
+								</a>
+							</div>
+							<div>
+								<img
+									src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+									alt="Ride Sharing App"
+									class="rounded-lg shadow-xl"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Virtual Classroom Tab Content -->
+					<div id="classroom" class="tab-content py-8 hidden">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+							<div>
+								<h3 class="text-3xl font-bold mb-6">Virtual Classroom with Group Call</h3>
+								<p class="text-gray-600 mb-6">
+									Comprehensive online education platform featuring high-quality video conferencing, interactive
+									whiteboards, and classroom management tools for effective remote learning.
+								</p>
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-video text-indigo-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">HD Video Calls</h4>
+										<p class="text-gray-600 text-sm">Crystal clear group video sessions</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-chalkboard text-indigo-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Interactive Whiteboard</h4>
+										<p class="text-gray-600 text-sm">Collaborative teaching tools</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-file-upload text-indigo-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Content Sharing</h4>
+										<p class="text-gray-600 text-sm">Upload and share learning materials</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-user-graduate text-indigo-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Student Management</h4>
+										<p class="text-gray-600 text-sm">Track attendance and progress</p>
+									</div>
+								</div>
+								<a
+									href="#"
+									class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition inline-flex items-center"
+								>
+									<i class="fas fa-chalkboard-teacher mr-2"></i> Explore Education Tools
+								</a>
+							</div>
+							<div>
+								<img
+									src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+									alt="Virtual Classroom"
+									class="rounded-lg shadow-xl"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Cloud Kitchen Tab Content -->
+					<div id="cloud-kitchen" class="tab-content py-8 hidden">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+							<div>
+								<h3 class="text-3xl font-bold mb-6">Cloud Kitchen Management</h3>
+								<p class="text-gray-600 mb-6">
+									Optimize your delivery-only restaurant operations with our specialized cloud kitchen platform. Manage
+									multiple virtual brands from a single kitchen with maximum efficiency.
+								</p>
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-hamburger text-pink-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Multi-Brand Support</h4>
+										<p class="text-gray-600 text-sm">Run multiple concepts from one kitchen</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-clock text-pink-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Order Scheduling</h4>
+										<p class="text-gray-600 text-sm">Optimize preparation and delivery times</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-chart-bar text-pink-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Performance Analytics</h4>
+										<p class="text-gray-600 text-sm">Track each brand's profitability</p>
+									</div>
+									<div class="feature-card bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+										<div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+											<i class="fas fa-box text-pink-600"></i>
+										</div>
+										<h4 class="font-bold mb-2">Inventory Control</h4>
+										<p class="text-gray-600 text-sm">Cross-brand ingredient management</p>
+									</div>
+								</div>
+								<a
+									href="#"
+									class="bg-pink-600 text-white px-6 py-3 rounded-md font-medium hover:bg-pink-700 transition inline-flex items-center"
+								>
+									<i class="fas fa-cloud mr-2"></i> See Cloud Kitchen Demo
+								</a>
+							</div>
+							<div>
+								<img
+									src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+									alt="Cloud Kitchen"
+									class="rounded-lg shadow-xl"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Key Features Section -->
+		<section id="features" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Unified Platform Advantages</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">Why choose our integrated suite over separate solutions</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Feature 1 -->
+					<div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-link text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Seamless Integration</h3>
+						<p class="text-gray-600">
+							All our products work together out of the box. No need for expensive custom integrations or middleware.
+						</p>
+					</div>
+
+					<!-- Feature 2 -->
+					<div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-database text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Unified Data</h3>
+						<p class="text-gray-600">
+							Single source of truth across all platforms with comprehensive reporting and analytics.
+						</p>
+					</div>
+
+					<!-- Feature 3 -->
+					<div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-lock text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Enterprise Security</h3>
+						<p class="text-gray-600">
+							Consistent security standards and compliance across all your business applications.
+						</p>
+					</div>
+
+					<!-- Feature 4 -->
+					<div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-headset text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Single Support</h3>
+						<p class="text-gray-600">One support team familiar with all your systems, reducing resolution times.</p>
+					</div>
+
+					<!-- Feature 5 -->
+					<div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-money-bill-wave text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Cost Efficiency</h3>
+						<p class="text-gray-600">Bundle pricing and shared infrastructure reduce total cost of ownership.</p>
+					</div>
+
+					<!-- Feature 6 -->
+					<div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+						<div class="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+							<i class="fas fa-rocket text-indigo-600 text-2xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Future Proof</h3>
+						<p class="text-gray-600">Regular updates and new features added across all products simultaneously.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Integration Section -->
+		<section class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+					<div>
+						<h2 class="text-3xl md:text-4xl font-bold mb-6">API & Integration Suite</h2>
+						<p class="text-xl text-gray-600 mb-8">
+							Connect our platforms with your existing systems or third-party services through our powerful API gateway.
+						</p>
+						<ul class="space-y-4 mb-8">
+							<li class="flex items-start">
+								<div class="bg-teal-100 rounded-full p-2 mr-4">
+									<i class="fas fa-plug text-teal-600"></i>
+								</div>
+								<div>
+									<h4 class="font-bold mb-1">Pre-built Connectors</h4>
+									<p class="text-gray-600">
+										Ready-made integrations for popular services like Shopify, QuickBooks, and more
+									</p>
+								</div>
+							</li>
+							<li class="flex items-start">
+								<div class="bg-teal-100 rounded-full p-2 mr-4">
+									<i class="fas fa-code text-teal-600"></i>
+								</div>
+								<div>
+									<h4 class="font-bold mb-1">Developer Friendly</h4>
+									<p class="text-gray-600">Comprehensive documentation and SDKs for all major languages</p>
+								</div>
+							</li>
+							<li class="flex items-start">
+								<div class="bg-teal-100 rounded-full p-2 mr-4">
+									<i class="fas fa-shield-alt text-teal-600"></i>
+								</div>
+								<div>
+									<h4 class="font-bold mb-1">Enterprise Grade</h4>
+									<p class="text-gray-600">OAuth 2.0, rate limiting, and comprehensive logging</p>
+								</div>
+							</li>
+						</ul>
+						<a
+							href="#api"
+							class="bg-teal-600 text-white px-6 py-3 rounded-md font-medium hover:bg-teal-700 transition inline-flex items-center"
+						>
+							<i class="fas fa-plug mr-2"></i> Explore API Documentation
+						</a>
+					</div>
+					<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+						<img
+							src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+							alt="API Integration"
+							class="rounded-lg"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-20 bg-indigo-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+					<p class="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+						Whether you need one solution or the complete suite, we'll help you find the perfect fit.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="contact.html"
+							class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Get Custom Quote</a
+						>
+						<a
+							href="demo.html"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+						>
+							<i class="fas fa-desktop mr-2"></i> Schedule Demo
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-cubes mr-2"></i>
+							<span>Nexa<span class="text-purple-400">Suite</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">Comprehensive digital solutions for modern businesses across industries.</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Products</h3>
+						<ul class="space-y-3">
+							<li><a href="#food-delivery" class="text-gray-400 hover:text-white">Food Delivery</a></li>
+							<li><a href="#ecommerce" class="text-gray-400 hover:text-white">eCommerce Solutions</a></li>
+							<li><a href="#booking" class="text-gray-400 hover:text-white">Booking Systems</a></li>
+							<li><a href="#epos" class="text-gray-400 hover:text-white">ePOS/mPOS</a></li>
+							<li><a href="#ride-sharing" class="text-gray-400 hover:text-white">Ride Sharing</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="case-studies.html" class="text-gray-400 hover:text-white">Case Studies</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+							<li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">456 Business Ave, Suite 300, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005559876" class="text-gray-400 hover:text-white">+1 (800) 555-9876</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:info@nexasuite.com" class="text-gray-400 hover:text-white">info@nexasuite.com</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-clock text-gray-400 mr-3"></i>
+								<span class="text-gray-400">Mon-Fri: 9am-6pm PST</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 NexaSuite. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Security</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// Tab functionality
+			const tabButtons = document.querySelectorAll('.tab-button');
+			const tabContents = document.querySelectorAll('.tab-content');
+
+			tabButtons.forEach((button) => {
+				button.addEventListener('click', () => {
+					// Remove active class from all buttons and contents
+					tabButtons.forEach((btn) => btn.classList.remove('active'));
+					tabContents.forEach((content) => content.classList.remove('active'));
+
+					// Add active class to clicked button
+					button.classList.add('active');
+
+					// Show corresponding content
+					const tabId = button.getAttribute('data-tab');
+					document.getElementById(tabId).classList.add('active');
+				});
+			});
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// If clicking a product card, activate its tab
+						if (targetId.startsWith('#') && targetId !== '#products' && targetId !== '#features') {
+							const tabButtons = document.querySelectorAll('.tab-button');
+							tabButtons.forEach((btn) => {
+								if (btn.getAttribute('data-tab') === targetId) {
+									btn.click();
+								}
+							});
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 100,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

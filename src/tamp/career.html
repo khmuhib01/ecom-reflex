@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | EcomReflex - Grow Your Career in eCommerce</title>
+    <meta name="description" content="Join EcomReflex and work with leading eCommerce brands. We offer competitive benefits, professional growth, and exciting challenges in digital commerce.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.3);
+        }
+        .perk-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.2);
+        }
+        .benefit-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .benefit-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: #3b82f6;
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z' clip-rule='evenodd' /%3E%3C/svg%3E");
+            mask-repeat: no-repeat;
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-600">Reflex</span></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                    <a href="solutions.html" class="text-gray-700 hover:text-indigo-600 transition">Solutions</a>
+                    <a href="team.html" class="text-gray-700 hover:text-indigo-600 transition">Team</a>
+                    <a href="careers.html" class="text-indigo-600 font-medium transition">Careers</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+                    <a href="get-started.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Get Started</a>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
+                    <a href="solutions.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Solutions</a>
+                    <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Team</a>
+                    <a href="careers.html" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 hover:bg-gray-50">Careers</a>
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+                    <a href="get-started.html" class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-20 md:py-28">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Build Your Career in eCommerce</h1>
+                <p class="text-xl text-blue-100 mb-8">
+                    Join a team that's shaping the future of digital commerce.
+                </p>
+                <a href="#open-positions" class="inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">View Open Positions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Join EcomReflex?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We're building more than a company - we're building a community of innovators.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Perk 1 -->
+                <div class="perk-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Growth Opportunities</h3>
+                    <p class="text-gray-600 text-center">
+                        Annual $3,000 professional development budget and mentorship programs.
+                    </p>
+                </div>
+                
+                <!-- Perk 2 -->
+                <div class="perk-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-heart text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Health & Wellness</h3>
+                    <p class="text-gray-600 text-center">
+                        Comprehensive medical, dental, and mental health benefits.
+                    </p>
+                </div>
+                
+                <!-- Perk 3 -->
+                <div class="perk-card bg-gray-50 p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-home text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Flexible Work</h3>
+                    <p class="text-gray-600 text-center">
+                        Hybrid remote/office options with flexible hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Culture</h2>
+                    <p class="text-xl text-gray-600 mb-6">
+                        At EcomReflex, we believe great work happens when talented people feel empowered, supported, and inspired.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="benefit-item">Collaborative environment with flat hierarchies</li>
+                        <li class="benefit-item">Quarterly innovation hackathons</li>
+                        <li class="benefit-item">Annual company retreats</li>
+                        <li class="benefit-item">Diversity and inclusion initiatives</li>
+                        <li class="benefit-item">Impactful projects with leading brands</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Team working together" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section id="open-positions" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Open Positions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Help shape the future of eCommerce. Browse our current opportunities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+                <!-- Job 1 -->
+                <div class="job-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <h3 class="text-2xl font-bold mb-2">Senior Frontend Developer</h3>
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Remote</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Full-time</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Engineering</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Lead the development of cutting-edge eCommerce interfaces using React, Vue, and modern CSS frameworks.
+                    </p>
+                    <div class="flex flex-wrap justify-between items-center">
+                        <a href="senior-frontend-developer.html" class="text-blue-600 font-medium hover:text-blue-800">View Details →</a>
+                        <span class="text-gray-500">Posted 2 weeks ago</span>
+                    </div>
+                </div>
+                
+                <!-- Job 2 -->
+                <div class="job-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <h3 class="text-2xl font-bold mb-2">eCommerce Strategist</h3>
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Hybrid</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Full-time</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Growth</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Develop data-driven strategies to optimize conversion rates and customer journeys for enterprise clients.
+                    </p>
+                    <div class="flex flex-wrap justify-between items-center">
+                        <a href="ecommerce-strategist.html" class="text-blue-600 font-medium hover:text-blue-800">View Details →</a>
+                        <span class="text-gray-500">Posted 1 week ago</span>
+                    </div>
+                </div>
+                
+                <!-- Job 3 -->
+                <div class="job-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <h3 class="text-2xl font-bold mb-2">UX/UI Designer</h3>
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Remote</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Full-time</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Design</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Create intuitive, conversion-focused interfaces for Shopify Plus and custom eCommerce platforms.
+                    </p>
+                    <div class="flex flex-wrap justify-between items-center">
+                        <a href="ux-ui-designer.html" class="text-blue-600 font-medium hover:text-blue-800">View Details →</a>
+                        <span class="text-gray-500">Posted 3 days ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-lg text-gray-600 mb-6">
+                    Don't see your perfect role? We're always looking for talented people.
+                </p>
+                <a href="contact.html" class="inline-block border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-blue-600 hover:text-white transition">Send Us Your Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hiring Process -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Hiring Process</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Transparent steps to join our team.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Application</h3>
+                    <p class="text-gray-600">
+                        Submit your resume and portfolio (if applicable)
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Screening</h3>
+                    <p class="text-gray-600">
+                        30-minute introductory call with HR
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Skills Assessment</h3>
+                    <p class="text-gray-600">
+                        Practical evaluation relevant to the role
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <span class="text-blue-600 font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Team Interviews</h3>
+                    <p class="text-gray-600">
+                        Meet with potential colleagues and managers
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our Team?</h2>
+                <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                    We're excited to hear from you. Apply today to start your journey with EcomReflex.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#open-positions" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center">View Openings</a>
+                    <a href="contact.html" class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-blue-600 transition text-center">Contact HR</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        <span>Ecom<span class="text-purple-400">Reflex</span></span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        Helping eCommerce brands grow through data-driven strategies and cutting-edge technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Solutions</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Growth Acceleration</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Technical Optimization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Customer Experience</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Data & Analytics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="team.html" class="text-gray-400 hover:text-white">Our Team</a></li>
+                        <li><a href="careers.html" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">123 Commerce St, San Francisco, CA 94107</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+                            <a href="tel:+18005551234" class="text-gray-400 hover:text-white">+1 (800) 555-1234</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-3"></i>
+                            <a href="mailto:careers@ecomreflex.com" class="text-gray-400 hover:text-white">careers@ecomreflex.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 EcomReflex. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

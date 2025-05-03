@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Industry Solutions | NexaSuite - Tailored for Your Business Sector</title>
+		<meta
+			name="description"
+			content="Discover how NexaSuite's solutions are customized for restaurants, retail, education, transportation, and other key industries."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.industry-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+			}
+			.solution-highlight {
+				position: relative;
+				padding-left: 2rem;
+			}
+			.solution-highlight:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0.5rem;
+				width: 1.5rem;
+				height: 1.5rem;
+				background-color: #8b5cf6;
+				mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z' clip-rule='evenodd' /%3E%3C/svg%3E");
+				mask-repeat: no-repeat;
+			}
+			.industry-icon {
+				width: 80px;
+				height: 80px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 20px;
+				margin: 0 auto 20px;
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.stat-highlight {
+				position: relative;
+				z-index: 1;
+			}
+			.stat-highlight:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 30%;
+				background-color: #ddd6fe;
+				z-index: -1;
+				transform: rotate(-1deg);
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-cubes mr-2"></i>
+							<span>Nexa<span class="text-purple-600">Suite</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+						<a href="products.html" class="text-gray-700 hover:text-indigo-600 transition">Products</a>
+						<a href="industries.html" class="text-indigo-600 font-medium transition">Industries</a>
+						<a href="case-studies.html" class="text-gray-700 hover:text-indigo-600 transition">Case Studies</a>
+						<a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+						<a href="demo.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Request Demo</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Home</a
+						>
+						<a
+							href="products.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Products</a
+						>
+						<a
+							href="industries.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 hover:bg-gray-50"
+							>Industries</a
+						>
+						<a
+							href="case-studies.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Case Studies</a
+						>
+						<a
+							href="contact.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Contact</a
+						>
+						<a
+							href="demo.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Request Demo</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-20 md:py-28">
+				<div class="max-w-4xl mx-auto text-center">
+					<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Industry-Specific Solutions</h1>
+					<p class="text-xl text-indigo-100 mb-8">
+						Tailored implementations of our platform for your unique business challenges
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="#industries"
+							class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
+							>Explore Industries</a
+						>
+						<a
+							href="#solutions"
+							class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
+							>Key Solutions</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Industries Overview -->
+		<section id="industries" class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Our solutions are customized to address the unique needs of each sector
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<!-- Industry 1 -->
+					<div
+						class="industry-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="industry-icon bg-purple-100">
+							<i class="fas fa-utensils text-purple-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Restaurants & Hospitality</h3>
+						<p class="text-gray-600 mb-4">
+							Streamline operations from reservations to delivery with our complete restaurant ecosystem
+						</p>
+						<div class="mt-6">
+							<a href="#restaurants" class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+								>View Solutions →</a
+							>
+						</div>
+					</div>
+
+					<!-- Industry 2 -->
+					<div
+						class="industry-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="industry-icon bg-blue-100">
+							<i class="fas fa-shopping-bag text-blue-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Retail & eCommerce</h3>
+						<p class="text-gray-600 mb-4">Unified commerce platform bridging online and in-store experiences</p>
+						<div class="mt-6">
+							<a href="#retail" class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+								>View Solutions →</a
+							>
+						</div>
+					</div>
+
+					<!-- Industry 3 -->
+					<div
+						class="industry-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="industry-icon bg-green-100">
+							<i class="fas fa-school text-green-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Education</h3>
+						<p class="text-gray-600 mb-4">
+							Virtual classroom technology for schools, universities, and training providers
+						</p>
+						<div class="mt-6">
+							<a href="#education" class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+								>View Solutions →</a
+							>
+						</div>
+					</div>
+
+					<!-- Industry 4 -->
+					<div
+						class="industry-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="industry-icon bg-yellow-100">
+							<i class="fas fa-car text-yellow-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Transportation</h3>
+						<p class="text-gray-600 mb-4">Complete ride-sharing and fleet management solutions</p>
+						<div class="mt-6">
+							<a href="#transportation" class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+								>View Solutions →</a
+							>
+						</div>
+					</div>
+
+					<!-- Industry 5 -->
+					<div
+						class="industry-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="industry-icon bg-red-100">
+							<i class="fas fa-heartbeat text-red-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Healthcare</h3>
+						<p class="text-gray-600 mb-4">Appointment scheduling and patient management systems</p>
+						<div class="mt-6">
+							<a href="#healthcare" class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+								>View Solutions →</a
+							>
+						</div>
+					</div>
+
+					<!-- Industry 6 -->
+					<div
+						class="industry-card bg-white p-8 rounded-xl shadow-md transition duration-300 border border-gray-100 text-center"
+					>
+						<div class="industry-icon bg-indigo-100">
+							<i class="fas fa-tools text-indigo-600 text-3xl"></i>
+						</div>
+						<h3 class="text-xl font-bold mb-3">Professional Services</h3>
+						<p class="text-gray-600 mb-4">Booking and payment solutions for service businesses</p>
+						<div class="mt-6">
+							<a href="#services" class="text-indigo-600 font-medium hover:text-indigo-800 transition"
+								>View Solutions →</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Industry Solutions -->
+		<section id="solutions" class="py-20 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Industry-Specific Solutions</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						How we adapt our platform to meet sector-specific requirements
+					</p>
+				</div>
+
+				<!-- Restaurant Solutions -->
+				<div id="restaurants" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+					<div>
+						<span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold mb-4"
+							>Restaurants & Hospitality</span
+						>
+						<h3 class="text-3xl font-bold mb-6">Complete Restaurant <span class="stat-highlight">Ecosystem</span></h3>
+						<p class="text-gray-600 mb-6">
+							From fine dining to quick service, our integrated solutions help restaurants optimize every aspect of
+							their operations while enhancing the guest experience.
+						</p>
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-calendar-check text-purple-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Table Reservations</h4>
+								<p class="text-gray-600 text-sm">Reduce no-shows with automated confirmations</p>
+							</div>
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-mobile-alt text-purple-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Mobile Ordering</h4>
+								<p class="text-gray-600 text-sm">QR code menus and contactless payment</p>
+							</div>
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-biking text-purple-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Delivery Management</h4>
+								<p class="text-gray-600 text-sm">Optimize dispatch and driver routing</p>
+							</div>
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-chart-pie text-purple-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Menu Analytics</h4>
+								<p class="text-gray-600 text-sm">Identify top performers and optimize pricing</p>
+							</div>
+						</div>
+						<a
+							href="#"
+							class="bg-purple-600 text-white px-6 py-3 rounded-md font-medium hover:bg-purple-700 transition inline-flex items-center"
+						>
+							<i class="fas fa-utensils mr-2"></i> Explore Restaurant Solutions
+						</a>
+					</div>
+					<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+						<img
+							src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+							alt="Restaurant Solutions"
+							class="rounded-lg"
+						/>
+						<div class="mt-6 bg-purple-50 p-6 rounded-lg">
+							<h4 class="font-bold text-purple-800 mb-3">Key Benefits for Restaurants</h4>
+							<ul class="space-y-3">
+								<li class="solution-highlight text-gray-700">Increase table turnover by 15-25%</li>
+								<li class="solution-highlight text-gray-700">Reduce food waste through inventory tracking</li>
+								<li class="solution-highlight text-gray-700">Boost average check size with upsell prompts</li>
+								<li class="solution-highlight text-gray-700">Improve staff efficiency with kitchen display system</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Retail Solutions -->
+				<div id="retail" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+					<div class="order-last lg:order-first">
+						<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+							<img
+								src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+								alt="Retail Solutions"
+								class="rounded-lg"
+							/>
+							<div class="mt-6 bg-blue-50 p-6 rounded-lg">
+								<h4 class="font-bold text-blue-800 mb-3">Key Benefits for Retailers</h4>
+								<ul class="space-y-3">
+									<li class="solution-highlight text-gray-700">Unified inventory across all channels</li>
+									<li class="solution-highlight text-gray-700">Mobile checkout reduces queue times</li>
+									<li class="solution-highlight text-gray-700">Personalized promotions based on purchase history</li>
+									<li class="solution-highlight text-gray-700">Real-time sales analytics by location</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="order-first lg:order-last">
+						<span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mb-4"
+							>Retail & eCommerce</span
+						>
+						<h3 class="text-3xl font-bold mb-6">Omnichannel <span class="stat-highlight">Retail Platform</span></h3>
+						<p class="text-gray-600 mb-6">
+							Bridge the gap between physical and digital retail with solutions that deliver seamless shopping
+							experiences wherever your customers are.
+						</p>
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-store text-blue-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Unified POS</h4>
+								<p class="text-gray-600 text-sm">Consistent experience across all locations</p>
+							</div>
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-boxes text-blue-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Inventory Sync</h4>
+								<p class="text-gray-600 text-sm">Real-time stock levels across channels</p>
+							</div>
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-user-tag text-blue-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Clienteling</h4>
+								<p class="text-gray-600 text-sm">Personalized service with customer profiles</p>
+							</div>
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-exchange-alt text-blue-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">BOPIS</h4>
+								<p class="text-gray-600 text-sm">Buy online, pickup in-store functionality</p>
+							</div>
+						</div>
+						<a
+							href="#"
+							class="bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition inline-flex items-center"
+						>
+							<i class="fas fa-shopping-bag mr-2"></i> Explore Retail Solutions
+						</a>
+					</div>
+				</div>
+
+				<!-- Education Solutions -->
+				<div id="education" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div>
+						<span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mb-4"
+							>Education</span
+						>
+						<h3 class="text-3xl font-bold mb-6">Next-Gen <span class="stat-highlight">Learning Platform</span></h3>
+						<p class="text-gray-600 mb-6">
+							Transform educational delivery with our virtual classroom technology designed for engagement,
+							accessibility, and administrative efficiency.
+						</p>
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-video text-green-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Virtual Classroom</h4>
+								<p class="text-gray-600 text-sm">HD video with breakout rooms</p>
+							</div>
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-chalkboard text-green-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Interactive Whiteboard</h4>
+								<p class="text-gray-600 text-sm">Collaborative learning tools</p>
+							</div>
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-clipboard-check text-green-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Assignment Tracking</h4>
+								<p class="text-gray-600 text-sm">Digital submission and grading</p>
+							</div>
+							<div class="bg-white p-6 rounded-lg border border-gray-200">
+								<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+									<i class="fas fa-user-graduate text-green-600"></i>
+								</div>
+								<h4 class="font-bold mb-2">Attendance Automation</h4>
+								<p class="text-gray-600 text-sm">Track participation and engagement</p>
+							</div>
+						</div>
+						<a
+							href="#"
+							class="bg-green-600 text-white px-6 py-3 rounded-md font-medium hover:bg-green-700 transition inline-flex items-center"
+						>
+							<i class="fas fa-school mr-2"></i> Explore Education Solutions
+						</a>
+					</div>
+					<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+						<img
+							src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+							alt="Education Solutions"
+							class="rounded-lg"
+						/>
+						<div class="mt-6 bg-green-50 p-6 rounded-lg">
+							<h4 class="font-bold text-green-800 mb-3">Key Benefits for Educators</h4>
+							<ul class="space-y-3">
+								<li class="solution-highlight text-gray-700">Reduce administrative workload by 30%</li>
+								<li class="solution-highlight text-gray-700">Increase student engagement with interactive tools</li>
+								<li class="solution-highlight text-gray-700">Secure platform compliant with education regulations</li>
+								<li class="solution-highlight text-gray-700">Scalable for institutions of all sizes</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Stats Section -->
+		<section class="py-20 bg-indigo-600 text-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-4">Proven Impact Across Industries</h2>
+					<p class="text-xl text-indigo-100">
+						Measurable results our clients have achieved with industry-specific implementations
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					<div class="bg-indigo-700 p-8 rounded-xl text-center">
+						<div class="text-5xl font-bold mb-2">300+</div>
+						<h3 class="text-xl font-bold mb-3">Restaurants Optimized</h3>
+						<p class="text-indigo-100">Average 22% increase in revenue per location</p>
+					</div>
+					<div class="bg-indigo-700 p-8 rounded-xl text-center">
+						<div class="text-5xl font-bold mb-2">85%</div>
+						<h3 class="text-xl font-bold mb-3">Retailers Reduced Costs</h3>
+						<p class="text-indigo-100">Through inventory and labor optimization</p>
+					</div>
+					<div class="bg-indigo-700 p-8 rounded-xl text-center">
+						<div class="text-5xl font-bold mb-2">1.2M</div>
+						<h3 class="text-xl font-bold mb-3">Students Engaged</h3>
+						<p class="text-indigo-100">Through our virtual classroom platform</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6">Need a Solution Tailored to Your Industry?</h2>
+					<p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+						Our experts will work with you to customize our platform for your specific business requirements
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+						<a
+							href="contact.html"
+							class="bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition text-center"
+							>Get Industry Consultation</a
+						>
+						<a
+							href="case-studies.html"
+							class="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition text-center"
+						>
+							<i class="fas fa-book-open mr-2"></i> View Case Studies
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-cubes mr-2"></i>
+							<span>Nexa<span class="text-purple-400">Suite</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">Comprehensive digital solutions for modern businesses across industries.</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Industries</h3>
+						<ul class="space-y-3">
+							<li><a href="#restaurants" class="text-gray-400 hover:text-white">Restaurants & Hospitality</a></li>
+							<li><a href="#retail" class="text-gray-400 hover:text-white">Retail & eCommerce</a></li>
+							<li><a href="#education" class="text-gray-400 hover:text-white">Education</a></li>
+							<li><a href="#transportation" class="text-gray-400 hover:text-white">Transportation</a></li>
+							<li><a href="#healthcare" class="text-gray-400 hover:text-white">Healthcare</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Solutions</h3>
+						<ul class="space-y-3">
+							<li><a href="#" class="text-gray-400 hover:text-white">Food Delivery Platform</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">eCommerce Solutions</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Virtual Classroom</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Ride Sharing</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Booking Systems</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">456 Business Ave, Suite 300, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005559876" class="text-gray-400 hover:text-white">+1 (800) 555-9876</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:info@nexasuite.com" class="text-gray-400 hover:text-white">info@nexasuite.com</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-clock text-gray-400 mr-3"></i>
+								<span class="text-gray-400">Mon-Fri: 9am-6pm PST</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 NexaSuite. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Security</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// Smooth scrolling for anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+
+					const targetId = this.getAttribute('href');
+					if (targetId === '#') return;
+
+					const targetElement = document.querySelector(targetId);
+					if (targetElement) {
+						// Close mobile menu if open
+						const mobileMenu = document.getElementById('mobile-menu');
+						if (mobileMenu.classList.contains('open')) {
+							mobileMenu.classList.remove('open');
+						}
+
+						// Scroll to target
+						window.scrollTo({
+							top: targetElement.offsetTop - 100,
+							behavior: 'smooth',
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
