@@ -865,7 +865,7 @@ export default function Home() {
 													id="firstName"
 													name="firstName"
 													required
-													className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+													className="text-gray-700 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
 												/>
 											</div>
 											<div>
@@ -877,7 +877,7 @@ export default function Home() {
 													id="lastName"
 													name="lastName"
 													required
-													className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+													className="text-gray-700 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
 												/>
 											</div>
 										</div>
@@ -891,7 +891,7 @@ export default function Home() {
 												id="email"
 												name="email"
 												required
-												className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+												className="text-gray-700 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
 											/>
 										</div>
 
@@ -903,7 +903,7 @@ export default function Home() {
 												type="tel"
 												id="phone"
 												name="phone"
-												className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+												className="text-gray-700 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
 											/>
 										</div>
 
@@ -915,7 +915,7 @@ export default function Home() {
 												id="service"
 												name="service"
 												required
-												className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+												className="text-gray-700 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
 											>
 												<option value="">Select a service</option>
 												<option value="ecommerce-development">Ecommerce Development</option>
@@ -936,7 +936,7 @@ export default function Home() {
 												name="message"
 												rows="4"
 												required
-												className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+												className="text-gray-700 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
 											></textarea>
 										</div>
 

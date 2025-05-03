@@ -27,8 +27,8 @@ export default function HeaderComponent() {
 						<Link href="/services" className="text-gray-700 hover:text-indigo-600 transition">
 							Services
 						</Link>
-						<Link href="/solutions" className="text-gray-700 hover:text-indigo-600 transition">
-							Solutions
+						<Link href="/products" className="text-gray-700 hover:text-indigo-600 transition">
+							Products
 						</Link>
 						<Link href="/team" className="text-gray-700 hover:text-indigo-600 transition">
 							Team
@@ -70,10 +70,10 @@ export default function HeaderComponent() {
 							</Link>
 
 							<Link
-								href="/solutions"
+								href="/products"
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
 							>
-								Solutions
+								Products
 							</Link>
 
 							<Link

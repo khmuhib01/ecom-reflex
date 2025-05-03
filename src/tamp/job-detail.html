@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Senior Product Designer | NexaSuite Careers</title>
+		<meta
+			name="description"
+			content="Join our team as a Senior Product Designer at NexaSuite. Help shape the future of our digital solutions platform."
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<style>
+			.hero-gradient {
+				background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+			}
+			.job-highlight {
+				position: relative;
+			}
+			.job-highlight:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 30%;
+				background-color: #ddd6fe;
+				z-index: -1;
+				transform: rotate(-1deg);
+			}
+			.benefit-icon {
+				width: 48px;
+				height: 48px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 12px;
+				margin-right: 16px;
+			}
+			.mobile-menu {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease-out;
+			}
+			.mobile-menu.open {
+				max-height: 500px;
+			}
+			.apply-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+			}
+		</style>
+	</head>
+	<body class="font-sans antialiased text-gray-800">
+		<!-- Navigation -->
+		<header class="bg-white shadow-sm sticky top-0 z-50">
+			<div class="container mx-auto px-4 py-3">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center">
+						<a href="index.html" class="text-2xl font-bold text-indigo-600 flex items-center">
+							<i class="fas fa-cubes mr-2"></i>
+							<span>Nexa<span class="text-purple-600">Suite</span></span>
+						</a>
+					</div>
+
+					<div class="hidden md:flex items-center space-x-8">
+						<a href="index.html" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+						<a href="products.html" class="text-gray-700 hover:text-indigo-600 transition">Products</a>
+						<a href="industries.html" class="text-gray-700 hover:text-indigo-600 transition">Industries</a>
+						<a href="careers.html" class="text-indigo-600 font-medium transition">Careers</a>
+						<a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+						<a href="demo.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+							>Request Demo</a
+						>
+					</div>
+
+					<button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+						<i class="fas fa-bars text-2xl"></i>
+					</button>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden">
+					<div class="px-2 pt-2 pb-4 space-y-1">
+						<a
+							href="index.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Home</a
+						>
+						<a
+							href="products.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Products</a
+						>
+						<a
+							href="industries.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Industries</a
+						>
+						<a
+							href="careers.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 hover:bg-gray-50"
+							>Careers</a
+						>
+						<a
+							href="contact.html"
+							class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+							>Contact</a
+						>
+						<a
+							href="demo.html"
+							class="block text-center bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition mt-2"
+							>Request Demo</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white">
+			<div class="container mx-auto px-4 py-16 md:py-24">
+				<div class="max-w-4xl mx-auto">
+					<div class="mb-6">
+						<a href="careers.html" class="inline-flex items-center text-indigo-100 hover:text-white transition">
+							<i class="fas fa-arrow-left mr-2"></i> Back to Careers
+						</a>
+					</div>
+					<h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">Senior Product Designer</h1>
+					<div class="flex flex-wrap items-center gap-4 text-indigo-100 mb-6">
+						<div class="flex items-center">
+							<i class="fas fa-map-marker-alt mr-2"></i>
+							<span>San Francisco, CA or Remote</span>
+						</div>
+						<div class="flex items-center">
+							<i class="fas fa-briefcase mr-2"></i>
+							<span>Full-time</span>
+						</div>
+						<div class="flex items-center">
+							<i class="fas fa-dollar-sign mr-2"></i>
+							<span>$120,000 - $150,000</span>
+						</div>
+					</div>
+					<a
+						href="#apply"
+						class="apply-btn inline-block bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition shadow-md"
+					>
+						Apply Now
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Job Details -->
+		<section class="py-16 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+						<div class="lg:col-span-2">
+							<h2 class="text-2xl font-bold mb-6 job-highlight">About the Role</h2>
+							<p class="text-gray-600 mb-6">
+								As a Senior Product Designer at NexaSuite, you'll lead the design of our core product experiences,
+								working closely with product managers and engineers to deliver intuitive, beautiful solutions that solve
+								real business problems. You'll have the opportunity to shape the future of our platform while mentoring
+								junior designers.
+							</p>
+
+							<h3 class="text-xl font-bold mt-8 mb-4">What You'll Do</h3>
+							<ul class="space-y-3 text-gray-600 mb-8">
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Lead end-to-end design projects from discovery to implementation</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Conduct user research and translate insights into design solutions</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Create user flows, wireframes, and high-fidelity prototypes</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Collaborate with engineering to ensure high-quality implementation</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Contribute to and evolve our design system</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Mentor junior designers and promote design best practices</span>
+								</li>
+							</ul>
+
+							<h3 class="text-xl font-bold mt-8 mb-4">What We're Looking For</h3>
+							<ul class="space-y-3 text-gray-600 mb-8">
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>5+ years of product design experience, preferably in SaaS or enterprise software</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Strong portfolio showcasing your design process and outcomes</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Expertise in Figma, Sketch, or similar design tools</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Experience conducting user research and usability testing</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Excellent communication and collaboration skills</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Bachelor's degree in Design, HCI, or related field (or equivalent experience)</span>
+								</li>
+							</ul>
+
+							<h3 class="text-xl font-bold mt-8 mb-4">Nice to Have</h3>
+							<ul class="space-y-3 text-gray-600">
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Experience designing for B2B products</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Front-end development skills (HTML/CSS/JS)</span>
+								</li>
+								<li class="flex items-start">
+									<i class="fas fa-check text-indigo-500 mt-1 mr-3"></i>
+									<span>Experience with design systems at scale</span>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<div class="bg-gray-50 p-6 rounded-xl sticky top-6">
+								<h3 class="text-lg font-bold mb-4">Job Details</h3>
+								<div class="space-y-4">
+									<div>
+										<h4 class="text-sm font-medium text-gray-500">Department</h4>
+										<p class="text-gray-700">Product Design</p>
+									</div>
+									<div>
+										<h4 class="text-sm font-medium text-gray-500">Location</h4>
+										<p class="text-gray-700">San Francisco, CA or Remote (US)</p>
+									</div>
+									<div>
+										<h4 class="text-sm font-medium text-gray-500">Employment Type</h4>
+										<p class="text-gray-700">Full-time</p>
+									</div>
+									<div>
+										<h4 class="text-sm font-medium text-gray-500">Experience Level</h4>
+										<p class="text-gray-700">Senior</p>
+									</div>
+									<div>
+										<h4 class="text-sm font-medium text-gray-500">Salary Range</h4>
+										<p class="text-gray-700">$120,000 - $150,000</p>
+									</div>
+									<div>
+										<h4 class="text-sm font-medium text-gray-500">Posted Date</h4>
+										<p class="text-gray-700">June 15, 2023</p>
+									</div>
+								</div>
+
+								<a
+									href="#apply"
+									class="apply-btn mt-6 block text-center bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition shadow-md"
+								>
+									Apply Now
+								</a>
+
+								<div class="mt-6 pt-6 border-t border-gray-200">
+									<h3 class="text-lg font-bold mb-4">Share This Job</h3>
+									<div class="flex space-x-4">
+										<a
+											href="#"
+											class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-300 transition"
+										>
+											<i class="fab fa-linkedin-in"></i>
+										</a>
+										<a
+											href="#"
+											class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-300 transition"
+										>
+											<i class="fab fa-twitter"></i>
+										</a>
+										<a
+											href="#"
+											class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-300 transition"
+										>
+											<i class="fas fa-envelope"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Benefits Section -->
+		<section class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-2xl font-bold mb-8 text-center">Life at NexaSuite</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div class="flex items-start bg-white p-6 rounded-xl shadow-sm">
+							<div class="benefit-icon bg-purple-100 text-purple-600">
+								<i class="fas fa-heart text-xl"></i>
+							</div>
+							<div>
+								<h3 class="font-bold mb-2">Health & Wellness</h3>
+								<p class="text-gray-600">
+									Comprehensive medical, dental, and vision insurance. Wellness stipend and mental health support.
+								</p>
+							</div>
+						</div>
+						<div class="flex items-start bg-white p-6 rounded-xl shadow-sm">
+							<div class="benefit-icon bg-blue-100 text-blue-600">
+								<i class="fas fa-home text-xl"></i>
+							</div>
+							<div>
+								<h3 class="font-bold mb-2">Flexible Work</h3>
+								<p class="text-gray-600">Remote-friendly with flexible hours. Co-working space access if needed.</p>
+							</div>
+						</div>
+						<div class="flex items-start bg-white p-6 rounded-xl shadow-sm">
+							<div class="benefit-icon bg-green-100 text-green-600">
+								<i class="fas fa-graduation-cap text-xl"></i>
+							</div>
+							<div>
+								<h3 class="font-bold mb-2">Learning & Growth</h3>
+								<p class="text-gray-600">Annual learning budget, conference attendance, and promotion opportunities.</p>
+							</div>
+						</div>
+						<div class="flex items-start bg-white p-6 rounded-xl shadow-sm">
+							<div class="benefit-icon bg-yellow-100 text-yellow-600">
+								<i class="fas fa-umbrella-beach text-xl"></i>
+							</div>
+							<div>
+								<h3 class="font-bold mb-2">Time Off</h3>
+								<p class="text-gray-600">Unlimited PTO, paid parental leave, and company-wide holidays.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Application Form -->
+		<section id="apply" class="py-16 bg-white">
+			<div class="container mx-auto px-4">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-2xl font-bold mb-2">Apply for this position</h2>
+					<p class="text-gray-600 mb-8">
+						We're excited you're interested in joining our team! Please fill out the form below.
+					</p>
+
+					<form class="space-y-6">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+								<input
+									type="text"
+									id="first-name"
+									name="first-name"
+									required
+									class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 transition"
+								/>
+							</div>
+							<div>
+								<label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+								<input
+									type="text"
+									id="last-name"
+									name="last-name"
+									required
+									class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 transition"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								required
+								class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 transition"
+							/>
+						</div>
+
+						<div>
+							<label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+							<input
+								type="tel"
+								id="phone"
+								name="phone"
+								class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 transition"
+							/>
+						</div>
+
+						<div>
+							<label for="resume" class="block text-sm font-medium text-gray-700 mb-1">Resume/CV *</label>
+							<input
+								type="file"
+								id="resume"
+								name="resume"
+								required
+								class="w-full text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100"
+							/>
+							<p class="mt-1 text-sm text-gray-500">PDF, DOC, DOCX (Max 5MB)</p>
+						</div>
+
+						<div>
+							<label for="portfolio" class="block text-sm font-medium text-gray-700 mb-1">Portfolio Link</label>
+							<input
+								type="url"
+								id="portfolio"
+								name="portfolio"
+								class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 transition"
+							/>
+						</div>
+
+						<div>
+							<label for="cover-letter" class="block text-sm font-medium text-gray-700 mb-1">Cover Letter</label>
+							<textarea
+								id="cover-letter"
+								name="cover-letter"
+								rows="4"
+								class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 transition"
+							></textarea>
+						</div>
+
+						<div>
+							<label for="how-heard" class="block text-sm font-medium text-gray-700 mb-1"
+								>How did you hear about this position?</label
+							>
+							<select
+								id="how-heard"
+								name="how-heard"
+								class="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 transition"
+							>
+								<option value="">Select an option</option>
+								<option value="LinkedIn">LinkedIn</option>
+								<option value="Indeed">Indeed</option>
+								<option value="Company Website">Company Website</option>
+								<option value="Referral">Referral</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+
+						<div class="flex items-center">
+							<input
+								id="privacy-policy"
+								name="privacy-policy"
+								type="checkbox"
+								required
+								class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+							/>
+							<label for="privacy-policy" class="ml-2 block text-sm text-gray-700">
+								I agree to the <a href="#" class="text-indigo-600 hover:text-indigo-800">Privacy Policy</a> and consent
+								to my data being processed for this application.
+							</label>
+						</div>
+
+						<div>
+							<button
+								type="submit"
+								class="apply-btn bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition shadow-md w-full"
+							>
+								Submit Application
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Similar Jobs -->
+		<section class="py-16 bg-gray-50">
+			<div class="container mx-auto px-4">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-2xl font-bold mb-8">Other Open Positions</h2>
+					<div class="space-y-4">
+						<a href="#" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+							<div class="flex justify-between items-start">
+								<div>
+									<h3 class="font-bold text-lg mb-1">Frontend Engineer</h3>
+									<div class="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
+										<span>Product Engineering</span>
+										<span>San Francisco or Remote</span>
+										<span>Full-time</span>
+									</div>
+								</div>
+								<span class="text-indigo-600">View</span>
+							</div>
+						</a>
+						<a href="#" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+							<div class="flex justify-between items-start">
+								<div>
+									<h3 class="font-bold text-lg mb-1">Product Manager</h3>
+									<div class="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
+										<span>Product</span>
+										<span>San Francisco</span>
+										<span>Full-time</span>
+									</div>
+								</div>
+								<span class="text-indigo-600">View</span>
+							</div>
+						</a>
+						<a href="#" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+							<div class="flex justify-between items-start">
+								<div>
+									<h3 class="font-bold text-lg mb-1">Customer Success Manager</h3>
+									<div class="flex flex-wrap items-center gap-4 text-gray-500 text-sm">
+										<span>Customer Success</span>
+										<span>Remote (US)</span>
+										<span>Full-time</span>
+									</div>
+								</div>
+								<span class="text-indigo-600">View</span>
+							</div>
+						</a>
+					</div>
+
+					<div class="text-center mt-8">
+						<a
+							href="careers.html"
+							class="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition"
+						>
+							View all open positions <i class="fas fa-arrow-right ml-2"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white pt-16 pb-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+					<!-- Column 1 -->
+					<div>
+						<a href="index.html" class="text-2xl font-bold text-white flex items-center mb-6">
+							<i class="fas fa-cubes mr-2"></i>
+							<span>Nexa<span class="text-purple-400">Suite</span></span>
+						</a>
+						<p class="text-gray-400 mb-6">Comprehensive digital solutions for modern businesses across industries.</p>
+						<div class="flex space-x-4">
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Products</h3>
+						<ul class="space-y-3">
+							<li><a href="#" class="text-gray-400 hover:text-white">Food Delivery Platform</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">eCommerce Solutions</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Virtual Classroom</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Ride Sharing</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Booking Systems</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Company</h3>
+						<ul class="space-y-3">
+							<li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+							<li><a href="careers.html" class="text-gray-400 hover:text-white">Careers</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+							<li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+							<li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div>
+						<h3 class="text-lg font-bold mb-6">Contact</h3>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<i class="fas fa-map-marker-alt text-gray-400 mt-1 mr-3"></i>
+								<span class="text-gray-400">456 Business Ave, Suite 300, San Francisco, CA 94107</span>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-phone-alt text-gray-400 mr-3"></i>
+								<a href="tel:+18005559876" class="text-gray-400 hover:text-white">+1 (800) 555-9876</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-envelope text-gray-400 mr-3"></i>
+								<a href="mailto:info@nexasuite.com" class="text-gray-400 hover:text-white">info@nexasuite.com</a>
+							</li>
+							<li class="flex items-center">
+								<i class="fas fa-clock text-gray-400 mr-3"></i>
+								<span class="text-gray-400">Mon-Fri: 9am-6pm PST</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-gray-400 mb-4 md:mb-0">© 2023 NexaSuite. All rights reserved.</p>
+					<div class="flex space-x-6">
+						<a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+						<a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+						<a href="#" class="text-gray-400 hover:text-white">Security</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			document.getElementById('mobile-menu-button').addEventListener('click', function () {
+				const menu = document.getElementById('mobile-menu');
+				menu.classList.toggle('open');
+			});
+
+			// Form submission handling
+			document.querySelector('form').addEventListener('submit', function (e) {
+				e.preventDefault();
+				// Here you would typically send the form data to your server
+				alert('Thank you for your application! We will review your materials and get back to you soon.');
+				this.reset();
+			});
+		</script>
+	</body>
+</html>
