@@ -7,6 +7,7 @@ import {useState} from 'react';
 import {FaLaptopCode, FaExchangeAlt, FaSearch, FaChartLine, FaCogs, FaCode, FaArrowRight} from 'react-icons/fa';
 import {FaLayerGroup, FaTachometerAlt, FaProjectDiagram, FaChartBar, FaCheckCircle} from 'react-icons/fa';
 import {FaChevronDown} from 'react-icons/fa';
+import {FaAnglesRight} from 'react-icons/fa6';
 
 export default function Home() {
 	const [activeIndex, setActiveIndex] = useState(null);
@@ -115,10 +116,10 @@ export default function Home() {
 						<div className="md:w-1/2 flex justify-center">
 							<div className="relative w-full max-w-md h-[300px] md:h-[400px]">
 								<Image
-									src="/images/home/hero.png"
+									src="/assets/images/home/hero.png"
 									alt="eCommerce Dashboard"
 									fill
-									className="rounded-lg shadow-2xl object-cover"
+									className="rounded-lg object-cover"
 									sizes="(max-width: 768px) 100vw, 50vw"
 									priority
 								/>
@@ -641,13 +642,13 @@ export default function Home() {
 						</div>
 					</div>
 
-					{/* View All Button */}
-					<div className="text-center">
+					<div className="text-center mt-12">
 						<Link
 							href="/case-studies"
-							className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+							className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
 						>
 							View All Case Studies
+							<FaArrowRight className="ml-2" />
 						</Link>
 					</div>
 				</div>
@@ -756,7 +757,7 @@ export default function Home() {
 							className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
 						>
 							View All Success Stories
-							<i className="fas fa-arrow-right ml-2"></i>
+							<FaArrowRight className="ml-2" />
 						</Link>
 					</div>
 				</div>

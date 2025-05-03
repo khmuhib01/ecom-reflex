@@ -21,9 +21,6 @@ export default function HeaderComponent() {
 					</div>
 
 					<div className="hidden md:flex items-center space-x-8">
-						<Link href="/" className="text-gray-700 hover:text-indigo-600 transition">
-							Home
-						</Link>
 						<Link href="/services" className="text-gray-700 hover:text-indigo-600 transition">
 							Services
 						</Link>
@@ -33,11 +30,8 @@ export default function HeaderComponent() {
 						<Link href="/case-studies" className="text-gray-700 hover:text-indigo-600 transition">
 							Case Studies
 						</Link>
-						<Link href="/about" className="text-gray-700 hover:text-indigo-600 transition">
-							About
-						</Link>
-						<Link href="/contact" className="text-gray-700 hover:text-indigo-600 transition">
-							Contact
+						<Link href="/success-stories" className="text-gray-700 hover:text-indigo-600 transition">
+							Success Stories
 						</Link>
 						<Link
 							href="/get-started"
@@ -55,10 +49,6 @@ export default function HeaderComponent() {
 				{mobileOpen && (
 					<div className="md:hidden">
 						<div className="px-2 pt-2 pb-4 space-y-1">
-							<Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">
-								Home
-							</Link>
-
 							<Link
 								href="/services"
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
@@ -78,20 +68,6 @@ export default function HeaderComponent() {
 								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
 							>
 								Case Studies
-							</Link>
-
-							<Link
-								href="/about"
-								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
-							>
-								About
-							</Link>
-
-							<Link
-								href="/contact"
-								className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
-							>
-								Contact
 							</Link>
 
 							<Link

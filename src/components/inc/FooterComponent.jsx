@@ -92,8 +92,8 @@ export default function FooterComponent() {
 								</Link>
 							</li>
 							<li>
-								<Link href="/case-studies" className="text-gray-400 hover:text-white">
-									Case Studies
+								<Link href="/contact" className="text-gray-400 hover:text-white">
+									Contact
 								</Link>
 							</li>
 							<li>
