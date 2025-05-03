@@ -24,30 +24,30 @@ export default function HeaderComponent() {
 						<Link href="/" className="text-gray-700 hover:text-indigo-600 transition">
 							Home
 						</Link>
-						<a href="/services" className="text-gray-700 hover:text-indigo-600 transition">
+						<Link href="/services" className="text-gray-700 hover:text-indigo-600 transition">
 							Services
-						</a>
-						<a href="/solutions" className="text-gray-700 hover:text-indigo-600 transition">
+						</Link>
+						<Link href="/solutions" className="text-gray-700 hover:text-indigo-600 transition">
 							Solutions
-						</a>
-						<a href="/team" className="text-gray-700 hover:text-indigo-600 transition">
+						</Link>
+						<Link href="/team" className="text-gray-700 hover:text-indigo-600 transition">
 							Team
-						</a>
-						<a href="/blog" className="text-gray-700 hover:text-indigo-600 transition">
+						</Link>
+						<Link href="/blog" className="text-gray-700 hover:text-indigo-600 transition">
 							Blog
-						</a>
-						<a href="/career" className="text-gray-700 hover:text-indigo-600 transition">
+						</Link>
+						<Link href="/career" className="text-gray-700 hover:text-indigo-600 transition">
 							Career
-						</a>
-						<a href="/contact" className="text-gray-700 hover:text-indigo-600 transition">
+						</Link>
+						<Link href="/contact" className="text-gray-700 hover:text-indigo-600 transition">
 							Contact
-						</a>
-						<a
+						</Link>
+						<Link
 							href="/get-started"
 							className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
 						>
 							Get Started
-						</a>
+						</Link>
 					</div>
 
 					<button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-gray-700 focus:outline-none">
