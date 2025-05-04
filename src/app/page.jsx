@@ -591,7 +591,7 @@ export default function Home() {
 									30%.
 								</p>
 								<Link
-									href="/service/ecommerce-development"
+									href="/case-studies/case-studies-detail"
 									className="text-indigo-600 hover:text-indigo-500 font-medium"
 								>
 									Read More →
@@ -614,9 +614,12 @@ export default function Home() {
 									Our team created a tailored solution for a client, allowing them to streamline their business
 									operations.
 								</p>
-								<a href="#" className="text-indigo-600 hover:text-indigo-500 font-medium">
+								<Link
+									href="/case-studies/case-studies-detail"
+									className="text-indigo-600 hover:text-indigo-500 font-medium"
+								>
 									Read More →
-								</a>
+								</Link>
 							</div>
 						</div>
 
@@ -635,9 +638,12 @@ export default function Home() {
 									By optimizing digital marketing strategies, we helped our client double their customer base in 6
 									months.
 								</p>
-								<a href="#" className="text-indigo-600 hover:text-indigo-500 font-medium">
+								<Link
+									href="/case-studies/case-studies-detail"
+									className="text-indigo-600 hover:text-indigo-500 font-medium"
+								>
 									Read More →
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

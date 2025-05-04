@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
 import {AiOutlineRead} from 'react-icons/ai';
 import {AiOutlineArrowRight} from 'react-icons/ai';
@@ -68,12 +69,12 @@ export default function BlogPage() {
 									<span className="tag">Strategy</span>
 									<span className="tag">Innovation</span>
 								</div>
-								<a
-									href="blog-post.html"
+								<Link
+									href="/blog/blog-detail"
 									className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
 								>
 									Read more <AiOutlineArrowRight className="ml-2" />
-								</a>
+								</Link>
 							</div>
 						</div>
 
@@ -103,12 +104,12 @@ export default function BlogPage() {
 									<span className="tag">Migration</span>
 									<span className="tag">How-To</span>
 								</div>
-								<a
-									href="blog-post.html"
+								<Link
+									href="/blog/blog-detail"
 									className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
 								>
 									Read more <AiOutlineArrowRight className="ml-2" />
-								</a>
+								</Link>
 							</div>
 						</div>
 
@@ -138,12 +139,12 @@ export default function BlogPage() {
 									<span className="tag">Optimization</span>
 									<span className="tag">Case Study</span>
 								</div>
-								<a
-									href="blog-post.html"
+								<Link
+									href="/blog/blog-detail"
 									className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
 								>
 									Read more <AiOutlineArrowRight className="ml-2" />
-								</a>
+								</Link>
 							</div>
 						</div>
 
@@ -173,12 +174,12 @@ export default function BlogPage() {
 									<span className="tag">UX</span>
 									<span className="tag">Trends</span>
 								</div>
-								<a
-									href="blog-post.html"
+								<Link
+									href="/blog/blog-detail"
 									className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
 								>
 									Read more <AiOutlineArrowRight className="ml-2" />
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
