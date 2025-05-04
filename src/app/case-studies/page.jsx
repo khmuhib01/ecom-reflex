@@ -134,12 +134,12 @@ export default function CaseStudiesPage() {
 							Discover how businesses transformed their operations with NexaSuite solutions
 						</p>
 						<div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-							<a
-								href="#featured-case"
+							<Link
+								href="/contact"
 								class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
 							>
-								Featured Case Study
-							</a>
+								Get Free Consultation
+							</Link>
 							<a
 								href="#all-cases"
 								class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
