@@ -7,7 +7,69 @@ import {useState} from 'react';
 import {FaLaptopCode, FaExchangeAlt, FaSearch, FaChartLine, FaCogs, FaCode, FaArrowRight} from 'react-icons/fa';
 import {FaLayerGroup, FaTachometerAlt, FaProjectDiagram, FaChartBar, FaCheckCircle} from 'react-icons/fa';
 import {FaChevronDown} from 'react-icons/fa';
-import {FaAnglesRight} from 'react-icons/fa6';
+
+const faqItems = [
+	{
+		question: 'What services does EcomReflex offer?',
+		answer:
+			'EcomReflex offers a variety of services related to e-commerce, such as designing custom stores, moving platforms, creating headless commerce, integrating APIs, improving performance, and providing ongoing maintenance. We also offer digital strategy, SEO, and UI/UX enhancements designed for eCommerce brands that want to grow.',
+	},
+	{
+		question: 'Which eCommerce platforms do you work with?',
+		answer:
+			'We work with many different platforms, including Shopify, Shopify Plus, WooCommerce, Magento (Adobe Commerce), BigCommerce, and custom solutions using headless frameworks like Next.js and React.',
+	},
+	{
+		question: 'Do you provide custom design and development?',
+		answer:
+			'Absolutely. Every store we build is uniquely designed to reflect your brand and meet your specific business needs. Our team handles everything from UI/UX design to full-stack development.',
+	},
+	{
+		question: 'How long does it take to build an eCommerce website?',
+		answer:
+			'How long this will take depends on how complicated the project is. It usually takes between 4 and 12 weeks to build a custom store. For platform migrations or large-scale projects, the timeline may be longer. We provide a detailed plan for the project during the discovery phase.',
+	},
+	{
+		question: "What's your pricing model?",
+		answer:
+			'Our prices can change based on the project. After we talk about what you need and look at what the job will cost, we will give you a detailed proposal with a price. We also offer retainer and hourly plans for ongoing work and support.',
+	},
+	{
+		question: 'Can you help with an existing eCommerce site?',
+		answer:
+			'Yes, we often work with clients who already have stores. We help them with redesigns, feature enhancements, speed optimization, or third-party integrations.',
+	},
+	{
+		question: 'Do you offer post-launch support?',
+		answer:
+			'Yes. We offer ongoing support and maintenance packages. These include updates, bug fixes, security monitoring, performance tuning, and feature rollouts.',
+	},
+	{
+		question: 'Will my website be mobile-optimized?',
+		answer:
+			'Absolutely. We build websites that look great on any device. They work well on desktops, laptops, and phones.',
+	},
+	{
+		question: 'Do you offer eCommerce SEO and marketing services?',
+		answer:
+			'Yes. Along with technical SEO for e-commerce (like speed optimization and structured data), we offer content strategy, landing page optimization, and integrations with email marketing and analytics tools.',
+	},
+	{
+		question: 'Can you integrate my store with third-party tools like CRMs or ERPs?',
+		answer:
+			'We can help you connect your e-commerce store to other tools, like CRMs (such as HubSpot and Salesforce) and ERPs (like NetSuite and SAP). We can also connect it to payment gateways, shipping APIs, and marketing platforms.',
+	},
+	{
+		question: 'What makes EcomReflex different from other agencies?',
+		answer:
+			"We combine deep e-commerce expertise with a strategy-first approach. We don't just build websites; we build ecosystems that support your brand's long-term growth. Our clients like that we are honest, fast, and pay close attention to detail.",
+	},
+	{
+		question: 'How do I get started?',
+		answer:
+			"Just send us a message through our contact form or schedule a free discovery call. We'll talk about your goals, what you're doing now, and how we can help you grow.",
+	},
+];
 
 export default function Home() {
 	const [activeIndex, setActiveIndex] = useState(null);
@@ -15,69 +77,6 @@ export default function Home() {
 	const toggleFAQ = (index) => {
 		setActiveIndex(activeIndex === index ? null : index);
 	};
-
-	const faqItems = [
-		{
-			question: 'What services does EcomReflex offer?',
-			answer:
-				'EcomReflex offers a variety of services related to e-commerce, such as designing custom stores, moving platforms, creating headless commerce, integrating APIs, improving performance, and providing ongoing maintenance. We also offer digital strategy, SEO, and UI/UX enhancements designed for eCommerce brands that want to grow.',
-		},
-		{
-			question: 'Which eCommerce platforms do you work with?',
-			answer:
-				'We work with many different platforms, including Shopify, Shopify Plus, WooCommerce, Magento (Adobe Commerce), BigCommerce, and custom solutions using headless frameworks like Next.js and React.',
-		},
-		{
-			question: 'Do you provide custom design and development?',
-			answer:
-				'Absolutely. Every store we build is uniquely designed to reflect your brand and meet your specific business needs. Our team handles everything from UI/UX design to full-stack development.',
-		},
-		{
-			question: 'How long does it take to build an eCommerce website?',
-			answer:
-				'How long this will take depends on how complicated the project is. It usually takes between 4 and 12 weeks to build a custom store. For platform migrations or large-scale projects, the timeline may be longer. We provide a detailed plan for the project during the discovery phase.',
-		},
-		{
-			question: "What's your pricing model?",
-			answer:
-				'Our prices can change based on the project. After we talk about what you need and look at what the job will cost, we will give you a detailed proposal with a price. We also offer retainer and hourly plans for ongoing work and support.',
-		},
-		{
-			question: 'Can you help with an existing eCommerce site?',
-			answer:
-				'Yes, we often work with clients who already have stores. We help them with redesigns, feature enhancements, speed optimization, or third-party integrations.',
-		},
-		{
-			question: 'Do you offer post-launch support?',
-			answer:
-				'Yes. We offer ongoing support and maintenance packages. These include updates, bug fixes, security monitoring, performance tuning, and feature rollouts.',
-		},
-		{
-			question: 'Will my website be mobile-optimized?',
-			answer:
-				'Absolutely. We build websites that look great on any device. They work well on desktops, laptops, and phones.',
-		},
-		{
-			question: 'Do you offer eCommerce SEO and marketing services?',
-			answer:
-				'Yes. Along with technical SEO for e-commerce (like speed optimization and structured data), we offer content strategy, landing page optimization, and integrations with email marketing and analytics tools.',
-		},
-		{
-			question: 'Can you integrate my store with third-party tools like CRMs or ERPs?',
-			answer:
-				'We can help you connect your e-commerce store to other tools, like CRMs (such as HubSpot and Salesforce) and ERPs (like NetSuite and SAP). We can also connect it to payment gateways, shipping APIs, and marketing platforms.',
-		},
-		{
-			question: 'What makes EcomReflex different from other agencies?',
-			answer:
-				"We combine deep e-commerce expertise with a strategy-first approach. We don't just build websites; we build ecosystems that support your brand's long-term growth. Our clients like that we are honest, fast, and pay close attention to detail.",
-		},
-		{
-			question: 'How do I get started?',
-			answer:
-				"Just send us a message through our contact form or schedule a free discovery call. We'll talk about your goals, what you're doing now, and how we can help you grow.",
-		},
-	];
 
 	return (
 		<>
@@ -98,18 +97,18 @@ export default function Home() {
 								integrations, and ongoing support.
 							</p>
 							<div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-								<a
-									href="#contact"
+								<Link
+									href="/contact"
 									className="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center"
 								>
 									Get Free Consultation
-								</a>
-								<a
+								</Link>
+								<Link
 									href="#portfolio"
 									className="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition text-center"
 								>
 									See Our Work
-								</a>
+								</Link>
 							</div>
 						</div>
 
@@ -452,7 +451,7 @@ export default function Home() {
 									Ideal for early-stage businesses needing essential functionality and a fast launch with a professional
 									presence.
 								</p>
-								<div className="text-3xl font-bold text-indigo-600 mb-6">From $25,000</div>
+								<div className="text-3xl font-bold text-indigo-600 mb-6">From $10,000</div>
 								<ul className="space-y-3 mb-8 text-left">
 									<li className="flex items-center">
 										<FaCheckCircle className="text-green-500 mr-2" /> Entry-level features
@@ -487,7 +486,7 @@ export default function Home() {
 							<div className="p-8 text-center">
 								<h3 className="text-xl font-bold mb-4">Midsized Business</h3>
 								<p className="text-gray-600 mb-6">Perfect for growing brands that need more than just the basics.</p>
-								<div className="text-3xl font-bold text-indigo-600 mb-6">From $55,000</div>
+								<div className="text-3xl font-bold text-indigo-600 mb-6">From $15,000</div>
 								<ul className="space-y-3 mb-8 text-left">
 									<li className="flex items-center">
 										<FaCheckCircle className="text-green-500 mr-2" /> Custom design
@@ -521,7 +520,7 @@ export default function Home() {
 								<p className="text-gray-600 mb-6">
 									Tailored for high-traffic, multi-channel, or B2B operations requiring enterprise-grade functionality.
 								</p>
-								<div className="text-3xl font-bold text-indigo-600 mb-6">From $200,000</div>
+								<div className="text-3xl font-bold text-indigo-600 mb-6">From $25,000</div>
 								<ul className="space-y-3 mb-8 text-left">
 									<li className="flex items-center">
 										<FaCheckCircle className="text-green-500 mr-2" /> Advanced custom development
@@ -553,13 +552,13 @@ export default function Home() {
 						<p className="text-gray-600 mb-4">
 							Need a custom solution? Tell us about your project and we'll prepare a tailored quote.
 						</p>
-						<a
-							href="#contact"
+						<Link
+							href="/contact"
 							className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
 						>
 							Request a Custom Quote
 							<FaArrowRight className="ml-2" />
-						</a>
+						</Link>
 					</div>
 				</div>
 			</section>
