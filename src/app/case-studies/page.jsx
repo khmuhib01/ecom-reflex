@@ -336,7 +336,7 @@ export default function CaseStudiesPage() {
 											{caseStudy.stat}
 										</div>
 										<Link
-											href={/case-studies/ + caseStudy.slug}
+											href="/case-studies/case-study-detail"
 											className="text-indigo-600 font-medium hover:text-indigo-800 transition"
 										>
 											Read Case →

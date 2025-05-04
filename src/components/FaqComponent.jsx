@@ -1,0 +1,5 @@
+import React from 'react';
+
+export default function FaqComponent() {
+	return <div>FaqComponent</div>;
+}
