@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
 import {FaChartLine, FaCogs, FaUsers, FaCheck} from 'react-icons/fa';
 import {FaSearchDollar, FaTachometerAlt, FaShoppingCart, FaRandom} from 'react-icons/fa';
@@ -259,12 +260,12 @@ export default function SolutionsPage() {
 							Let's discuss how we can help your business grow.
 						</p>
 						<div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-							<a
-								href="contact.html"
+							<Link
+								href="/contact"
 								className="bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition text-center"
 							>
 								Get Custom Solution
-							</a>
+							</Link>
 							<a
 								href="tel:+18005551234"
 								className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-blue-600 hover:text-white transition text-center flex items-center justify-center"

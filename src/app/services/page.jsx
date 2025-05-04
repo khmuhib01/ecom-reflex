@@ -1,142 +1,138 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
 import {FaArrowRight} from 'react-icons/fa';
 import {FaLaptopCode, FaExchangeAlt, FaSearch, FaChartLine, FaCogs, FaCode} from 'react-icons/fa';
 import {FaPhoneAlt} from 'react-icons/fa';
 
-export default function ServicesPage() {
-	const services = [
-		{
-			title: 'eCommerce Development',
-			description:
-				'We specialize in creating custom online stores that are tailored to your brand and business needs. Our development process focuses on creating mobile-responsive, SEO-optimized storefronts with intuitive user experiences and secure checkout systems.',
-			features: [
-				'Custom storefront design and development',
-				'Mobile-first responsive design',
-				'SEO-optimized architecture',
-				'Secure payment gateways integration',
-				'Product catalog setup and management',
-				'Checkout optimization',
-			],
-			platforms: ['Shopify', 'Shopify Plus', 'Magento', 'WooCommerce', 'BigCommerce', 'Custom Solutions'],
-			icon: FaLaptopCode,
-			iconColor: 'bg-indigo-100 text-indigo-600',
-			image: '/assets/images/services/ecommerce_development.jpg',
-			cta: 'Start Your Project',
-			detailLink: '/services/ecommerce-development',
-			ctaLink: 'contact.html',
-		},
-		{
-			title: 'Migration & Integration',
-			description:
-				'Our migration experts ensure smooth transitions between platforms while maintaining data integrity and minimizing downtime. We also integrate all the essential tools your business needs to operate efficiently.',
-			features: [
-				'Platform-to-platform migrations',
-				'Data migration (products, customers, orders)',
-				'ERP system integrations',
-				'CRM integrations (Salesforce, HubSpot)',
-				'Payment gateway connections',
-				'Shipping and fulfillment system integrations',
-				'Custom API development',
-			],
-			icon: FaExchangeAlt,
-			iconColor: 'bg-purple-100 text-purple-600',
-			image:
-				'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
-			cta: 'Discuss Your Migration',
-			detailLink: '/services/ecommerce-migration-and-integration',
-			ctaLink: 'contact.html',
-		},
-		{
-			title: 'Audit & Analysis',
-			description:
-				"Our comprehensive audits identify performance bottlenecks, security vulnerabilities, and growth opportunities in your eCommerce operation. We provide actionable insights to improve your store's performance.",
-			features: [
-				'Technical performance audit',
-				'UX/UI design review',
-				'Page speed analysis',
-				'SEO health check',
-				'Mobile responsiveness evaluation',
-				'Conversion funnel analysis',
-				'Security assessment',
-				'Competitive benchmarking',
-			],
-			icon: FaSearch,
-			iconColor: 'bg-blue-100 text-blue-600',
-			image:
-				'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
-			cta: 'Request an Audit',
-			detailLink: '/services/audit-and-analysis',
-			ctaLink: 'contact.html',
-		},
-		{
-			title: 'Growth & Optimization',
-			description:
-				'We help you scale through data-led strategies that improve conversion rates, increase average order value, and boost customer retention.',
-			features: [
-				'Conversion rate optimization (CRO)',
-				'A/B and multivariate testing',
-				'Cart abandonment recovery',
-				'Customer retention strategies',
-				'Upsell and cross-sell implementation',
-				'Personalization and recommendation engines',
-				'Analytics and tracking setup',
-				'Performance marketing integration',
-			],
-			icon: FaChartLine,
-			iconColor: 'bg-green-100 text-green-600',
-			image:
-				'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
-			cta: 'Optimize Your Store',
-			detailLink: '/services/growth-and-optimization',
-			ctaLink: 'contact.html',
-		},
-		{
-			title: 'Support & Maintenance',
-			description:
-				'Your eCommerce store requires ongoing care to perform at its best. Our support packages ensure your store remains secure, up-to-date, and fully functional at all times.',
-			features: [
-				'24/7 monitoring and incident response',
-				'Regular maintenance and updates',
-				'Bug fixes and troubleshooting',
-				'Performance optimization',
-				'Security patches and enhancements',
-				'Backup management',
-				'Content updates',
-				'Dedicated support team',
-			],
-			icon: FaCogs,
-			iconColor: 'bg-yellow-100 text-yellow-600',
-			image:
-				'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
-			cta: 'Explore Support Plans',
-			detailLink: '/services/support-and-maintenance',
-			ctaLink: 'contact.html',
-		},
-		{
-			title: 'Custom Development',
-			description:
-				"When off-the-shelf solutions don't meet your needs, our custom development services can create exactly what your business requires to operate efficiently and stand out from competitors.",
-			features: [
-				'Custom Magento modules',
-				'WooCommerce plugin development',
-				'Tailor-made APIs',
-				'Advanced product configuration tools',
-				'Custom checkout flows',
-				'Subscription and membership systems',
-				'Headless commerce solutions',
-				'Progressive Web Apps (PWAs)',
-			],
-			icon: FaCode,
-			iconColor: 'bg-red-100 text-red-600',
-			image:
-				'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
-			cta: 'Discuss Custom Needs',
-			detailLink: '/services/custom-development',
-			ctaLink: 'contact.html',
-		},
-	];
+const services = [
+	{
+		title: 'eCommerce Development',
+		description:
+			'We specialize in creating custom online stores that are tailored to your brand and business needs. Our development process focuses on creating mobile-responsive, SEO-optimized storefronts with intuitive user experiences and secure checkout systems.',
+		features: [
+			'Custom storefront design and development',
+			'Mobile-first responsive design',
+			'SEO-optimized architecture',
+			'Secure payment gateways integration',
+			'Product catalog setup and management',
+			'Checkout optimization',
+		],
+		platforms: ['Shopify', 'Shopify Plus', 'Magento', 'WooCommerce', 'BigCommerce', 'Custom Solutions'],
+		icon: FaLaptopCode,
+		iconColor: 'bg-indigo-100 text-indigo-600',
+		image: '/assets/images/services/ecommerce_development.jpg',
+		cta: 'Start Your Project',
+		detailLink: '/services/ecommerce-development',
+		ctaLink: '/contact',
+	},
+	{
+		title: 'Migration & Integration',
+		description:
+			'Our migration experts ensure smooth transitions between platforms while maintaining data integrity and minimizing downtime. We also integrate all the essential tools your business needs to operate efficiently.',
+		features: [
+			'Platform-to-platform migrations',
+			'Data migration (products, customers, orders)',
+			'ERP system integrations',
+			'CRM integrations (Salesforce, HubSpot)',
+			'Payment gateway connections',
+			'Shipping and fulfillment system integrations',
+			'Custom API development',
+		],
+		icon: FaExchangeAlt,
+		iconColor: 'bg-purple-100 text-purple-600',
+		image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+		cta: 'Discuss Your Migration',
+		detailLink: '/services/ecommerce-migration-and-integration',
+		ctaLink: '/contact',
+	},
+	{
+		title: 'Audit & Analysis',
+		description:
+			"Our comprehensive audits identify performance bottlenecks, security vulnerabilities, and growth opportunities in your eCommerce operation. We provide actionable insights to improve your store's performance.",
+		features: [
+			'Technical performance audit',
+			'UX/UI design review',
+			'Page speed analysis',
+			'SEO health check',
+			'Mobile responsiveness evaluation',
+			'Conversion funnel analysis',
+			'Security assessment',
+			'Competitive benchmarking',
+		],
+		icon: FaSearch,
+		iconColor: 'bg-blue-100 text-blue-600',
+		image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+		cta: 'Request an Audit',
+		detailLink: '/services/audit-and-analysis',
+		ctaLink: '/contact',
+	},
+	{
+		title: 'Growth & Optimization',
+		description:
+			'We help you scale through data-led strategies that improve conversion rates, increase average order value, and boost customer retention.',
+		features: [
+			'Conversion rate optimization (CRO)',
+			'A/B and multivariate testing',
+			'Cart abandonment recovery',
+			'Customer retention strategies',
+			'Upsell and cross-sell implementation',
+			'Personalization and recommendation engines',
+			'Analytics and tracking setup',
+			'Performance marketing integration',
+		],
+		icon: FaChartLine,
+		iconColor: 'bg-green-100 text-green-600',
+		image: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+		cta: 'Optimize Your Store',
+		detailLink: '/services/growth-and-optimization',
+		ctaLink: '/contact',
+	},
+	{
+		title: 'Support & Maintenance',
+		description:
+			'Your eCommerce store requires ongoing care to perform at its best. Our support packages ensure your store remains secure, up-to-date, and fully functional at all times.',
+		features: [
+			'24/7 monitoring and incident response',
+			'Regular maintenance and updates',
+			'Bug fixes and troubleshooting',
+			'Performance optimization',
+			'Security patches and enhancements',
+			'Backup management',
+			'Content updates',
+			'Dedicated support team',
+		],
+		icon: FaCogs,
+		iconColor: 'bg-yellow-100 text-yellow-600',
+		image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+		cta: 'Explore Support Plans',
+		detailLink: '/services/support-and-maintenance',
+		ctaLink: '/contact',
+	},
+	{
+		title: 'Custom Development',
+		description:
+			"When off-the-shelf solutions don't meet your needs, our custom development services can create exactly what your business requires to operate efficiently and stand out from competitors.",
+		features: [
+			'Custom Magento modules',
+			'WooCommerce plugin development',
+			'Tailor-made APIs',
+			'Advanced product configuration tools',
+			'Custom checkout flows',
+			'Subscription and membership systems',
+			'Headless commerce solutions',
+			'Progressive Web Apps (PWAs)',
+		],
+		icon: FaCode,
+		iconColor: 'bg-red-100 text-red-600',
+		image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80',
+		cta: 'Discuss Custom Needs',
+		detailLink: '/services/custom-development',
+		ctaLink: '/contact',
+	},
+];
 
+export default function ServicesPage() {
 	return (
 		<>
 			<Head>
@@ -156,12 +152,12 @@ export default function ServicesPage() {
 							Comprehensive solutions to build, optimize, and scale your online store for maximum performance and
 							growth.
 						</p>
-						<a
-							href="#contact"
+						<Link
+							href="/contact"
 							className="inline-flex items-center justify-center bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"
 						>
 							Get Free Consultation <FaArrowRight className="ml-2" />
-						</a>
+						</Link>
 					</div>
 				</div>
 			</section>
@@ -210,18 +206,18 @@ export default function ServicesPage() {
 								)}
 
 								<div className="flex gap-4">
-									<a
+									<Link
 										href={service.ctaLink}
 										className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition"
 									>
 										{service.cta}
-									</a>
-									<a
+									</Link>
+									<Link
 										href={service.detailLink}
 										className="inline-block border border-indigo-600 text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-indigo-50 transition"
 									>
 										See Detail
-									</a>
+									</Link>
 								</div>
 							</div>
 
@@ -242,18 +238,18 @@ export default function ServicesPage() {
 						your goals.
 					</p>
 					<div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-						<a
-							href="contact.html"
+						<Link
+							href="/contact"
 							className="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"
 						>
 							Get Free Consultation
-						</a>
-						<a
+						</Link>
+						<Link
 							href="tel:+18005551234"
 							className="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition flex items-center justify-center"
 						>
 							<FaPhoneAlt className="mr-2" /> Call Us Now
-						</a>
+						</Link>
 					</div>
 				</div>
 			</section>

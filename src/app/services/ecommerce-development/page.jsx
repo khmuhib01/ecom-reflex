@@ -7,6 +7,39 @@ import {FaBriefcase, FaExchangeAlt, FaStore, FaSearch, FaCogs} from 'react-icons
 import {FaPlug, FaHeadset} from 'react-icons/fa';
 import {FaChevronDown} from 'react-icons/fa';
 
+const faqs = [
+	{
+		question: 'What eCommerce platforms do you specialize in?',
+		answer:
+			'We work with all major platforms including Shopify, Shopify Plus, Magento 2, WooCommerce, Laravel (Bagisto/Aimeos), and custom Headless Commerce solutions. We recommend the best fit based on your business model, scale, and technical needs.',
+	},
+	{
+		question: 'How much does it cost to develop an eCommerce website?',
+		answer:
+			'The cost depends on factors like platform, features, design complexity, integrations, and store size. Projects typically start from $3,000 for small businesses and can go higher for enterprise-level or multi-store solutions. We offer free consultations and custom quotes.',
+	},
+	{
+		question: 'How long does it take to build an eCommerce website?',
+		answer:
+			'Timelines vary depending on the project scope. A basic store might take 3–4 weeks, while a complex, customized solution could take 8–12 weeks or more. We always define a timeline during project onboarding and stick to clear milestones.',
+	},
+	{
+		question: 'Can you migrate my existing store to a new platform?',
+		answer:
+			'Yes! We handle complete store migrations (data, design, SEO, integrations) from platforms like Wix, BigCommerce, Magento 1, or WooCommerce to Shopify, Magento 2, Laravel, and others — with minimal downtime and zero data loss.',
+	},
+	{
+		question: 'Do you provide post-launch support and maintenance?',
+		answer:
+			"Absolutely. eComReflex offers ongoing maintenance plans that include updates, bug fixes, security patches, performance monitoring, and feature enhancements. We're here for long-term support beyond launch day.",
+	},
+	{
+		question: 'What makes eComReflex different from other eCommerce agencies?',
+		answer:
+			"We combine deep platform expertise, business-focused development, and personalized service. We don't just build stores — we help you scale, optimize, and compete in your industry with confidence. Our end-to-end partnership approach means we're with you from strategy through development to long-term growth.",
+	},
+];
+
 export default function EcommerceDevelopmentServicesPage() {
 	const [activeTab, setActiveTab] = useState('shopify');
 	const [activeIndex, setActiveIndex] = useState(null);
@@ -17,38 +50,6 @@ export default function EcommerceDevelopmentServicesPage() {
 		setActiveIndex(activeIndex === index ? null : index);
 	};
 
-	const faqs = [
-		{
-			question: 'What eCommerce platforms do you specialize in?',
-			answer:
-				'We work with all major platforms including Shopify, Shopify Plus, Magento 2, WooCommerce, Laravel (Bagisto/Aimeos), and custom Headless Commerce solutions. We recommend the best fit based on your business model, scale, and technical needs.',
-		},
-		{
-			question: 'How much does it cost to develop an eCommerce website?',
-			answer:
-				'The cost depends on factors like platform, features, design complexity, integrations, and store size. Projects typically start from $3,000 for small businesses and can go higher for enterprise-level or multi-store solutions. We offer free consultations and custom quotes.',
-		},
-		{
-			question: 'How long does it take to build an eCommerce website?',
-			answer:
-				'Timelines vary depending on the project scope. A basic store might take 3–4 weeks, while a complex, customized solution could take 8–12 weeks or more. We always define a timeline during project onboarding and stick to clear milestones.',
-		},
-		{
-			question: 'Can you migrate my existing store to a new platform?',
-			answer:
-				'Yes! We handle complete store migrations (data, design, SEO, integrations) from platforms like Wix, BigCommerce, Magento 1, or WooCommerce to Shopify, Magento 2, Laravel, and others — with minimal downtime and zero data loss.',
-		},
-		{
-			question: 'Do you provide post-launch support and maintenance?',
-			answer:
-				"Absolutely. eComReflex offers ongoing maintenance plans that include updates, bug fixes, security patches, performance monitoring, and feature enhancements. We're here for long-term support beyond launch day.",
-		},
-		{
-			question: 'What makes eComReflex different from other eCommerce agencies?',
-			answer:
-				"We combine deep platform expertise, business-focused development, and personalized service. We don't just build stores — we help you scale, optimize, and compete in your industry with confidence. Our end-to-end partnership approach means we're with you from strategy through development to long-term growth.",
-		},
-	];
 	return (
 		<>
 			<Head>
@@ -432,9 +433,12 @@ export default function EcommerceDevelopmentServicesPage() {
 									<span>Bulk ordering capabilities</span>
 								</li>
 							</ul>
-							<a href="contact.html" className="text-indigo-600 font-medium hover:text-indigo-800">
+							<Link
+								href="/services/b2b-ecommerce-development"
+								className="text-indigo-600 font-medium hover:text-indigo-800"
+							>
 								Learn More →
-							</a>
+							</Link>
 						</div>
 
 						{/* Service 2 */}
@@ -461,9 +465,12 @@ export default function EcommerceDevelopmentServicesPage() {
 									<span>Home screen installation</span>
 								</li>
 							</ul>
-							<a href="contact.html" className="text-purple-600 font-medium hover:text-purple-800">
+							<Link
+								href="/services/mobile-ecommerce-and-pwas"
+								className="text-indigo-600 font-medium hover:text-indigo-800"
+							>
 								Learn More →
-							</a>
+							</Link>
 						</div>
 
 						{/* Service 3 */}
@@ -489,9 +496,9 @@ export default function EcommerceDevelopmentServicesPage() {
 									<span>Data integrity checks</span>
 								</li>
 							</ul>
-							<a href="contact.html" className="text-blue-600 font-medium hover:text-blue-800">
+							<Link href="/services/platform-migration" className="text-indigo-600 font-medium hover:text-indigo-800">
 								Learn More →
-							</a>
+							</Link>
 						</div>
 
 						{/* Service 4 */}
@@ -517,9 +524,12 @@ export default function EcommerceDevelopmentServicesPage() {
 									<span>Unified reporting</span>
 								</li>
 							</ul>
-							<a href="contact.html" className="text-green-600 font-medium hover:text-green-800">
+							<Link
+								href="/services/multi-store-management"
+								className="text-indigo-600 font-medium hover:text-indigo-800"
+							>
 								Learn More →
-							</a>
+							</Link>
 						</div>
 
 						{/* Service 5 */}
@@ -545,9 +555,12 @@ export default function EcommerceDevelopmentServicesPage() {
 									<span>Content strategy</span>
 								</li>
 							</ul>
-							<a href="contact.html" className="text-yellow-600 font-medium hover:text-yellow-800">
+							<Link
+								href="/services/ecommerce-seo-services"
+								className="text-indigo-600 font-medium hover:text-indigo-800"
+							>
 								Learn More →
-							</a>
+							</Link>
 						</div>
 
 						{/* Service 6 */}
@@ -574,9 +587,9 @@ export default function EcommerceDevelopmentServicesPage() {
 									<span>Performance optimization</span>
 								</li>
 							</ul>
-							<a href="contact.html" className="text-red-600 font-medium hover:text-red-800">
+							<Link href="/services/ongoing-support" className="text-indigo-600 font-medium hover:text-indigo-800">
 								Learn More →
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>

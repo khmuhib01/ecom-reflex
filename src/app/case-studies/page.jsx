@@ -9,53 +9,65 @@ import {FaPhoneAlt} from 'react-icons/fa';
 export default function CaseStudiesPage() {
 	const caseStudies = [
 		{
+			id: 1,
 			image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
 			tag: 'Food Delivery',
 			tagColor: 'bg-purple-100 text-purple-800',
 			title: 'BistroExpress: 3x Delivery Volume',
+			slug: 'bistroexpress-3x-delivery-volume',
 			description: 'How a local restaurant chain expanded their delivery radius while improving efficiency',
 			stat: '185% ROI in 6 months',
 		},
 		{
+			id: 2,
 			image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
 			tag: 'ePOS/mPOS',
 			tagColor: 'bg-yellow-100 text-yellow-800',
 			title: 'StyleHub: Omnichannel Retail',
+			slug: 'stylehub-omnichannel-retail',
 			description: 'Fashion retailer unified online and in-store inventory with mobile checkout',
 			stat: '40% faster checkout',
 		},
 		{
+			id: 3,
 			image:
 				'https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
 			tag: 'Virtual Classroom',
 			tagColor: 'bg-indigo-100 text-indigo-800',
 			title: 'EduNext: Scaling Online Learning',
+			slug: 'edunext-scaling-online-learning',
 			description: 'Education provider expanded capacity 5x with reliable group video platform',
 			stat: '98% uptime',
 		},
 		{
+			id: 4,
 			image:
 				'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
 			tag: 'Ride Sharing',
 			tagColor: 'bg-red-100 text-red-800',
 			title: 'CityRide: Local Transportation',
+			slug: 'cityride-local-transportation',
 			description: 'Municipal ride-sharing program reduced traffic congestion by 18%',
 			stat: '15,000+ rides/month',
 		},
 		{
+			id: 5,
 			image:
 				'https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
 			tag: 'Booking System',
 			tagColor: 'bg-green-100 text-green-800',
 			title: 'SpaRelax: Online Reservations',
+			slug: 'sparelax-online-reservations',
 			description: 'Wellness center increased bookings by 65% with automated scheduling',
 			stat: '75% less no-shows',
 		},
 		{
+			id: 6,
 			image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
 			tag: 'eCommerce',
 			tagColor: 'bg-blue-100 text-blue-800',
 			title: 'CraftMarket: Global Expansion',
+			slug: 'craftmarket-global-expansion',
 			description: 'Artisan marketplace scaled to 12 new countries with localized payment',
 			stat: '3x international sales',
 		},
@@ -140,7 +152,7 @@ export default function CaseStudiesPage() {
 			</section>
 
 			{/* Featured Case Study */}
-			<section id="featured-case" className="py-20 bg-white">
+			{/* <section id="featured-case" className="py-20 bg-white">
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
 						<span className="solution-tag bg-purple-100 text-purple-800 mb-4 inline-block px-3 py-1 rounded-full text-sm font-semibold">
@@ -153,9 +165,7 @@ export default function CaseStudiesPage() {
 					</div>
 
 					<div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-						{/* Left Side (Challenge + Solution) */}
 						<div className="lg:col-span-2">
-							{/* Challenge */}
 							<div className="bg-gray-50 rounded-xl p-8 mb-12">
 								<h3 className="text-2xl font-bold mb-6">The Challenge</h3>
 								<p className="text-gray-600 mb-6">
@@ -190,7 +200,6 @@ export default function CaseStudiesPage() {
 								</ul>
 							</div>
 
-							{/* Solution */}
 							<div className="bg-gray-50 rounded-xl p-8 mb-12">
 								<h3 className="text-2xl font-bold mb-6">The Solution</h3>
 								<p className="text-gray-600 mb-6">
@@ -234,9 +243,7 @@ export default function CaseStudiesPage() {
 							</div>
 						</div>
 
-						{/* Right Side (Results, Testimonial, Technologies) */}
 						<div className="space-y-8">
-							{/* Results */}
 							<div className="bg-indigo-600 text-white rounded-xl p-8">
 								<h3 className="text-2xl font-bold mb-6">The Results</h3>
 								<div className="space-y-6">
@@ -254,7 +261,6 @@ export default function CaseStudiesPage() {
 								</div>
 							</div>
 
-							{/* Testimonial */}
 							<div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
 								<div className="flex items-center mb-4">
 									<img
@@ -279,7 +285,6 @@ export default function CaseStudiesPage() {
 								</div>
 							</div>
 
-							{/* Technologies */}
 							<div className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
 								<h4 className="font-bold mb-4">Technologies Used</h4>
 								<div className="flex flex-wrap gap-3">
@@ -298,13 +303,13 @@ export default function CaseStudiesPage() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* More Success Stories */}
 			<section id="all-cases" className="py-20 bg-gray-50">
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-16">
-						<h2 className="text-3xl md:text-4xl font-bold mb-4">More Success Stories</h2>
+						<h2 className="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto">
 							Explore how businesses across industries are achieving remarkable results
 						</p>
@@ -330,23 +335,27 @@ export default function CaseStudiesPage() {
 											<FaChartLine className="mr-1" />
 											{caseStudy.stat}
 										</div>
-										<a href="#" className="text-indigo-600 font-medium hover:text-indigo-800 transition">
+										<Link
+											href={/case-studies/ + caseStudy.slug}
+											className="text-indigo-600 font-medium hover:text-indigo-800 transition"
+										>
 											Read Case →
-										</a>
+										</Link>
 									</div>
 								</div>
 							</div>
 						))}
 					</div>
 
-					<div className="text-center mt-12">
+					{/* Don't remove  */}
+					{/* <div className="text-center mt-12">
 						<a
 							href="#"
 							className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-800 transition"
 						>
 							View all case studies <FaArrowRight className="ml-2" />
 						</a>
-					</div>
+					</div> */}
 				</div>
 			</section>
 
